@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "map": {
+    "E:\\CocosProjects\\Color\\assets\\Scence": {
+      "time": 1729873733940.4417,
+      "uuid": "83738ec2-d92b-497e-8d32-fa55a8cd9cca"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts": {
+      "time": 1729873733941.786,
+      "uuid": "1818acf5-9fdb-44b9-9fc0-532684b1f61f"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts": {
+      "time": 1729873733941.786,
+      "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence.meta": {
+      "time": 1729873733937.9912
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts.meta": {
+      "time": 1729873733941.0474
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts.meta": {
+      "time": 1729873733941.786
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene": {
+      "time": 1729873733939.9258,
+      "uuid": "976dd202-9303-4f1f-aa02-f386ec411f95"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene.meta": {
+      "time": 1729873733940.4417
+    }
+  },
+  "missing": {}
+}

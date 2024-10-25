@@ -1,0 +1,30 @@
+{
+  "83738ec2-d92b-497e-8d32-fa55a8cd9cca": {
+    "url": "db://assets/Scence",
+    "value": {},
+    "versionCode": 1
+  },
+  "1818acf5-9fdb-44b9-9fc0-532684b1f61f": {
+    "url": "db://assets/Scripts",
+    "value": {},
+    "versionCode": 1
+  },
+  "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335": {
+    "url": "db://assets/Scripts/HelloWorld.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "976dd202-9303-4f1f-aa02-f386ec411f95": {
+    "url": "db://assets/Scence/001.scene",
+    "value": {
+      "depends": [
+        "976dd202-9303-4f1f-aa02-f386ec411f95",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 1
+  }
+}
