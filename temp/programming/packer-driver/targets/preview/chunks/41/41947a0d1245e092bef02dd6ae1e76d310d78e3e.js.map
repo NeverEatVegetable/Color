@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/servers/src/shared/tsgfServer/match/IAppMatchTaskData.ts"],"names":[],"mappings":";;;;;;;;;;;;;AAGA","sourcesContent":["import { IMatcher } from \"./IMatcher\";\n\n\n/**应用匹配任务数据*/\nexport interface IAppMatchTaskData{\n    //allMatcher:IMatcher[];\n}"]}

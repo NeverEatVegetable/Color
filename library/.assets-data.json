@@ -23,8 +23,62 @@
         "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
         "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
       ],
-      "dependScripts": []
+      "dependScripts": [
+        "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
+      ]
     },
+    "versionCode": 1
+  },
+  "a57057f5-25f5-4210-b95e-5cdff5afd5cd": {
+    "url": "db://assets/Scripts/Socket",
+    "value": {},
+    "versionCode": 1
+  },
+  "bbcfa071-812d-4027-b679-4d9037ab6381": {
+    "url": "db://assets/Scripts/Socket/Sever.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3c0a23fa-b179-4b5d-af6f-f76109a5f78b": {
+    "url": "db://assets/Scripts/Player",
+    "value": {},
+    "versionCode": 1
+  },
+  "b6857566-5946-46e1-bc22-1bb7452d7a39": {
+    "url": "db://assets/Scripts/Player/PlayerController.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ef766d03-e1f6-469e-a201-3ce973e33ed3": {
+    "url": "db://assets/cs-huawei/hwgobe/GOBE/GOBE.d.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "88feb81c-93d3-4092-aba3-73b401b04fb6": {
+    "url": "db://assets/cs-huawei",
+    "value": {},
+    "versionCode": 1
+  },
+  "147ee122-a7f8-4794-91b2-ba8b067170fa": {
+    "url": "db://assets/cs-huawei/hwgobe",
+    "value": {},
+    "versionCode": 1
+  },
+  "8b9da2d2-372c-4478-ac35-d795dd07305c": {
+    "url": "db://assets/cs-huawei/hwgobe/GOBE",
+    "value": {},
+    "versionCode": 1
+  },
+  "d48afb54-b651-4934-b6c9-5a0c5dadb6dc": {
+    "url": "db://assets/cs-huawei/hwgobe/GOBE/endpoint-cert.cer",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "fbacd566-8641-445d-88e7-2c76f5ed418d": {
+    "url": "db://assets/cs-huawei/hwgobe/GOBE/GOBE.js",
+    "value": {},
     "versionCode": 1
   }
 }

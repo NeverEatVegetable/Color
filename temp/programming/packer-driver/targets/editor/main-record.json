@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 7107.415899999905,
+      "mTimestamp": 7412.856200000038,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -703,7 +703,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 8615.145999999717,
+      "mTimestamp": 10575753.316499999,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -921,7 +921,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1729877416029,
+      "mTimestamp": 1730121596932,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -1137,7 +1137,7 @@
     },
     "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts": {
       "mTimestamp": {
-        "mtime": 1729873733941.786,
+        "mtime": 1730122151599.61,
         "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
       },
       "chunkId": "8311598651c24f1f19afdcf8454dfb6710214371",
@@ -1158,6 +1158,110 @@
             "end": {
               "line": 1,
               "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts": {
+      "mTimestamp": {
+        "mtime": 1730129351403.8047,
+        "uuid": "bbcfa071-812d-4027-b679-4d9037ab6381"
+      },
+      "chunkId": "f2cd1ad5cccfd0b34d4bea25bb340a3d8dc37a42",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts": {
+      "mTimestamp": {
+        "mtime": 1730130185403.7458,
+        "uuid": "b6857566-5946-46e1-bc22-1bb7452d7a39"
+      },
+      "chunkId": "6da537b7d4011c53aeeff04883e8e2bd8af7f322",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 70
+            },
+            "end": {
+              "line": 1,
+              "column": 74
             }
           }
         }

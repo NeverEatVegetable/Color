@@ -1,0 +1,466 @@
+21:20:04 debug: 2024/10/28下午9:20:04
+21:20:04 debug: Project: E:\CocosProjects\Color
+21:20:04 debug: Targets: editor,preview
+21:20:04 debug: Incremental file seems great.
+21:20:04 debug: Engine path: D:\Program Files\Cocos\Creator\3.8.4\resources\resources\3d\engine
+21:20:04 debug: Initializing target [Editor]
+21:20:04 debug: Loading cache
+21:20:04 debug: Loading cache costs 1.5133000000496395ms.
+21:20:04 debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,gfx-webgpu,3d,animation,skeletal-animation,2d,ui,particle,particle-2d,physics-framework,physics-2d-framework,physics-2d-box2d-wasm,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,spine,dragon-bones,marionette,procedural-animation,custom-pipeline,custom-pipeline-builtin-scripts,custom-pipeline-post-process,legacy-pipeline,websocket,websocket-server,meshopt
+21:20:04 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+21:20:04 debug: Initializing target [Preview]
+21:20:04 debug: Loading cache
+21:20:04 debug: Loading cache costs 0.873699999996461ms.
+21:20:04 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+21:20:04 debug: Sync engine features: 2d,animation,audio,base,custom-pipeline,dragon-bones,gfx-webgl,gfx-webgl2,intersection-2d,particle-2d,physics-2d-box2d,profiler,spine,tiled-map,tween,ui,video,webview
+21:20:04 debug: Reset databases. Enumerated domains: [
+  {
+    "root": "db://internal/",
+    "physical": "D:\\Program Files\\Cocos\\Creator\\3.8.4\\resources\\resources\\3d\\engine\\editor\\assets"
+  },
+  {
+    "root": "db://assets/",
+    "physical": "E:\\CocosProjects\\Color\\assets"
+  }
+]
+21:20:04 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///E:/CocosProjects/Color/assets/"
+  }
+}
+21:20:04 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///E:/CocosProjects/Color/assets/"
+  }
+}
+21:20:04 debug: Pulling asset-db.
+21:20:04 debug: Fetch asset-db cost: 8.28100000001723ms.
+21:20:04 debug: Build iteration starts.
+Number of accumulated asset changes: 5
+Feature changed: false
+21:20:04 debug: Target(editor) build started.
+21:20:04 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/x/cc
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-empty from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-empty.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-webgpu from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgpu.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-wasm from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-wasm.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/geometry-renderer from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/geometry-renderer.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/xr from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/xr.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline-post-process from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline-post-process.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
+21:20:04 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:08 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/x/prerequisite-imports
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:20:04 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+21:20:04 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Sat Oct 26 2024 01:30:16 GMT+0800 (中国标准时间), Current mtime: Mon Oct 28 2024 21:19:56 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/code-quality/cr.mjs
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc/env from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+21:20:04 debug: Resolve ./builtin-pipeline-types from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:20:04 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc/env from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve ./builtin-pipeline-types from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:20:04 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts. Last mtime: Sat Oct 26 2024 00:28:53 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335, Current mtime: Mon Oct 28 2024 21:17:29 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335
+21:20:04 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Target(editor) ends with cost 177.22879999998258ms.
+21:20:04 debug: Target(preview) build started.
+21:20:04 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/x/cc
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+21:20:04 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+21:20:04 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:08 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/x/prerequisite-imports
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:20:04 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+21:20:04 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Sat Oct 26 2024 01:30:16 GMT+0800 (中国标准时间), Current mtime: Mon Oct 28 2024 21:19:56 GMT+0800 (中国标准时间)
+21:20:04 debug: Inspect cce:/internal/code-quality/cr.mjs
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc/env from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+21:20:04 debug: Resolve ./builtin-pipeline-types from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:20:04 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc/env from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve ./builtin-pipeline-types from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:04 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:20:04 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts. Last mtime: Sat Oct 26 2024 00:28:53 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335, Current mtime: Mon Oct 28 2024 21:17:29 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335
+21:20:04 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:20:04 debug: Target(preview) ends with cost 134.98730000003707ms.
+21:20:05 debug: Pulling asset-db.
+21:20:05 debug: Fetch asset-db cost: 758.0726999999606ms.
+21:20:05 debug: Build iteration starts.
+Number of accumulated asset changes: 5
+Feature changed: false
+21:20:05 debug: Target(editor) build started.
+21:20:05 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:09 GMT+0800 (中国标准时间)
+21:20:05 debug: Inspect cce:/internal/x/prerequisite-imports
+21:20:05 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:20:05 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:20:06 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:20:06 debug: Target(editor) ends with cost 36.53049999999348ms.
+21:20:06 debug: Target(preview) build started.
+21:20:06 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:07 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:00:09 GMT+0800 (中国标准时间)
+21:20:06 debug: Inspect cce:/internal/x/prerequisite-imports
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:20:06 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:20:06 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:20:06 debug: Target(preview) ends with cost 36.663300000014715ms.
+21:29:13 debug: Dispatch build request for time accumulated 1 asset changes.
+21:29:13 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+21:29:13 debug: Target(editor) build started.
+21:29:13 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:09 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:09:16 GMT+0800 (中国标准时间)
+21:29:13 debug: Inspect cce:/internal/x/prerequisite-imports
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:29:13 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:29:13 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts. Last mtime: Mon Oct 28 2024 21:17:29 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335, Current mtime: Mon Oct 28 2024 21:29:11 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335
+21:29:13 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Target(editor) ends with cost 64.5905999999959ms.
+21:29:13 debug: Target(preview) build started.
+21:29:13 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:00:09 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 08:09:16 GMT+0800 (中国标准时间)
+21:29:13 debug: Inspect cce:/internal/x/prerequisite-imports
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:29:13 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:29:13 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+21:29:13 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts. Last mtime: Mon Oct 28 2024 21:17:29 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335, Current mtime: Mon Oct 28 2024 21:29:11 GMT+0800 (中国标准时间)@f9324ca4-327c-4c9f-a5eb-70b6b1a3a335
+21:29:13 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts as cce:/internal/x/cc.
+21:29:13 debug: Target(preview) ends with cost 73.75479999999516ms.
+23:25:52 debug: Dispatch build request for time accumulated 1 asset changes.
+23:25:52 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+23:25:52 debug: Target(editor) build started.
+23:25:52 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:09:16 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:05:55 GMT+0800 (中国标准时间)
+23:25:52 debug: Inspect cce:/internal/x/prerequisite-imports
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:25:52 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:25:52 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:25:52 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Target(editor) ends with cost 51.19799999985844ms.
+23:25:52 debug: Target(preview) build started.
+23:25:52 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 08:09:16 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:05:55 GMT+0800 (中国标准时间)
+23:25:52 debug: Inspect cce:/internal/x/prerequisite-imports
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:25:52 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:25:52 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:25:52 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:25:52 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:25:52 debug: Target(preview) ends with cost 53.80819999985397ms.
+23:42:01 debug: Dispatch build request for time accumulated 1 asset changes.
+23:42:01 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+23:42:01 debug: Target(editor) build started.
+23:42:01 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:05:55 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:22:04 GMT+0800 (中国标准时间)
+23:42:01 debug: Inspect cce:/internal/x/prerequisite-imports
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:42:01 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:42:01 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:42:01 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts. Last mtime: Mon Oct 28 2024 23:25:52 GMT+0800 (中国标准时间)@bbcfa071-812d-4027-b679-4d9037ab6381, Current mtime: Mon Oct 28 2024 23:29:11 GMT+0800 (中国标准时间)@bbcfa071-812d-4027-b679-4d9037ab6381
+23:42:01 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Target(editor) ends with cost 52.813900001347065ms.
+23:42:01 debug: Target(preview) build started.
+23:42:01 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:05:55 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:22:04 GMT+0800 (中国标准时间)
+23:42:01 debug: Inspect cce:/internal/x/prerequisite-imports
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:42:01 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:42:01 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:42:01 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:42:01 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts. Last mtime: Mon Oct 28 2024 23:25:52 GMT+0800 (中国标准时间)@bbcfa071-812d-4027-b679-4d9037ab6381, Current mtime: Mon Oct 28 2024 23:29:11 GMT+0800 (中国标准时间)@bbcfa071-812d-4027-b679-4d9037ab6381
+23:42:01 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts as cce:/internal/x/cc.
+23:42:01 debug: Target(preview) ends with cost 53.91160000115633ms.
+23:42:22 debug: Dispatch build request for time accumulated 1 asset changes.
+23:42:22 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+23:42:22 debug: Target(editor) build started.
+23:42:22 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:22:04 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:22:25 GMT+0800 (中国标准时间)
+23:42:22 debug: Inspect cce:/internal/x/prerequisite-imports
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+23:42:22 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:42:22 debug: Target(editor) ends with cost 55.82190000079572ms.
+23:42:22 debug: Target(preview) build started.
+23:42:22 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:22:04 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:22:25 GMT+0800 (中国标准时间)
+23:42:22 debug: Inspect cce:/internal/x/prerequisite-imports
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:42:22 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+23:42:22 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:42:22 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:42:22 debug: Target(preview) ends with cost 51.68859999999404ms.
+23:43:52 debug: Dispatch build request for time accumulated 1 asset changes.
+23:43:52 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+23:43:52 debug: Target(editor) build started.
+23:43:52 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:22:25 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:23:56 GMT+0800 (中国标准时间)
+23:43:52 debug: Inspect cce:/internal/x/prerequisite-imports
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+23:43:53 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts. Last mtime: Mon Oct 28 2024 23:42:22 GMT+0800 (中国标准时间)@b6857566-5946-46e1-bc22-1bb7452d7a39, Current mtime: Mon Oct 28 2024 23:43:05 GMT+0800 (中国标准时间)@b6857566-5946-46e1-bc22-1bb7452d7a39
+23:43:53 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:43:53 debug: Target(editor) ends with cost 60.57310000061989ms.
+23:43:53 debug: Target(preview) build started.
+23:43:53 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:22:25 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:23:56 GMT+0800 (中国标准时间)
+23:43:53 debug: Inspect cce:/internal/x/prerequisite-imports
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+23:43:53 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+23:43:53 debug: Detected change: file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts. Last mtime: Mon Oct 28 2024 23:42:22 GMT+0800 (中国标准时间)@b6857566-5946-46e1-bc22-1bb7452d7a39, Current mtime: Mon Oct 28 2024 23:43:05 GMT+0800 (中国标准时间)@b6857566-5946-46e1-bc22-1bb7452d7a39
+23:43:53 debug: Inspect file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve cc from file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts as cce:/internal/x/cc.
+23:43:53 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+23:43:53 debug: Target(preview) ends with cost 71.80090000107884ms.
+00:15:56 debug: Dispatch build request for time accumulated 1 asset changes.
+00:15:56 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+00:15:56 debug: Target(editor) build started.
+00:15:56 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:23:56 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间)
+00:15:57 debug: Inspect cce:/internal/x/prerequisite-imports
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+00:15:57 debug: Target(editor) ends with cost 40.11299999989569ms.
+00:15:57 debug: Target(preview) build started.
+00:15:57 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:23:56 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间)
+00:15:57 debug: Inspect cce:/internal/x/prerequisite-imports
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+00:15:57 debug: Target(preview) ends with cost 55.23130000010133ms.
+00:15:57 debug: Dispatch build request for time accumulated 1 asset changes.
+00:15:57 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+00:15:57 debug: Target(editor) build started.
+00:15:57 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间)
+00:15:57 debug: Inspect cce:/internal/x/prerequisite-imports
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+00:15:57 debug: Target(editor) ends with cost 32.58490000106394ms.
+00:15:57 debug: Target(preview) build started.
+00:15:57 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间)
+00:15:57 debug: Inspect cce:/internal/x/prerequisite-imports
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:15:57 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:15:57 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Socket/Sever.ts.
+00:15:57 debug: Target(preview) ends with cost 61.838199999183416ms.
+00:16:08 debug: Dispatch build request for time accumulated 1 asset changes.
+00:16:08 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+00:16:08 debug: Target(editor) build started.
+00:16:08 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:11 GMT+0800 (中国标准时间)
+00:16:08 debug: Inspect cce:/internal/x/prerequisite-imports
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:16:08 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:16:08 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:16:08 debug: Target(editor) ends with cost 36.26740000024438ms.
+00:16:08 debug: Target(preview) build started.
+00:16:08 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:00 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:11 GMT+0800 (中国标准时间)
+00:16:08 debug: Inspect cce:/internal/x/prerequisite-imports
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:16:08 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:16:08 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:16:08 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/Player/PlayerController.ts.
+00:16:08 debug: Target(preview) ends with cost 34.763799998909235ms.
+00:16:12 debug: Dispatch build request for time accumulated 1 asset changes.
+00:16:12 debug: Build iteration starts.
+Number of accumulated asset changes: 1
+Feature changed: false
+00:16:12 debug: Target(editor) build started.
+00:16:12 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:11 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:15 GMT+0800 (中国标准时间)
+00:16:12 debug: Inspect cce:/internal/x/prerequisite-imports
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:16:12 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:16:12 debug: Target(editor) ends with cost 35.80920000001788ms.
+00:16:12 debug: Target(preview) build started.
+00:16:12 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 10:56:11 GMT+0800 (中国标准时间), Current mtime: Thu Jan 01 1970 10:56:15 GMT+0800 (中国标准时间)
+00:16:12 debug: Inspect cce:/internal/x/prerequisite-imports
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+00:16:12 debug: Resolve file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+00:16:12 debug: Resolve file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts from cce:/internal/x/prerequisite-imports as file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts.
+00:16:12 debug: Target(preview) ends with cost 39.87089999951422ms.

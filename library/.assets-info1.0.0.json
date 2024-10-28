@@ -2,33 +2,96 @@
   "version": "1.0.0",
   "map": {
     "E:\\CocosProjects\\Color\\assets\\Scence": {
-      "time": 1729873733940.4417,
+      "time": 1730121449574.5012,
       "uuid": "83738ec2-d92b-497e-8d32-fa55a8cd9cca"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts": {
-      "time": 1729873733941.786,
+      "time": 1730132172610.0432,
       "uuid": "1818acf5-9fdb-44b9-9fc0-532684b1f61f"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts": {
-      "time": 1729873733941.786,
+      "time": 1730122151599.61,
       "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
     },
     "E:\\CocosProjects\\Color\\assets\\Scence.meta": {
-      "time": 1729873733937.9912
+      "time": 1730121449573.4824
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts.meta": {
-      "time": 1729873733941.0474
+      "time": 1730121449575.4773
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts.meta": {
-      "time": 1729873733941.786
+      "time": 1730121449576.4795
     },
     "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene": {
-      "time": 1729873733939.9258,
+      "time": 1730132176688.6406,
       "uuid": "976dd202-9303-4f1f-aa02-f386ec411f95"
     },
     "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene.meta": {
-      "time": 1729873733940.4417
+      "time": 1730121449574.5012
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei.meta": {
+      "time": 1730132156972.171
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe.meta": {
+      "time": 1730132156972.171
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE.meta": {
+      "time": 1730132156973.1687
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts.meta": {
+      "time": 1730132156971.1743
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\endpoint-cert.cer.meta": {
+      "time": 1730132157589.1064
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js.meta": {
+      "time": 1730132157588.1099
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts": {
+      "time": 1730132154217.87,
+      "uuid": "ef766d03-e1f6-469e-a201-3ce973e33ed3"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei": {
+      "time": 1730132156967.1926,
+      "uuid": "88feb81c-93d3-4092-aba3-73b401b04fb6"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe": {
+      "time": 1730132156967.1926,
+      "uuid": "147ee122-a7f8-4794-91b2-ba8b067170fa"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE": {
+      "time": 1730132156968.1846,
+      "uuid": "8b9da2d2-372c-4478-ac35-d795dd07305c"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js": {
+      "time": 1730132154219.8635,
+      "uuid": "fbacd566-8641-445d-88e7-2c76f5ed418d"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\endpoint-cert.cer": {
+      "time": 1730132154220.86,
+      "uuid": "d48afb54-b651-4934-b6c9-5a0c5dadb6dc"
     }
   },
-  "missing": {}
+  "missing": {
+    "a57057f5-25f5-4210-b95e-5cdff5afd5cd": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Socket",
+      "time": 1730129152260.2224,
+      "removeTime": 1730132168144
+    },
+    "bbcfa071-812d-4027-b679-4d9037ab6381": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Socket\\Sever.ts",
+      "time": 1730129351403.8047,
+      "removeTime": 1730132168144
+    },
+    "3c0a23fa-b179-4b5d-af6f-f76109a5f78b": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Player",
+      "time": 1730130142188.4026,
+      "removeTime": 1730132172616
+    },
+    "b6857566-5946-46e1-bc22-1bb7452d7a39": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Player\\PlayerController.ts",
+      "time": 1730130185403.7458,
+      "removeTime": 1730132172617
+    }
+  }
 }

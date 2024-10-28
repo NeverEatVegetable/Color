@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/servers/src/shared/gameClient/protocols/PtlStartFrameSync.ts"],"names":[],"mappings":";;;;;;;;;;;;;AACA;AACA;AACA;AACA","sourcesContent":["\n/**\n * 房间内开始帧同步\n * \n * */\nexport interface ReqStartFrameSync {\n\n}\n\nexport interface ResStartFrameSync {\n\n}"]}

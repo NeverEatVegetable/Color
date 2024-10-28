@@ -1,14 +1,18 @@
 {
   "__version__": "3.0.7",
   "game": {
-    "name": "未知游戏",
-    "app_id": "UNKNOW",
-    "c_id": "0"
+    "app_id": "601321075",
+    "c_id": "0",
+    "name": "Color"
   },
   "appConfigMaps": [
     {
       "app_id": "UNKNOW",
       "config_id": "ccce63"
+    },
+    {
+      "app_id": "601321075",
+      "config_id": "30959f"
     }
   ],
   "configs": [
@@ -17,7 +21,26 @@
       "config_id": "ccce63",
       "config_name": "Default",
       "config_remarks": "",
-      "services": []
+      "services": [
+        {
+          "service_id": "357",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    },
+    {
+      "app_id": "601321075",
+      "config_id": "30959f",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "357",
+          "enable": true,
+          "param": {}
+        }
+      ]
     }
   ]
 }
