@@ -8,7 +8,7 @@ export class GameStarter extends Component {
     }
 
     update(deltaTime: number) {
-        
+
     }
     protected onDestroy(): void {
         console.log("Game destroyed");
