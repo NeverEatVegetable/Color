@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 25130.39509987831,
+      "mTimestamp": 6477.664499999955,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -703,11 +703,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 27583948.36229992,
+      "mTimestamp": 12069931.4855,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts",
+          "value": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -716,133 +716,147 @@
             },
             "end": {
               "line": 5,
-              "column": 108
+              "column": 179
             }
           }
         },
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/SDK/ClientManager.ts",
+          "value": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 5,
-              "column": 124
+              "column": 195
             },
             "end": {
               "line": 5,
-              "column": 194
+              "column": 336
             }
           }
         },
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/Util/Global.ts",
+          "value": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 5,
-              "column": 210
+              "column": 352
             },
             "end": {
               "line": 5,
-              "column": 274
+              "column": 487
             }
           }
         },
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/GameStarter.ts",
+          "value": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
-              "column": 290
+              "column": 503
             },
             "end": {
               "line": 5,
-              "column": 344
+              "column": 631
             }
           }
         },
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/HelloWorld.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 360
+              "column": 647
             },
             "end": {
               "line": 5,
-              "column": 413
+              "column": 733
             }
           }
         },
         {
-          "value": "file:///C:/Cocos/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
               "line": 5,
-              "column": 429
+              "column": 749
             },
             "end": {
               "line": 5,
-              "column": 518
+              "column": 830
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/SDK/ClientManager.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
               "line": 5,
-              "column": 534
+              "column": 846
             },
             "end": {
               "line": 5,
-              "column": 682
+              "column": 924
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Util/Global.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
               "line": 5,
-              "column": 698
+              "column": 940
             },
             "end": {
               "line": 5,
-              "column": 843
+              "column": 1012
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts",
           "resolved": "__unresolved_8",
           "loc": {
             "start": {
               "line": 5,
-              "column": 859
+              "column": 1028
             },
             "end": {
               "line": 5,
-              "column": 998
+              "column": 1090
             }
           }
         },
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts",
           "resolved": "__unresolved_9",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1014
+              "column": 1106
             },
             "end": {
               "line": 5,
-              "column": 1146
+              "column": 1167
+            }
+          }
+        },
+        {
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1183
+            },
+            "end": {
+              "line": 5,
+              "column": 1280
             }
           }
         }
@@ -852,70 +866,77 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts"
+            "url": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/SDK/ClientManager.ts"
+            "url": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/FrameWork/Util/Global.ts"
+            "url": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/GameStarter.ts"
+            "url": "file:///D:/Program%20Files/Cocos/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/HelloWorld.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Cocos/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/SDK/ClientManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Util/Global.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/3.8.4/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts"
           },
           "messages": []
         }
@@ -1026,7 +1047,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1730341801703,
+      "mTimestamp": 1730386022381,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -1242,7 +1263,7 @@
     },
     "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts": {
       "mTimestamp": {
-        "mtime": 1730122151599.61,
+        "mtime": 1730375462426.0269,
         "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
       },
       "chunkId": "8311598651c24f1f19afdcf8454dfb6710214371",
@@ -2180,6 +2201,198 @@
         "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
       },
       "chunkId": "d7bb81f942cf5a4d9d16506e8878604411ebfe81",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts": {
+      "mTimestamp": {
+        "mtime": 1730397814026.6096,
+        "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
+      },
+      "chunkId": "9c59bdc1e925fa1e54235b978eb0574a2cb746b0",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/SDK/ClientManager.ts": {
+      "mTimestamp": {
+        "mtime": 1730397903745.104,
+        "uuid": "09eb1fcb-6c98-4b14-8227-c83407806133"
+      },
+      "chunkId": "0fb428e4737608e4b113bb249722b9fdc584d0f2",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Util/Global.ts": {
+      "mTimestamp": {
+        "mtime": 1730375462426.0269,
+        "uuid": "ebcfb01a-1a80-4625-8269-a52fdf9dda64"
+      },
+      "chunkId": "27a26e8d972a3accaf958a56243407f4a5fdc4f0",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts": {
+      "mTimestamp": {
+        "mtime": 1730397811539.0957,
+        "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
+      },
+      "chunkId": "03eec08b0365929889845edf1a8cc514c61736c7",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts": {
+      "mTimestamp": {
+        "mtime": 1730375462428.0698,
+        "uuid": "3ccac5d5-1497-457b-919f-2a66272272cf"
+      },
+      "chunkId": "2773e2bc0bdc889c7d5790b8941f0fa6e7cc9050",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts": {
+      "mTimestamp": {
+        "mtime": 1730388697640.1443,
+        "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
+      },
+      "chunkId": "1a742f93df6c2a47ff4f607ca051c3d056f98c75",
       "imports": [
         {
           "value": "cc"

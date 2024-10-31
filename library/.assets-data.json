@@ -95,7 +95,7 @@
     "versionCode": 1
   },
   "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b": {
-    "url": "db://assets/Scripts/FrameWork/SDK/ClientManager.ts",
+    "url": "db://assets/Scripts/FrameWork/Multiplayer/ClientManager.ts",
     "value": {},
     "versionCode": 1
   },
@@ -105,7 +105,7 @@
     "versionCode": 1
   },
   "c67d9ed8-e8d4-449b-a6ea-b73f283d5350": {
-    "url": "db://assets/SDK/agconnect-services.json",
+    "url": "db://assets/SDK/GOBE/agconnect-services.json",
     "value": {
       "depends": []
     },
@@ -142,7 +142,7 @@
     "versionCode": 1
   },
   "c449c86a-88db-403a-982d-e62bae4bf028": {
-    "url": "db://assets/Scripts/FrameWork/SDK",
+    "url": "db://assets/Scripts/FrameWork/Multiplayer",
     "value": {},
     "versionCode": 1
   },
@@ -234,6 +234,45 @@
   },
   "32d0f54a-5afe-45de-b7b9-992d0fc000d8": {
     "url": "db://assets/Scripts/FrameWork/Notify/NotifyManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "4019770b-e23d-4b30-ae9e-851799bd3afc": {
+    "url": "db://assets/SDK/GOBE",
+    "value": {},
+    "versionCode": 1
+  },
+  "1c03bb50-1aba-46b6-8047-5e4807106f8e": {
+    "url": "db://assets/Scripts/FrameWork/SDK",
+    "value": {},
+    "versionCode": 1
+  },
+  "49ef89f8-6bb8-4ef0-aec5-fe5187ff17b4": {
+    "url": "db://assets/Scripts/FrameWork/SDK/ClientManager.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "23fd2ee5-07a3-4281-965e-6a9baf17b951": {
+    "url": "db://assets/SDK/agconnect-services.json",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "a665cd6c-f521-46eb-9c6b-9182f70288b1": {
+    "url": "db://assets/SDK/agconnect-services.json",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "52302089-2dbc-4f40-9149-ee212b9ed4a9": {
+    "url": "db://assets/Scripts/FrameWork/SDK",
+    "value": {},
+    "versionCode": 1
+  },
+  "09eb1fcb-6c98-4b14-8227-c83407806133": {
+    "url": "db://assets/Scripts/FrameWork/SDK/ClientManager.ts",
     "value": {},
     "versionCode": 1
   }
