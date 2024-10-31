@@ -23,5 +23,20 @@
       "0_0",
       "0_0_1"
     ]
+  },
+  "609575c3-f030-4941-bc1f-3c51a786a822": {
+    "assetUuid": "609575c3-f030-4941-bc1f-3c51a786a822",
+    "animationUuid": "",
+    "expandLevels": [
+      "0"
+    ]
+  },
+  "5ad1b834-a3c3-4acc-9ad7-cd07ef15bb45": {
+    "assetUuid": "5ad1b834-a3c3-4acc-9ad7-cd07ef15bb45",
+    "animationUuid": "",
+    "expandLevels": [
+      "0",
+      "0_0"
+    ]
   }
 }

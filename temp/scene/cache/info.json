@@ -1,11 +1,11 @@
 {
     "systemInfo": {
         "arch": "x64",
-        "cpu": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
-        "version": "Windows 10 Home China"
+        "cpu": "12th Gen Intel(R) Core(TM) i5-12490F",
+        "version": "Windows 10 Pro"
     },
     "sceneListMap": {
-        "976dd202-9303-4f1f-aa02-f386ec411f95": "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene"
+        "5ad1b834-a3c3-4acc-9ad7-cd07ef15bb45": "C:\\Cocos\\Color\\assets\\Scence\\network.scene"
     },
-    "deviceMd5": "40e8dc87f119077297f52498876cd797"
+    "deviceMd5": "85bf8986e7eeb2a3eff3d1a4a8d0eeff"
 }
