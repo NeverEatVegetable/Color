@@ -1,101 +1,77 @@
-// // 事件管理器，有新需求再改吧
-// type Callback = (...args: any[]) => void;
+/**
+ * 回调数据类型，支持 任意 类型，建议是function
+ */
+type Callback = (...args: any[]) => void;
 
-// class Eventhandler {
-//     id: string;
-//     callback: Callback;
-//     type?: string;
+/**
+ * 事件处理器
+ * @param id 事件ID
+ * @param callback 回调函数
+ * @param type 事件类型，可选，暂无用处
+ */
+class Eventhandler {
+    id: string;
+    callback: Callback;
+    type?: string;  
 
-//     constructor(id: string, callback: Callback, type?: string) {
-//         this.id = id;
-//         this.callback = callback;
-//         this.type = type;
-//     }
-// }
-
-// class NotifyManager {
-//     private handlers: Map<string, Eventhandler[]>;
-
-//     constructor() {
-//         this.handlers = new Map();
-//     }
-
-//     // 添加事件监听
-//     addhandler(eventId: string, callback: Callback, type?: string): void {
-//         const handler = new Eventhandler(eventId, callback, type);
-//         if (!this.handlers.has(eventId)) {
-//             this.handlers.set(eventId, []);
-//         }
-//         this.handlers.get(eventId)!.push(handler);
-//     }
-
-//     // 移除事件监听
-//     removehandler(eventId: string): void {
-//         if (this.handlers.has(eventId)) {
-//             this.handlers.delete(eventId);
-//         }
-//     }
-
-//     // 派发事件
-//     dispatch(eventId: string, ...args: any[]): void {
-//         if (this.handlers.has(eventId)) {
-//             const eventhandlers = this.handlers.get(eventId)!;
-//             console.log(`NotifyManager: Dispatching notify ${eventId}`);
-//             eventhandlers.forEach(handler => {
-//                 handler.callback(...args);
-//             });
-//         }
-//     }
-
-//     public static instance = new NotifyManager();
-// }
-// (window as any).NotifyManager = NotifyManager;
-
-class EventManager {
-    private events: { [key: string]: { listener: Function; holder: any }[] } = {};
-
-    // 注册事件
-    public on(event: string, listener: Function, holder: any): void {
-        if (!this.events[event]) {
-            this.events[event] = [];
-        }
-        const existingListener = this.events[event].some(
-            l => l.listener === listener && l.holder === holder
-        );
-        if (!existingListener) {
-            this.events[event].push({ listener, holder });
-        }
+    constructor(id: string, callback: Callback, type?: string) {
+        this.id = id;
+        this.callback = callback;
+        this.type = type;
     }
-
-    // 注销事件
-    public off(event: string, listener: Function, holder: any): void {
-        if (!this.events[event]) return;
-
-        this.events[event] = this.events[event].filter(
-            l => l.listener !== listener || l.holder !== holder
-        );
-    }
-
-    // 触发事件
-    public emit(event: string, ...args: any[]): void {
-        if (!this.events[event]) return;
-
-        this.events[event].forEach(({ listener, holder }) => {
-            listener.apply(holder, args);
-        });
-    }
-
-    // 清除某个事件的所有监听器
-    public clear(event: string): void {
-        if (this.events[event]) {
-            delete this.events[event];
-        }
-    }
-
-    // 清除所有事件
-    public clearAll(): void {
-        this.events = {};
-    }
-
-    public static instance = new EventManager();
 }
+
+/**
+ * 事件管理器
+ * @param notifys 事件map<key:事件ID, value:事件处理器列表>
+ * @function addListener 添加事件监听, 参数：事件ID，回调函数，事件类型（可选）
+ * @function removeListener 移除事件监听, 参数：事件ID，回调函数（可选）
+ * @function dispatch 派发事件, 参数：事件ID，回调参数（可选）
+ */
+class NotifyManager {
+    private notifys: Map<string, Eventhandler[]>;
+
+    constructor() {
+        this.notifys = new Map();
+    }
+
+    // 添加事件监听
+    addListener(notifyId: string, callback: Callback, type?: string): void {
+        const handler = new Eventhandler(notifyId, callback, type);
+        if (!this.notifys.has(notifyId)) {
+            this.notifys.set(notifyId, []);
+        }
+        this.notifys.get(notifyId)!.push(handler);
+    }
+
+    // 移除事件监听
+    removeListener(notifyId: string, callback?: Callback): void {
+        if (!this.notifys.has(notifyId)) {
+            return; // 如果没有这个事件ID，直接返回
+        }
+
+        const eventnotifys = this.notifys.get(notifyId)!;
+
+        if (callback) {
+            // 如果提供了回调函数，删除指定的回调
+            this.notifys.set(notifyId, eventnotifys.filter(handler => handler.callback !== callback));
+        } else {
+            // 如果没有提供回调，删除整个事件ID的所有回调
+            this.notifys.delete(notifyId);
+        }
+    }
+
+    // 派发事件
+    dispatch(notifyId: string, ...args: any[]): void {
+        if (this.notifys.has(notifyId)) {
+            const eventnotifys = this.notifys.get(notifyId)!;
+            console.log(`NotifyManager: Dispatching notify ${notifyId}`);
+            eventnotifys.forEach(handler => {
+                handler.callback(...args);
+            });
+        }
+    }
+
+    public static instance = new NotifyManager();
+}
+(window as any).NotifyManager = NotifyManager;
