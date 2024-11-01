@@ -5,16 +5,16 @@ type Callback = (...args: any[]) => void;
 
 /**
  * 事件处理器
- * @param id 事件ID
+ * @param id 事件ID,仅支持数字和字符串,建议：全局事件添加到GlobalNotify中，局部事件用字符串
  * @param callback 回调函数
  * @param type 事件类型，可选，暂无用处
  */
 class Eventhandler {
-    id: string;
+    id: number|string;
     callback: Callback;
     type?: string;  
 
-    constructor(id: string, callback: Callback, type?: string) {
+    constructor(id: number|string, callback: Callback, type?: string) {
         this.id = id;
         this.callback = callback;
         this.type = type;
@@ -29,14 +29,15 @@ class Eventhandler {
  * @function dispatch 派发事件, 参数：事件ID，回调参数（可选）
  */
 class NotifyManager {
-    private notifys: Map<string, Eventhandler[]>;
+    private notifys: Map<number|string, Eventhandler[]>;
 
-    constructor() {
+
+    private constructor() {
         this.notifys = new Map();
     }
 
     // 添加事件监听
-    addListener(notifyId: string, callback: Callback, type?: string): void {
+    addListener(notifyId: number|string, callback: Callback, type?: string): void {
         const handler = new Eventhandler(notifyId, callback, type);
         if (!this.notifys.has(notifyId)) {
             this.notifys.set(notifyId, []);
@@ -45,7 +46,7 @@ class NotifyManager {
     }
 
     // 移除事件监听
-    removeListener(notifyId: string, callback?: Callback): void {
+    removeListener(notifyId: number|string, callback?: Callback): void {
         if (!this.notifys.has(notifyId)) {
             return; // 如果没有这个事件ID，直接返回
         }
@@ -62,7 +63,7 @@ class NotifyManager {
     }
 
     // 派发事件
-    dispatch(notifyId: string, ...args: any[]): void {
+    dispatch(notifyId: number|string, ...args: any[]): void {
         if (this.notifys.has(notifyId)) {
             const eventnotifys = this.notifys.get(notifyId)!;
             console.log(`NotifyManager: Dispatching notify ${notifyId}`);

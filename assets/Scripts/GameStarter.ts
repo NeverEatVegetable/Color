@@ -5,6 +5,8 @@ const { ccclass, property } = _decorator;
 export class GameStarter extends Component {
     start() {
         console.log("Game started");
+        ClientManager.instance.createClient()
+        ClientManager.instance.initClient()
     }
 
     update(deltaTime: number) {
