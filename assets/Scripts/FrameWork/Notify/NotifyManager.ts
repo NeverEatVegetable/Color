@@ -12,7 +12,7 @@ type Callback = (...args: any[]) => void;
 class Eventhandler {
     id: number|string;
     callback: Callback;
-    type?: string;  
+    type?: string;
 
     constructor(id: number|string, callback: Callback, type?: string) {
         this.id = id;
@@ -51,11 +51,11 @@ class NotifyManager {
             return; // 如果没有这个事件ID，直接返回
         }
 
-        const eventnotifys = this.notifys.get(notifyId)!;
+        const notify = this.notifys.get(notifyId)!;
 
         if (callback) {
             // 如果提供了回调函数，删除指定的回调
-            this.notifys.set(notifyId, eventnotifys.filter(handler => handler.callback !== callback));
+            this.notifys.set(notifyId, notify.filter(handler => handler.callback !== callback));
         } else {
             // 如果没有提供回调，删除整个事件ID的所有回调
             this.notifys.delete(notifyId);
@@ -65,9 +65,9 @@ class NotifyManager {
     // 派发事件
     dispatch(notifyId: number|string, ...args: any[]): void {
         if (this.notifys.has(notifyId)) {
-            const eventnotifys = this.notifys.get(notifyId)!;
+            const notify = this.notifys.get(notifyId)!;
             console.log(`NotifyManager: Dispatching notify ${notifyId}`);
-            eventnotifys.forEach(handler => {
+            notify.forEach(handler => {
                 handler.callback(...args);
             });
         }

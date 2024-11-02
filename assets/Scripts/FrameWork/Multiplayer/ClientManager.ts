@@ -11,7 +11,7 @@
  */
 class ClientManager{
     private _appId: string = '5765880207855782829'
-    private _clientId: string = '9FCB7CDA93F39E30DB444504E68E2C9582BFA87562E165ED99AE34040AB07A92'
+    private _clientId: string = '1542321410377030848'
     private _clientSecret: string = '9FCB7CDA93F39E30DB444504E68E2C9582BFA87562E165ED99AE34040AB07A92'
     private _accessToken: string;
     private _platform: string;
