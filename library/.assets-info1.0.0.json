@@ -1,0 +1,550 @@
+{
+  "version": "1.0.0",
+  "map": {
+    "E:\\CocosProjects\\Color\\assets\\Scence": {
+      "time": 1730375462423.0874,
+      "uuid": "83738ec2-d92b-497e-8d32-fa55a8cd9cca"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts": {
+      "time": 1730477746896.8276,
+      "uuid": "1818acf5-9fdb-44b9-9fc0-532684b1f61f"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts": {
+      "time": 1730375462426.0269,
+      "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence.meta": {
+      "time": 1730375462422.048
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts.meta": {
+      "time": 1730375462423.0874
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts.meta": {
+      "time": 1730375462427.1296
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene": {
+      "time": 1730375462423.0874,
+      "uuid": "976dd202-9303-4f1f-aa02-f386ec411f95"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\001.scene.meta": {
+      "time": 1730375462423.0874
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei.meta": {
+      "time": 1730375462428.0698
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe.meta": {
+      "time": 1730375462429.018
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE.meta": {
+      "time": 1730375462429.018
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts.meta": {
+      "time": 1730375462430.1655
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\endpoint-cert.cer.meta": {
+      "time": 1730132157589.1064
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js.meta": {
+      "time": 1730375462432.2366
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts": {
+      "time": 1730375462430.1655,
+      "uuid": "ef766d03-e1f6-469e-a201-3ce973e33ed3"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei": {
+      "time": 1730375462429.018,
+      "uuid": "88feb81c-93d3-4092-aba3-73b401b04fb6"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe": {
+      "time": 1730375462429.018,
+      "uuid": "147ee122-a7f8-4794-91b2-ba8b067170fa"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE": {
+      "time": 1730375462432.2366,
+      "uuid": "8b9da2d2-372c-4478-ac35-d795dd07305c"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js": {
+      "time": 1730375462431.1797,
+      "uuid": "fbacd566-8641-445d-88e7-2c76f5ed418d"
+    },
+    "E:\\CocosProjects\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\endpoint-cert.cer": {
+      "time": 1730132154220.86,
+      "uuid": "d48afb54-b651-4934-b6c9-5a0c5dadb6dc"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei": {
+      "time": 1730341744543.599,
+      "uuid": "88feb81c-93d3-4092-aba3-73b401b04fb6"
+    },
+    "C:\\Cocos\\Color\\assets\\Scence": {
+      "time": 1730364553698.7063,
+      "uuid": "83738ec2-d92b-497e-8d32-fa55a8cd9cca"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts": {
+      "time": 1730365241520.8328,
+      "uuid": "1818acf5-9fdb-44b9-9fc0-532684b1f61f"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe": {
+      "time": 1730341744544.599,
+      "uuid": "147ee122-a7f8-4794-91b2-ba8b067170fa"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE": {
+      "time": 1730345442601.854,
+      "uuid": "8b9da2d2-372c-4478-ac35-d795dd07305c"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\HelloWorld.ts": {
+      "time": 1730341744542.5994,
+      "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts": {
+      "time": 1730341744544.599,
+      "uuid": "ef766d03-e1f6-469e-a201-3ce973e33ed3"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei.meta": {
+      "time": 1730341744542.5994
+    },
+    "C:\\Cocos\\Color\\assets\\Scence.meta": {
+      "time": 1730341744540.599
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts.meta": {
+      "time": 1730341744541.599
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe.meta": {
+      "time": 1730341744543.599
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE.meta": {
+      "time": 1730341744543.599
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.d.ts.meta": {
+      "time": 1730341744545.5994
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\HelloWorld.ts.meta": {
+      "time": 1730341744542.5994
+    },
+    "C:\\Cocos\\Color\\assets\\Scence\\001.scene": {
+      "time": 1730341744540.599,
+      "uuid": "976dd202-9303-4f1f-aa02-f386ec411f95"
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js": {
+      "time": 1730341744546.599,
+      "uuid": "fbacd566-8641-445d-88e7-2c76f5ed418d"
+    },
+    "C:\\Cocos\\Color\\assets\\Scence\\001.scene.meta": {
+      "time": 1730341744541.599
+    },
+    "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\GOBE.js.meta": {
+      "time": 1730341744546.599
+    },
+    "C:\\Cocos\\Color\\assets\\Resources.meta": {
+      "time": 1730345436756.1558
+    },
+    "C:\\Cocos\\Color\\assets\\Resources": {
+      "time": 1730345442601.854,
+      "uuid": "255dd19a-f171-4deb-b48c-820857ac1709"
+    },
+    "C:\\Cocos\\Color\\assets\\Resources\\endpoint-cert.cer.meta": {
+      "time": 1730341744547.599
+    },
+    "C:\\Cocos\\Color\\assets\\Resources\\endpoint-cert.cer": {
+      "time": 1730341744547.599,
+      "uuid": "d48afb54-b651-4934-b6c9-5a0c5dadb6dc"
+    },
+    "C:\\Cocos\\Color\\assets\\SDK.meta": {
+      "time": 1730355152551.373
+    },
+    "C:\\Cocos\\Color\\assets\\SDK": {
+      "time": 1730355162198.2734,
+      "uuid": "0dc26fa6-dc40-4b60-b2a7-d70cdeb2f8b3"
+    },
+    "C:\\Cocos\\Color\\assets\\SDK\\agconnect-services.json.meta": {
+      "time": 1730355162211.2764
+    },
+    "C:\\Cocos\\Color\\assets\\SDK\\agconnect-services.json": {
+      "time": 1730355110680.5552,
+      "uuid": "c67d9ed8-e8d4-449b-a6ea-b73f283d5350"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork.meta": {
+      "time": 1730358275298.5059
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork": {
+      "time": 1730366956827.2344,
+      "uuid": "202e3f30-cb86-48fc-9faf-dcc3e4e37bc1"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Util.meta": {
+      "time": 1730356444775.837
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Util": {
+      "time": 1730364323053.6487,
+      "uuid": "14403f56-d698-447d-bf1f-310beae001c1"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Util\\Global.ts.meta": {
+      "time": 1730364323061.6477
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Util\\Global.ts": {
+      "time": 1730364314323.3257,
+      "uuid": "ebcfb01a-1a80-4625-8269-a52fdf9dda64"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\SDK.meta": {
+      "time": 1730364347521.9219
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\SDK": {
+      "time": 1730364350353.187,
+      "uuid": "c449c86a-88db-403a-982d-e62bae4bf028"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts.meta": {
+      "time": 1730345685537.9446
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts": {
+      "time": 1730366373231.4653,
+      "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\GameStarter.ts.meta": {
+      "time": 1730364379221.5608
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\GameStarter.ts": {
+      "time": 1730366370121.0645,
+      "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
+    },
+    "C:\\Cocos\\Color\\assets\\Scence\\network.scene.meta": {
+      "time": 1730364553703.7058
+    },
+    "C:\\Cocos\\Color\\assets\\Scence\\network.scene": {
+      "time": 1730366360692.1433,
+      "uuid": "5ad1b834-a3c3-4acc-9ad7-cd07ef15bb45"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Componet.meta": {
+      "time": 1730364670447.528
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views.meta": {
+      "time": 1730365241521.8325
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views": {
+      "time": 1730365250527.3079,
+      "uuid": "e65b7e58-107e-4faf-ad52-1bb848424c03"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network.meta": {
+      "time": 1730365250529.308
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network": {
+      "time": 1730365305434.6226,
+      "uuid": "78114c72-e0c6-4ee6-9543-814bb59698d4"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network\\controller.meta": {
+      "time": 1730365268242.4983
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network\\controller": {
+      "time": 1730365336205.8398,
+      "uuid": "64c7be24-a42b-47e5-9fda-10a6d9984d5f"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network\\controller\\NetWorkViewController.ts.meta": {
+      "time": 1730365336206.8394
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network\\controller\\NetWorkViewController.ts": {
+      "time": 1730365336204.8396,
+      "uuid": "3ccac5d5-1497-457b-919f-2a66272272cf"
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest.meta": {
+      "time": 1730366340591.0935
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest": {
+      "time": 1730366348147.5488,
+      "uuid": "3128a5d0-0d9f-4066-b456-a5c70b3ba457"
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest\\Prefabs.meta": {
+      "time": 1730366348148.549
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest\\Prefabs": {
+      "time": 1730366352257.6785,
+      "uuid": "fe49a525-1605-4ac2-ae22-437ef40c0d0f"
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest\\Prefabs\\networkview.prefab.meta": {
+      "time": 1730366352260.679
+    },
+    "C:\\Cocos\\Color\\assets\\GameAssest\\Prefabs\\networkview.prefab": {
+      "time": 1730366352258.6794,
+      "uuid": "532a63b8-a41d-4442-ad78-3dd0c4fd85b8"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Notify.meta": {
+      "time": 1730366956828.234
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Notify": {
+      "time": 1730367014170.8835,
+      "uuid": "6cfd0222-83ce-4e97-8b5c-a45c9c30f455"
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager.ts.meta": {
+      "time": 1730367014172.8818
+    },
+    "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager.ts": {
+      "time": 1730369383567.5723,
+      "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest": {
+      "time": 1730375462419.05,
+      "uuid": "3128a5d0-0d9f-4066-b456-a5c70b3ba457"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Resources": {
+      "time": 1730375462421.09,
+      "uuid": "255dd19a-f171-4deb-b48c-820857ac1709"
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK": {
+      "time": 1730477746894.828,
+      "uuid": "0dc26fa6-dc40-4b60-b2a7-d70cdeb2f8b3"
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest\\Prefabs": {
+      "time": 1730375462420.0469,
+      "uuid": "fe49a525-1605-4ac2-ae22-437ef40c0d0f"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork": {
+      "time": 1730477746895.8276,
+      "uuid": "202e3f30-cb86-48fc-9faf-dcc3e4e37bc1"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views": {
+      "time": 1730375462427.1296,
+      "uuid": "e65b7e58-107e-4faf-ad52-1bb848424c03"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify": {
+      "time": 1730477746896.8276,
+      "uuid": "6cfd0222-83ce-4e97-8b5c-a45c9c30f455"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util": {
+      "time": 1730375462426.0269,
+      "uuid": "14403f56-d698-447d-bf1f-310beae001c1"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network": {
+      "time": 1730375462428.0698,
+      "uuid": "78114c72-e0c6-4ee6-9543-814bb59698d4"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network\\controller": {
+      "time": 1730375462428.0698,
+      "uuid": "64c7be24-a42b-47e5-9fda-10a6d9984d5f"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\GameStarter.ts": {
+      "time": 1730477746897.8276,
+      "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager.ts": {
+      "time": 1730488279572.9138,
+      "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util\\Global.ts": {
+      "time": 1730375462426.0269,
+      "uuid": "ebcfb01a-1a80-4625-8269-a52fdf9dda64"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network\\controller\\NetWorkViewController.ts": {
+      "time": 1730375462428.0698,
+      "uuid": "3ccac5d5-1497-457b-919f-2a66272272cf"
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest.meta": {
+      "time": 1730375462419.05
+    },
+    "E:\\CocosProjects\\Color\\assets\\Resources.meta": {
+      "time": 1730375462420.0469
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK.meta": {
+      "time": 1730375462422.048
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest\\Prefabs.meta": {
+      "time": 1730375462419.05
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork.meta": {
+      "time": 1730375462424.1023
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views.meta": {
+      "time": 1730375462427.1296
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify.meta": {
+      "time": 1730375462424.1023
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util.meta": {
+      "time": 1730375462426.0269
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network.meta": {
+      "time": 1730375462427.1296
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network\\controller.meta": {
+      "time": 1730375462427.1296
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\GameStarter.ts.meta": {
+      "time": 1730375462426.0269
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager.ts.meta": {
+      "time": 1730375462424.1023
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util\\Global.ts.meta": {
+      "time": 1730375462426.0269
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\Views\\network\\controller\\NetWorkViewController.ts.meta": {
+      "time": 1730375462428.0698
+    },
+    "E:\\CocosProjects\\Color\\assets\\Resources\\endpoint-cert.cer": {
+      "time": 1730375462421.09,
+      "uuid": "d48afb54-b651-4934-b6c9-5a0c5dadb6dc"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\network.scene": {
+      "time": 1730375462423.0874,
+      "uuid": "5ad1b834-a3c3-4acc-9ad7-cd07ef15bb45"
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest\\Prefabs\\networkview.prefab": {
+      "time": 1730375462419.05,
+      "uuid": "532a63b8-a41d-4442-ad78-3dd0c4fd85b8"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scence\\network.scene.meta": {
+      "time": 1730375462423.0874
+    },
+    "E:\\CocosProjects\\Color\\assets\\GameAssest\\Prefabs\\networkview.prefab.meta": {
+      "time": 1730375462420.0469
+    },
+    "E:\\CocosProjects\\Color\\assets\\Resources\\endpoint-cert.cer.meta": {
+      "time": 1730375462421.09
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer.meta": {
+      "time": 1730477746895.8276
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer": {
+      "time": 1730477746895.8276,
+      "uuid": "c449c86a-88db-403a-982d-e62bae4bf028"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer\\ClientManager.ts.meta": {
+      "time": 1730477746895.8276
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer\\ClientManager.ts": {
+      "time": 1730553111251.0938,
+      "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE.meta": {
+      "time": 1730477746893.8276
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE": {
+      "time": 1730477746894.828,
+      "uuid": "4019770b-e23d-4b30-ae9e-851799bd3afc"
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE\\agconnect-services.json.meta": {
+      "time": 1730477746894.828
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE\\agconnect-services.json": {
+      "time": 1730477746894.828,
+      "uuid": "c67d9ed8-e8d4-449b-a6ea-b73f283d5350"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK.meta": {
+      "time": 1730398092244.805
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts.meta": {
+      "time": 1730398092246.7988
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json.meta": {
+      "time": 1730477746894.828
+    },
+    "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json": {
+      "time": 1730397912439.9436,
+      "uuid": "a665cd6c-f521-46eb-9c6b-9182f70288b1"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\GlobalNotify.ts": {
+      "time": 1730477746896.8276,
+      "uuid": "65b1cab8-00d9-4c96-ae75-2d1b6954e936"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\GlobalNotify.ts.meta": {
+      "time": 1730477746896.8276
+    }
+  },
+  "missing": {
+    "a57057f5-25f5-4210-b95e-5cdff5afd5cd": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Socket",
+      "time": 1730129152260.2224,
+      "removeTime": 1730132168144
+    },
+    "bbcfa071-812d-4027-b679-4d9037ab6381": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Socket\\Sever.ts",
+      "time": 1730129351403.8047,
+      "removeTime": 1730132168144
+    },
+    "3c0a23fa-b179-4b5d-af6f-f76109a5f78b": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Player",
+      "time": 1730130142188.4026,
+      "removeTime": 1730132172616
+    },
+    "b6857566-5946-46e1-bc22-1bb7452d7a39": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\Player\\PlayerController.ts",
+      "time": 1730130185403.7458,
+      "removeTime": 1730132172617
+    },
+    "03ac404d-ff40-4714-b028-ecc3bf7be73d": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\GOBE",
+      "time": 1730358247734.9812,
+      "removeTime": 1730358251399
+    },
+    "d48afb54-b651-4934-b6c9-5a0c5dadb6dc": {
+      "path": "C:\\Cocos\\Color\\assets\\cs-huawei\\hwgobe\\GOBE\\endpoint-cert.cer",
+      "time": 1730341744547.599,
+      "removeTime": 1730345442602
+    },
+    "6fcc4c38-8e8b-49b8-9483-bf848960f9f0": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\GOBE\\Client.ts",
+      "time": 1730345546843.0703,
+      "removeTime": 1730345626150
+    },
+    "29ce71e0-728f-455b-a7cb-d577be228db7": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\Util\\SingletonComponet.ts",
+      "time": 1730356552982.6482,
+      "removeTime": 1730356595926
+    },
+    "6a197f97-8fba-4da0-8b42-01b0da522a18": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\Util\\Singleton.ts",
+      "time": 1730357274410.699,
+      "removeTime": 1730357529143
+    },
+    "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts",
+      "time": 1730375462425.0806,
+      "removeTime": 1730375846085
+    },
+    "14403f56-d698-447d-bf1f-310beae001c1": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\Util",
+      "time": 1730357529133.118,
+      "removeTime": 1730358278036
+    },
+    "4455cc77-1421-4205-8cc4-994caa6dc48a": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Global.ts",
+      "time": 1730358293876.1157,
+      "removeTime": 1730364323052
+    },
+    "c1bf550d-8c29-41b3-b61e-6cf68d4c22fc": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Componet\\AutoScaleView.ts",
+      "time": 1730364777583.5254,
+      "removeTime": 1730364784957
+    },
+    "4a422296-7436-48dc-b13b-3e66104b396d": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\Views\\network\\view",
+      "time": 1730365260249.2695,
+      "removeTime": 1730365305451
+    },
+    "4cc235db-2d4d-471b-8e6e-4a792ff75b62": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager",
+      "time": 1730366997462.0996,
+      "removeTime": 1730367004095
+    },
+    "5f492df5-ff5f-46f8-9d48-4f58374856cf": {
+      "path": "C:\\Cocos\\Color\\assets\\Scripts\\FrameWork\\Componet",
+      "time": 1730364784948.4895,
+      "removeTime": 1730375621835
+    },
+    "c449c86a-88db-403a-982d-e62bae4bf028": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK",
+      "time": 1730375462425.0806,
+      "removeTime": 1730375846084
+    },
+    "c67d9ed8-e8d4-449b-a6ea-b73f283d5350": {
+      "path": "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json",
+      "time": 1730375462422.048,
+      "removeTime": 1730375873504
+    },
+    "52302089-2dbc-4f40-9149-ee212b9ed4a9": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK",
+      "time": 1730398090597.1797,
+      "removeTime": 1730487755118
+    },
+    "09eb1fcb-6c98-4b14-8227-c83407806133": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts",
+      "time": 1730397903745.104,
+      "removeTime": 1730487755118
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/tsgf-sdk/src/gameClient/protocols/MsgDisconnect.ts"],"names":[],"mappings":";;;;;;;;;;;;;AACA","sourcesContent":["\n/**主动告知断开*/\nexport interface MsgDisconnect {\n}"]}

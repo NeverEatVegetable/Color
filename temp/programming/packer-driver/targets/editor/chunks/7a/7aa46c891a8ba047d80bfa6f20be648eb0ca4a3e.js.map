@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/servers/src/shared/tsgfServer/match/IMatchServerInfo.ts"],"names":[],"mappings":";;;;;;;;;;;;;AAGA","sourcesContent":["\n\n\n/**匹配服务器信息*/\nexport interface IMatchServerInfo {\n    /**服务器ID*/\n    serverId: string;\n    /**负责匹配的应用数量*/\n    matchAppCount: number;\n}"]}

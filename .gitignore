@@ -4,10 +4,11 @@
 #///////////////////////////
 library/
 temp/
-local/
+local/*
+!local/local.json
 build/
 profiles/
-native
+# native
 #//////////////////////////
 # NPM
 #//////////////////////////

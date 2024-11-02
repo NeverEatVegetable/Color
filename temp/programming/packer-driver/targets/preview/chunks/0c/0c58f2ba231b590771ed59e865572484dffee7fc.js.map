@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/servers/src/shared/gameClient/protocols/PtlCancelMatch.ts"],"names":[],"mappings":";;;;;;;;;;;;;AACA;AACA;AACA;AACA","sourcesContent":["\n/**\n * 取消匹配请求\n * 可能发生并发,导致虽然请求成功了,但还是收到了成功结果的通知\n*/\nexport interface ReqCancelMatch {\n}\n\nexport interface ResCancelMatch {\n    \n}"]}
