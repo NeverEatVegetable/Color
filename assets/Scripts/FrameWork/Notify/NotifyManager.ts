@@ -76,3 +76,21 @@ class NotifyManager {
     public static instance = new NotifyManager();
 }
 (window as any).NotifyManager = NotifyManager;
+
+/*
+使用示例：
+    -- 注册事件监听
+    NotifyManager.instance.addListener(notifyId,()=>console.log("这里放事件的回调函数,可以匿名函数，也可调用类中的方法：this.方法名"))
+
+    -- 派发事件
+    NotifyManager.instance.dispatch(notifyId)   // 派发事件，不传数据
+    NotifyManager.instance.dispatch(notifyId, data1, data2,...)  // 派发事件，传递数据
+    具体带数据派发事件的示例：
+    NotifyManager.instance.addListener("带数据事件", (a, b) => { console.log(a, b) })//回调函数参数必须指定，数据与事件派发的数据参数顺序一致
+    NotifyManager.instance.dispatch("带数据事件",1,2)   //触发事件，控制台打印：1 2
+    NotifyManager.instance.removeListener("GameStart")
+
+    -- 移除事件监听
+    NotifyManager.instance.removeListener(notifyId) // 移除指定事件ID
+    NotifyManager.instance.removeListener(notifyId,functionName)  // 移除指定事件ID的指定监听回调,无法移除匿名函数
+ */

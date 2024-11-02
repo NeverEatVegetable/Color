@@ -640,7 +640,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 30832235.450700007,
+      "mTimestamp": 37919880.1008,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2093,7 +2093,7 @@
     },
     "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts": {
       "mTimestamp": {
-        "mtime": 1730488279572.9138,
+        "mtime": 1730560218249.7178,
         "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
       },
       "chunkId": "9c59bdc1e925fa1e54235b978eb0574a2cb746b0",
@@ -2159,7 +2159,7 @@
     },
     "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts": {
       "mTimestamp": {
-        "mtime": 1730477746897.8276,
+        "mtime": 1730559727357.9556,
         "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
       },
       "chunkId": "03eec08b0365929889845edf1a8cc514c61736c7",
@@ -2263,7 +2263,7 @@
     },
     "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts": {
       "mTimestamp": {
-        "mtime": 1730553111251.0938,
+        "mtime": 1730560224864.421,
         "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
       },
       "chunkId": "1a742f93df6c2a47ff4f607ca051c3d056f98c75",
