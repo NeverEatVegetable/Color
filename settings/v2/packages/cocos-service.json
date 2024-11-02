@@ -9,10 +9,6 @@
     {
       "app_id": "UNKNOW",
       "config_id": "ccce63"
-    },
-    {
-      "app_id": "601321075",
-      "config_id": "30959f"
     }
   ],
   "configs": [
@@ -21,26 +17,7 @@
       "config_id": "ccce63",
       "config_name": "Default",
       "config_remarks": "",
-      "services": [
-        {
-          "service_id": "357",
-          "enable": false,
-          "param": {}
-        }
-      ]
-    },
-    {
-      "app_id": "601321075",
-      "config_id": "30959f",
-      "config_name": "Default",
-      "config_remarks": "",
-      "services": [
-        {
-          "service_id": "357",
-          "enable": true,
-          "param": {}
-        }
-      ]
+      "services": []
     }
   ]
 }
