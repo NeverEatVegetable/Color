@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 17554.314199984074,
+      "mTimestamp": 21314.757700003684,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -409,11 +409,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1469770.260800004,
+      "mTimestamp": 30832350.9794,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
-          "value": "file:///C:/ProgramData/cocos/editors/Creator/CocosCreator-v3.8.3-oh-win-102911/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "value": "file:///D:/Program%20Files/Cocos/Creator/CocosCreator-v3.8.3-oh-win-102911/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -422,12 +422,12 @@
             },
             "end": {
               "line": 4,
-              "column": 167
+              "column": 163
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
@@ -436,12 +436,12 @@
             },
             "end": {
               "line": 5,
-              "column": 98
+              "column": 93
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/GlobalNotify.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/GlobalNotify.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
@@ -450,12 +450,12 @@
             },
             "end": {
               "line": 6,
-              "column": 92
+              "column": 87
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
@@ -464,12 +464,12 @@
             },
             "end": {
               "line": 7,
-              "column": 93
+              "column": 88
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Util/Global.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Util/Global.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
@@ -478,12 +478,12 @@
             },
             "end": {
               "line": 8,
-              "column": 84
+              "column": 79
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/GameStarter.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
@@ -492,12 +492,12 @@
             },
             "end": {
               "line": 9,
-              "column": 74
+              "column": 69
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/HelloWorld.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
@@ -506,12 +506,12 @@
             },
             "end": {
               "line": 10,
-              "column": 73
+              "column": 68
             }
           }
         },
         {
-          "value": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts",
+          "value": "file:///E:/CocosProjects/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -520,7 +520,7 @@
             },
             "end": {
               "line": 11,
-              "column": 109
+              "column": 104
             }
           }
         }
@@ -530,56 +530,56 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/ProgramData/cocos/editors/Creator/CocosCreator-v3.8.3-oh-win-102911/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+            "url": "file:///D:/Program%20Files/Cocos/Creator/CocosCreator-v3.8.3-oh-win-102911/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/GlobalNotify.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/GlobalNotify.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Util/Global.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/FrameWork/Util/Global.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/GameStarter.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/GameStarter.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/HelloWorld.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/HelloWorld.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts"
+            "url": "file:///E:/CocosProjects/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts"
           },
           "messages": []
         }
@@ -2097,302 +2097,6 @@
             "end": {
               "line": 1,
               "column": 224
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/ProgramData/cocos/editors/Creator/CocosCreator-v3.8.3-oh-win-102911/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": {
-      "mTimestamp": {
-        "mtime": 1695718714197.8025,
-        "uuid": "b2bd1fa7-8d7c-49c5-a158-df29a6d3a594"
-      },
-      "chunkId": "8f0396c7611d30d8524db25030dd86772dbbfb39",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 220
-            },
-            "end": {
-              "line": 1,
-              "column": 224
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Multiplayer/ClientManager.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554178.7861,
-        "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
-      },
-      "chunkId": "cdb9765f85e0109edf4ac360e135b85a68a51df0",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/GlobalNotify.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554179.7864,
-        "uuid": "65b1cab8-00d9-4c96-ae75-2d1b6954e936"
-      },
-      "chunkId": "a54128cd87cab81fdef226b68d99d7effc6ef4dd",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Notify/NotifyManager.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554179.7864,
-        "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
-      },
-      "chunkId": "d294ac4381596dedd17ed780595499a2c43a8bdb",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/FrameWork/Util/Global.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554180.7861,
-        "uuid": "ebcfb01a-1a80-4625-8269-a52fdf9dda64"
-      },
-      "chunkId": "af396d5f7b032821eebd99cab25d0fc242d677ad",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/GameStarter.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554180.7861,
-        "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
-      },
-      "chunkId": "aebcc86bd5af2c1052165d308c779fad55490f0c",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/HelloWorld.ts": {
-      "mTimestamp": {
-        "mtime": 1730561534067.2634,
-        "uuid": "f9324ca4-327c-4c9f-a5eb-70b6b1a3a335"
-      },
-      "chunkId": "c841d26fac67958e80354b3949571c9a0b5e5efc",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///D:/akkkkk/study/cocos/Color/assets/Scripts/Views/network/controller/NetWorkViewController.ts": {
-      "mTimestamp": {
-        "mtime": 1730559554181.782,
-        "uuid": "3ccac5d5-1497-457b-919f-2a66272272cf"
-      },
-      "chunkId": "b2472413a9e670fb52890de28d193c823382fc26",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
             }
           }
         }

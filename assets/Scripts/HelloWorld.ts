@@ -4,7 +4,7 @@ const { ccclass, property } = _decorator;
 @ccclass('HelloWorld')
 export class HelloWorld extends Component {
     start() {
-        console.info('HelloWorld');
+        console.info('Hello world');
     }
 
     update(deltaTime: number) {

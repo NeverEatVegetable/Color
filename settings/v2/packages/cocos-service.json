@@ -1,9 +1,9 @@
 {
   "__version__": "3.0.7",
   "game": {
-    "name": "未知游戏",
-    "app_id": "UNKNOW",
-    "c_id": "0"
+    "app_id": "601321075",
+    "c_id": "0",
+    "name": "Color"
   },
   "appConfigMaps": [
     {
