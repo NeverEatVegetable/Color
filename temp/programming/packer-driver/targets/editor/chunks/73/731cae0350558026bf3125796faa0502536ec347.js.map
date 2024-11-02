@@ -1,1 +1,0 @@
-{"version":3,"sources":["file:///E:/CocosProjects/Color/assets/ts-gameframework-master/servers/src/shared/gameClient/protocols/MsgRequirePlayerSyncState.ts"],"names":[],"mappings":";;;;;;;;;;;;;;AAIA","sourcesContent":["export interface MsgRequirePlayerSyncState {\n    \n}\n\n// export const conf = {}"]}
