@@ -275,5 +275,10 @@
     "url": "db://assets/Scripts/FrameWork/SDK/ClientManager.ts",
     "value": {},
     "versionCode": 1
+  },
+  "65b1cab8-00d9-4c96-ae75-2d1b6954e936": {
+    "url": "db://assets/Scripts/FrameWork/Notify/GlobalNotify.ts",
+    "value": {},
+    "versionCode": 1
   }
 }

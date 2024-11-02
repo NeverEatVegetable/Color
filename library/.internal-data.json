@@ -4017,5 +4017,12 @@
       ]
     },
     "versionCode": 1
+  },
+  "ca127c79-69d6-4afd-8183-d712d7b80e14": {
+    "url": "db://internal/default_renderpipeline/builtin-custom.rpp",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
   }
 }

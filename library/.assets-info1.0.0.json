@@ -6,7 +6,7 @@
       "uuid": "83738ec2-d92b-497e-8d32-fa55a8cd9cca"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts": {
-      "time": 1730375462427.1296,
+      "time": 1730477746896.8276,
       "uuid": "1818acf5-9fdb-44b9-9fc0-532684b1f61f"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\HelloWorld.ts": {
@@ -286,7 +286,7 @@
       "uuid": "255dd19a-f171-4deb-b48c-820857ac1709"
     },
     "E:\\CocosProjects\\Color\\assets\\SDK": {
-      "time": 1730398090478.9731,
+      "time": 1730477746894.828,
       "uuid": "0dc26fa6-dc40-4b60-b2a7-d70cdeb2f8b3"
     },
     "E:\\CocosProjects\\Color\\assets\\GameAssest\\Prefabs": {
@@ -294,7 +294,7 @@
       "uuid": "fe49a525-1605-4ac2-ae22-437ef40c0d0f"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork": {
-      "time": 1730398090713.6492,
+      "time": 1730477746895.8276,
       "uuid": "202e3f30-cb86-48fc-9faf-dcc3e4e37bc1"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\Views": {
@@ -302,7 +302,7 @@
       "uuid": "e65b7e58-107e-4faf-ad52-1bb848424c03"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify": {
-      "time": 1730397834337.0554,
+      "time": 1730477746896.8276,
       "uuid": "6cfd0222-83ce-4e97-8b5c-a45c9c30f455"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util": {
@@ -318,11 +318,11 @@
       "uuid": "64c7be24-a42b-47e5-9fda-10a6d9984d5f"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\GameStarter.ts": {
-      "time": 1730397811539.0957,
+      "time": 1730477746897.8276,
       "uuid": "384b4b22-7c73-4e8c-844b-08871bce62f5"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\NotifyManager.ts": {
-      "time": 1730397814026.6096,
+      "time": 1730488279572.9138,
       "uuid": "32d0f54a-5afe-45de-b7b9-992d0fc000d8"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Util\\Global.ts": {
@@ -397,31 +397,31 @@
       "time": 1730375462421.09
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer.meta": {
-      "time": 1730375462425.0806
+      "time": 1730477746895.8276
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer": {
-      "time": 1730375462425.0806,
+      "time": 1730477746895.8276,
       "uuid": "c449c86a-88db-403a-982d-e62bae4bf028"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer\\ClientManager.ts.meta": {
-      "time": 1730375462425.0806
+      "time": 1730477746895.8276
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Multiplayer\\ClientManager.ts": {
-      "time": 1730388697640.1443,
+      "time": 1730553111251.0938,
       "uuid": "a53e55ad-e3c2-49f0-9fbf-5709d7230a0b"
     },
     "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE.meta": {
-      "time": 1730375870876.6335
+      "time": 1730477746893.8276
     },
     "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE": {
-      "time": 1730375873503.6846,
+      "time": 1730477746894.828,
       "uuid": "4019770b-e23d-4b30-ae9e-851799bd3afc"
     },
     "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE\\agconnect-services.json.meta": {
-      "time": 1730375462422.048
+      "time": 1730477746894.828
     },
     "E:\\CocosProjects\\Color\\assets\\SDK\\GOBE\\agconnect-services.json": {
-      "time": 1730375462422.048,
+      "time": 1730477746894.828,
       "uuid": "c67d9ed8-e8d4-449b-a6ea-b73f283d5350"
     },
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK.meta": {
@@ -430,20 +430,19 @@
     "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts.meta": {
       "time": 1730398092246.7988
     },
-    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK": {
-      "time": 1730398090597.1797,
-      "uuid": "52302089-2dbc-4f40-9149-ee212b9ed4a9"
-    },
-    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts": {
-      "time": 1730397903745.104,
-      "uuid": "09eb1fcb-6c98-4b14-8227-c83407806133"
-    },
     "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json.meta": {
-      "time": 1730398092251.7817
+      "time": 1730477746894.828
     },
     "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json": {
       "time": 1730397912439.9436,
       "uuid": "a665cd6c-f521-46eb-9c6b-9182f70288b1"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\GlobalNotify.ts": {
+      "time": 1730477746896.8276,
+      "uuid": "65b1cab8-00d9-4c96-ae75-2d1b6954e936"
+    },
+    "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\Notify\\GlobalNotify.ts.meta": {
+      "time": 1730477746896.8276
     }
   },
   "missing": {
@@ -536,6 +535,16 @@
       "path": "E:\\CocosProjects\\Color\\assets\\SDK\\agconnect-services.json",
       "time": 1730375462422.048,
       "removeTime": 1730375873504
+    },
+    "52302089-2dbc-4f40-9149-ee212b9ed4a9": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK",
+      "time": 1730398090597.1797,
+      "removeTime": 1730487755118
+    },
+    "09eb1fcb-6c98-4b14-8227-c83407806133": {
+      "path": "E:\\CocosProjects\\Color\\assets\\Scripts\\FrameWork\\SDK\\ClientManager.ts",
+      "time": 1730397903745.104,
+      "removeTime": 1730487755118
     }
   }
 }
