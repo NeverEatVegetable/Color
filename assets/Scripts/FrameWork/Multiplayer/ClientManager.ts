@@ -67,7 +67,8 @@ class ClientManager{
             NotifyManager.instance.dispatch(GlobalNotify.ClientInitSuccess)
             playerId = client.playerId;
         }).catch((err) => {
-            console.error('初始化失败，重新初始化或联系华为技术支持,error:' + err)
+            console.error('初始化失败，错误码 = ' + err + '请重新初始化！')
+            console.error('错误码查询链接 https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/gameobe-errorcode-0000001280943429')
         });
     }
 
