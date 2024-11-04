@@ -1,7 +1,7 @@
 {
-  "name": "Color",
+  "name": "color",
   "uuid": "0db6186e-9cfc-4f20-9552-6ac9759bf2ef",
   "creator": {
-    "version": "3.8.4"
+    "version": "3.8.3-oh"
   }
 }
