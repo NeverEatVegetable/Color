@@ -1,10 +1,10 @@
 import { _decorator, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('HelloWorld')
-export class HelloWorld extends Component {
+@ccclass('MyColor')
+export class MyColor extends Component {
     start() {
-        console.info('Hello world');
+
     }
 
     update(deltaTime: number) {
