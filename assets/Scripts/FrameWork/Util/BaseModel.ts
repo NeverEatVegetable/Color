@@ -1,32 +1,66 @@
-interface IModel {
+interface IData{
+    value: any;
     needSend: boolean;
 }
-
-class BaseModel implements IModel {
+/**
+ * 数据基类
+ * @param {IData} IData 数据接口，每个数据都应该实现这个接口
+ * @param {Data} Data 数据类，实现IData接口。
+ * @param value 数据值
+ * @param needSend 是否需要将数据发送到服务器
+ */
+class Data implements IData {
+    value: any;
     needSend: boolean;
-    propMap: Map<string, any>;
 
-    constructor() {
-        this.propMap = new Map<string, any>();
-        this.needSend = false;  //默认无需发送整个data的信息
+    setValue(value: any) {
+        this.value = value;
     }
 
-    setNeedSend(needSend: boolean) {
+    getValue() {
+        return this.value;
+    }
+
+    setNeeSend(needSend: boolean) {
         this.needSend = needSend;
     }
-    /**
-     * 获取类所有属性的值，返回一个map。
-     * 如果isRefresh为true或propMap为空，则刷新propMap
-     * */
-    getPropToMap(isRefresh: boolean = false): Map<string, any> {
-        if (this.propMap.size == 0 || isRefresh) {
-            const properties = Object.getOwnPropertyNames(this);
-            for (const property of properties) {
-                this.propMap.set(property, this[property]);
-            }
-        }
 
-        return this.propMap;
+    getNeedSend() {
+        return this.needSend;
+    }
+}
+(window as any).Data = Data;
+
+
+/**
+ * Model基类：
+ * 凡是Model都应继承该类，并实现自己的属性。
+ * @function getPropToMap 获取类所有需要发送的属性值，返回一个map。
+ */
+class BaseModel {
+    /**
+     * 获取类所有需要发送的属性值，返回一个map。
+     * */
+    getPropToMap(): Map<string, any> {
+        const map = new Map<string, any>();
+        const properties = Object.getOwnPropertyNames(this);
+        for (const property of properties) {
+            if (this[property].getNeedSend() == true)
+                map.set(property, this[property]);
+        }
+        return map;
     }
 }
 (window as any).BaseModel = BaseModel;
+
+// 使用示例：
+// class TestModel extends BaseModel {
+//     testData : Data = new Data();
+// }
+// var mo = new TestModel();
+// mo.testData.setValue(1);
+// mo.testData.setNeeSend(true);   // 改成false则不会被获取
+// var moMp = mo.getPropToMap();
+// moMp.forEach((value, key) => {
+//     console.log(key + " : value = " + value.getValue() + ", needSend = " + value.getNeedSend());
+// });
