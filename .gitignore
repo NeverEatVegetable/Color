@@ -21,10 +21,9 @@ node_modules/
 .vs/
 
 #//////////////////////////
+
 # WebStorm
 #//////////////////////////
 .idea/
 /.vs
-/.vs
-/settings
 /settings
