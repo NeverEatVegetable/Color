@@ -10,11 +10,11 @@ type Callback = (...args: any[]) => void;
  * @param type 事件类型，可选，暂无用处
  */
 class Eventhandler {
-    id: number | string;
+    id: number|string;
     callback: Callback;
     type?: string;
 
-    constructor(id: number | string, callback: Callback, type?: string) {
+    constructor(id: number|string, callback: Callback, type?: string) {
         this.id = id;
         this.callback = callback;
         this.type = type;
@@ -29,7 +29,7 @@ class Eventhandler {
  * @function dispatch 派发事件, 参数：事件ID，回调参数（可选）
  */
 class NotifyManager {
-    private notifys: Map<number | string, Eventhandler[]>;
+    private notifys: Map<number|string, Eventhandler[]>;
 
 
     private constructor() {
@@ -37,7 +37,7 @@ class NotifyManager {
     }
 
     // 添加事件监听
-    addListener(notifyId: number | string, callback: Callback, type?: string): void {
+    addListener(notifyId: number|string, callback: Callback, type?: string): void {
         const handler = new Eventhandler(notifyId, callback, type);
         if (!this.notifys.has(notifyId)) {
             this.notifys.set(notifyId, []);
@@ -46,7 +46,7 @@ class NotifyManager {
     }
 
     // 移除事件监听
-    removeListener(notifyId: number | string, callback?: Callback): void {
+    removeListener(notifyId: number|string, callback?: Callback): void {
         if (!this.notifys.has(notifyId)) {
             return; // 如果没有这个事件ID，直接返回
         }
@@ -63,7 +63,7 @@ class NotifyManager {
     }
 
     // 派发事件
-    dispatch(notifyId: number | string, ...args: any[]): void {
+    dispatch(notifyId: number|string, ...args: any[]): void {
         if (this.notifys.has(notifyId)) {
             const notify = this.notifys.get(notifyId)!;
             console.log(`NotifyManager: Dispatching notify ${notifyId}`);
@@ -71,13 +71,6 @@ class NotifyManager {
                 handler.callback(...args);
             });
         }
-    }
-
-    getNotifyListenerCount(notifyId: number | string): number {
-        const handlers = this.notifys.get(notifyId);
-        const count = handlers ? handlers.length : 0;
-        console.log(`NotifyManager: Get notify {${notifyId}} listener count: ${count}`);
-        return count;  // 如果存在，返回长度，否则返回 0
     }
 
     public static instance = new NotifyManager();
