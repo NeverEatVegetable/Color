@@ -120,7 +120,7 @@ class ClientManager{
         return this._openId;
     }
     // 获取GOBE客户端
-    public getClient() {
+    private _getClient() {
         return this._client;
     }
 
