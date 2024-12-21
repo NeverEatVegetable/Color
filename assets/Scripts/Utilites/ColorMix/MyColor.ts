@@ -2,12 +2,6 @@ import { _decorator, Component, error, math, Node } from 'cc';
 import { ColorManager } from './ColorManager';
 const { ccclass, property } = _decorator;
 
-<<<<<<< Updated upstream:assets/Scripts/HelloWorld.ts
-@ccclass('HelloWorld')
-export class HelloWorld extends Component {
-    start() {
-        console.info('Hello world');
-=======
 export class MyColor {
     public colorHEX:string;
     public colorRGB: number[] = [];
@@ -25,7 +19,6 @@ export class MyColor {
         //this.colorRGB = colorRGB ? [Math.floor(colorRGB[0] / 255), Math.floor(colorRGB[1] / 255), Math.floor(colorRGB[2] / 255)]:null;
         this.colorRGB = colorRGB ? [colorRGB[0], colorRGB[1], colorRGB[2]] : null;
         this.colorMix = colorMix ? colorMix :null;
->>>>>>> Stashed changes:assets/Scripts/Utilites/ColorMix/MyColor.ts
     }
 
     static Creat_ByHEX(colorHEX: string): MyColor {

@@ -5,5 +5,10 @@
   "uuid": "255dd19a-f171-4deb-b48c-820857ac1709",
   "files": [],
   "subMetas": {},
-  "userData": {}
+  "userData": {
+    "isBundle": true,
+    "bundleConfigID": "default",
+    "bundleName": "resources",
+    "priority": 8
+  }
 }

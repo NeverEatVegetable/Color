@@ -2,7 +2,11 @@
   "ver": "1.2.0",
   "importer": "directory",
   "imported": true,
+<<<<<<< Updated upstream
   "uuid": "fe49a525-1605-4ac2-ae22-437ef40c0d0f",
+=======
+  "uuid": "0d66457e-0867-4e87-a7c6-d84266656ea1",
+>>>>>>> Stashed changes
   "files": [],
   "subMetas": {},
   "userData": {}
