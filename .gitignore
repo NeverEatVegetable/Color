@@ -4,11 +4,10 @@
 #///////////////////////////
 library/
 temp/
-local/*
-!local/local.json
+local/
 build/
 profiles/
-# native
+native
 #//////////////////////////
 # NPM
 #//////////////////////////
@@ -18,12 +17,9 @@ node_modules/
 # VSCode
 #//////////////////////////
 .vscode/
-.vs/
 
 #//////////////////////////
-
 # WebStorm
 #//////////////////////////
 .idea/
 /.vs
-/settings
