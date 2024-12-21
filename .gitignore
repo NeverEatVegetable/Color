@@ -8,6 +8,7 @@ local/*
 !local/local.json
 build/
 profiles/
+settings/
 # native
 #//////////////////////////
 # NPM
@@ -23,3 +24,8 @@ node_modules/
 # WebStorm
 #//////////////////////////
 .idea/
+
+#//////////////////////////
+# vs
+#//////////////////////////
+.vs/
