@@ -42,7 +42,7 @@ export class RoomView extends Component {
     }
 
     private _onClickClose() {
-        console.log('close')
+        console.log('close RoomView')
     }
 }
 

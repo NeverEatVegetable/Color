@@ -22,7 +22,7 @@ class RoomManager {
 
     }
 
-    public getRoomInfo() {
+    public getRoomList() {
         if (this.room) {
             console.log(this.room);
         } else {
