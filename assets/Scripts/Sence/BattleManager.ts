@@ -42,16 +42,28 @@ export class BattleManager extends Component {
         const map = instantiate(prefab)
         map.setParent(this.stage)
     }
-
-    update() {
-        this.render()
-
-    }
-
-    render() {
+    //统一管理更新
+    update(dt) {
         if (!this.shouldUpdate) {
             return
         }
+        this.render()
+        this.tick(dt)
+    }
+
+    tick(dt) {
+        this.tickActor(dt)
+    }
+
+    tickActor(dt) {
+        for (const data of DataManager.Instance.state.actors) {
+            const { id } = data
+            let am = DataManager.Instance.actorMap.get(id)
+            am.tick(dt)
+        }
+    }
+
+    render() {
         this.renderActor()
     }
 
