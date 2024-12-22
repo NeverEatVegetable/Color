@@ -21,18 +21,18 @@ export default class State {
     private force: boolean = false
   ) {
     //生成动画轨道属性
-    const track = new animation.ObjectTrack();
-    track.path = new animation.TrackPath().toComponent(Sprite).toProperty("spriteFrame");
-    const spriteFrames = DataManager.Instance.textureMap.get(this.path);
-    const frames: Array<[number, SpriteFrame]> = sortSpriteFrame(spriteFrames).map((item, index) => [index * ANIMATION_SPEED, item]);
-    track.channel.curve.assignSorted(frames);
+    //const track = new animation.ObjectTrack();
+    //track.path = new animation.TrackPath().toComponent(Sprite).toProperty("spriteFrame");
+    //const spriteFrames = DataManager.Instance.textureMap.get(this.path);
+    //const frames: Array<[number, SpriteFrame]> = sortSpriteFrame(spriteFrames).map((item, index) => [index * ANIMATION_SPEED, item]);
+    //track.channel.curve.assignSorted(frames);
 
     //动画添加轨道
-    this.animationClip = new AnimationClip();
-    this.animationClip.name = this.path;
-    this.animationClip.duration = frames.length * ANIMATION_SPEED;
-    this.animationClip.addTrack(track);
-    this.animationClip.wrapMode = this.wrapMode;
+    //this.animationClip = new AnimationClip();
+    //this.animationClip.name = this.path;
+    //this.animationClip.duration = frames.length * ANIMATION_SPEED;
+    //this.animationClip.addTrack(track);
+    //this.animationClip.wrapMode = this.wrapMode;
   }
 
   run() {

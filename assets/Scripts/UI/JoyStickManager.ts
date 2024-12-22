@@ -40,7 +40,7 @@ export class JoyStickManager extends Component {
         }
         this.stick.setPosition(stickPos.x, stickPos.y)
         this.input = stickPos.clone().normalize()
-        console.log(this.input)
+        /*console.log(this.input)*/
     }
 
     onTouchEnd() {

@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.creator",
+    "\\assets",
+    "\\assets\\Scripts"
   ],
+  "SelectedNode": "\\assets\\Scripts\\EntityActor",
   "PreviewInSolutionExplorer": false
 }
