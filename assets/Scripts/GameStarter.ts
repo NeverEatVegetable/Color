@@ -1,4 +1,5 @@
 import { _decorator, Component, Node } from 'cc';
+import { ColorManager } from './Utilites/ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -43,5 +44,8 @@ export class GameStarter extends Component {
 
     private _onClientInitSuccess() {
         this.node.addComponent("InputSystemTest")
+
+        //加载本地配置
+        ColorManager._Instance.loadJsonData();
     }
 }
