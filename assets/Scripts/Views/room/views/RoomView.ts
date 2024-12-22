@@ -31,6 +31,11 @@ export class RoomView extends Component {
 
     private _onClickTabBtn(tabId) {
         console.log('tabId = ', tabId)
+        if (tabId >= this.container.children.length) {
+            console.log("tabId 超出范围，切换界面失败。")
+            return
+        }
+
         for (let i = 0; i < this.container.children.length; i++) {
             this.container.children[i].active = i == tabId
         }
