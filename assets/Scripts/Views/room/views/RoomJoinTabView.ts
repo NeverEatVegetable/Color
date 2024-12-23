@@ -6,10 +6,14 @@ export class RoomJoinTabView extends Component {
     private content: Node
     private baseRoom: Node
     private roomList: Node[] = []
+    private roomInfos: GOBE.RoomInfo[] = []
+    protected onEnable(): void {
+        this.onEnter()
+    }
     start() {
         this.buildUI()
         this.bindEvent()
-        this.onEnter()
+        this._onInit()
     }
 
     buildUI() {
@@ -30,7 +34,14 @@ export class RoomJoinTabView extends Component {
     }
 
     onEnter() {
-        RoomManager.instance.getRoomList()
+
+    }
+
+    _onInit(){
+        let client = ClientManager.instance.getClient()
+        if (client) {
+            this.roomInfos = RoomManager.instance.getRoomList(client)
+        }
     }
 }
 
