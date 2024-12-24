@@ -45,7 +45,7 @@ export class RoomCreateTabView extends Component {
         }
 
         var nums = parseInt(this.memberNum.textLabel.string)
-        if (nums <= 2 || nums > 500) {
+        if (nums < 2 || nums > 500) {
             console.error('房间人数不合法，创建房间失败')
             return
         }
