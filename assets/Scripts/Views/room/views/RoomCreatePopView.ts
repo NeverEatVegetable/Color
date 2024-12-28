@@ -12,6 +12,17 @@ export class RoomCreatePopView extends Component {
     private tgNeedPw: Toggle
     private memberNum: EditBox
 
+    start() {
+        this.buildUI()
+        this.bindEvent()
+        this.onEnter()
+    }
+
+    protected onDestroy(): void {
+        this.unbindEvent()
+        this.onExit()
+    }
+
     buildUI() {
         this.btnCreate = this.node.getChildByPath('btnCreate').getComponent(Button)
         this.btnCancel = this.node.getChildByPath('btnCancel').getComponent(Button)
@@ -23,12 +34,15 @@ export class RoomCreatePopView extends Component {
         this.btnCancel.node.on('click', this._onClickBtnCancel, this)
     }
 
-    start() {
-        this.buildUI()
-        this.bindEvent()
-        this.onEnter()
+    unbindEvent() {
+        this.btnCreate.node.off('click', this._onClickBtnCreate, this)
+        this.btnCancel.node.off('click', this._onClickBtnCancel, this)
     }
 
+    private onExit() {
+        NotifyManager.instance.removeListener(GlobalNotify.RoomCreateSuccess, this._onRoomCreateSuccess.bind(this))
+        
+    }
     private onEnter() {
         NotifyManager.instance.addListener(GlobalNotify.RoomCreateSuccess, this._onRoomCreateSuccess.bind(this))
     }
@@ -63,7 +77,7 @@ export class RoomCreatePopView extends Component {
     
     private _onRoomCreateSuccess() {
         //加载 Prefab
-        NotifyManager.instance.dispatch(GlobalNotify.OpenView,"roomresultpopview",this.node.name)
+        NotifyManager.instance.dispatch(GlobalNotify.OpenView,"roomcreateresultpopview",this.node.name)
     }
 
 }

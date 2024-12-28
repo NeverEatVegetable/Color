@@ -11,6 +11,13 @@ enum GlobalNotify {
     /** 房间创建成功 */
     RoomCreateSuccess,
 
+    /** 加入房间成功 */
+    RoomJoinSuccess,
+    
+    /** 获取房间信息列表成功 */
+    GetRoomInfosSuccessRes,
+
+
     /** 本地配置加载完毕 */
     LOCAL_DATA_LOAD_SUCESS,
 

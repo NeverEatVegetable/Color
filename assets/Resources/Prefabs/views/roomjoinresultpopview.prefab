@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "roomresultpopview",
+    "_name": "roomjoinresultpopview",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "roomresultpopview",
+    "_name": "roomjoinresultpopview",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -157,7 +157,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "7falLfN7dMrZexxz/YbTRe"
+    "fileId": "67utPsS7lB27UdAlIgYJUA"
   },
   {
     "__type__": "cc.Sprite",
@@ -202,7 +202,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "53dgKlmBxA1pHGicPGTp8P"
+    "fileId": "7e5fhBNDJN/YewVCuGTEku"
   },
   {
     "__type__": "cc.Widget",
@@ -238,7 +238,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "54D16dKRZI2r2Imm5NpYx3"
+    "fileId": "b6/vdorR5O94zdL2RSQKNP"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -248,7 +248,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "8b/ghGTWFJIqQRf7u7SdrS",
+    "fileId": "fcaD78ghhIWLpxY/uhN+5+",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -317,7 +317,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 253.37890625,
+      "width": 160,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -329,7 +329,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "efmsqndjBBc5Xx7WlIOoIw"
+    "fileId": "34cQijr+RDFpTc/Hx5Cjxr"
   },
   {
     "__type__": "cc.RichText",
@@ -344,7 +344,7 @@
       "__id__": 14
     },
     "_lineHeight": 40,
-    "_string": "房间名#房间id",
+    "_string": "加入房间",
     "_horizontalAlign": 0,
     "_verticalAlign": 0,
     "_fontSize": 40,
@@ -367,7 +367,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "8bDu/qpHxCLJS9YfJOD/fY"
+    "fileId": "72l1g7UEBLXoCi0QBVEoSJ"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -377,7 +377,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "64C7InUnNMSLwZqZSz0b+P",
+    "fileId": "7d4WghLFJJ/rLJNRhc2KLi",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -446,8 +446,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 423.359375,
-      "height": 195.6
+      "width": 320,
+      "height": 135.6
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -458,7 +458,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "d4eGRClTdFn6NQpd/PDnPm"
+    "fileId": "05vsWMlxZF8pnQW+l9YdF6"
   },
   {
     "__type__": "cc.RichText",
@@ -473,7 +473,7 @@
       "__id__": 20
     },
     "_lineHeight": 60,
-    "_string": "房间创建成功！\n房间邀请码为：xxxxx\n快邀请好友进入房间吧~",
+    "_string": "加入房间成功！\n赶紧进入游戏吧！",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_fontSize": 40,
@@ -496,7 +496,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "ebuayjI6NIQKDKNjzkZcGo"
+    "fileId": "20UO7xGiFGcICtRLbwyu+b"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -506,7 +506,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "08DGidpBtDP69032GPrIzN",
+    "fileId": "1blmDVMaFNWqWXl3ReqLWl",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -644,7 +644,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "2e8dW2Y7ZGlqu3PRT6q4WA"
+    "fileId": "dc8P0G44FLOadNz8Qg6dYa"
   },
   {
     "__type__": "cc.Label",
@@ -712,7 +712,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "74km4eSz1NT6XfbKoi4OtC"
+    "fileId": "fcy4lnp9xNjoiV6XEGUVA3"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -722,7 +722,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "b7mUoqrEFOVLAGNa1yGLdo",
+    "fileId": "bbNL2h0X9BRYFBe+3W12Zc",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -753,7 +753,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "49yJpuO7BCpKYvrPwOOmyj"
+    "fileId": "a1XfamODZNGaZo3QmqhkBB"
   },
   {
     "__type__": "cc.Sprite",
@@ -798,7 +798,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "fb/fHU8GlE+IT6mm/loCdC"
+    "fileId": "62lqLgythN5b8xAwUG5S3d"
   },
   {
     "__type__": "cc.Button",
@@ -868,7 +868,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "b4zu6j66lJWYT9ua29ggX+"
+    "fileId": "0exKzx6ehI0b+nKmzFknxo"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -878,7 +878,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "3cB1Zb79JBYoTrw+Ql8t4/",
+    "fileId": "c7wAoK33BO9bGNXXorYIIr",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -1016,7 +1016,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "40DA4VLWJLlZQcE0S7UFtI"
+    "fileId": "2acIX/rRBCMLeBE08Srn85"
   },
   {
     "__type__": "cc.Label",
@@ -1084,7 +1084,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "26iveZzs5HsrZF1aeS8gg6"
+    "fileId": "9dmBdFLbNJDYZl+8ylx2AU"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1094,7 +1094,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "fbGU16G9ZKFor5xDPFVZR0",
+    "fileId": "c6mpF8JghNP7fQchwu7qBI",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -1125,7 +1125,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "b10pY9jTFOD7fX7zIPXPuN"
+    "fileId": "6ewzH9Z7dJTKdf8henEFlG"
   },
   {
     "__type__": "cc.Sprite",
@@ -1170,7 +1170,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "e2UfzQDzdP17WhNS2MiZco"
+    "fileId": "7dA+WazhJD04ra71zBe6sX"
   },
   {
     "__type__": "cc.Button",
@@ -1240,7 +1240,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "00sY9M6jxAg6VrLg4iwOs2"
+    "fileId": "47jk78sdpFF7Hw7HNhzjAS"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1250,7 +1250,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "feahNlsdFEA4BG0Z0m5DgU",
+    "fileId": "3bdAKYllRG7q0aVXwpJ5yQ",
     "instance": null,
     "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
@@ -1281,7 +1281,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "cc9+yOP6hGurieaqD885N2"
+    "fileId": "b2hl+f4VNACKHcSBXuMoam"
   },
   {
     "__type__": "cc.Widget",
@@ -1317,10 +1317,10 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "8fY2R8EsRJ9bwo1MYZV88x"
+    "fileId": "dbALOWEeVPP7ejkHyaDFLa"
   },
   {
-    "__type__": "75952NUS8tLbqRj2OOeEht6",
+    "__type__": "f9d42hGCRhMkopcRMtmajwe",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -1335,7 +1335,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "65UbL+60hBTItiv30/0EM8"
+    "fileId": "8bv0Sxy2BA7ITw2KLObFTO"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1345,8 +1345,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "8dz54AnJ1AcplabPorc4BS",
-    "instance": null,
+    "fileId": "24EYVHCD1GGZoh9xKEtThB",
     "targetOverrides": null
   }
 ]

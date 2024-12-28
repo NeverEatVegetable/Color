@@ -1,8 +1,8 @@
 import { _decorator, Component, Button, Node, RichText, Label, resources, instantiate, Prefab, find } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('RoomResultPopView')
-export class RoomResultPopView extends Component {
+@ccclass('RoomJoinResultPopView')
+export class RoomJoinResultPopView extends Component {
     private title: RichText
     private desc: RichText
     // private txtCancel: Label
@@ -19,6 +19,9 @@ export class RoomResultPopView extends Component {
         this.onEnter()
     }
 
+    protected onDestroy(): void {
+        this.unbindEvent()
+    }
     buildUI() {
         this.title = this.node.getChildByPath('title').getComponent(RichText)
         this.desc = this.node.getChildByPath('desc').getComponent(RichText)
@@ -33,16 +36,21 @@ export class RoomResultPopView extends Component {
         this.btnCancel.node.on('click', this._onClickBtnCancel, this)
     }
 
+    unbindEvent() {
+        this.btnConfirm.node.off('click', this.onClickConfirm, this)
+        this.btnCancel.node.off('click', this._onClickBtnCancel, this)
+    }
+    
     onEnter() {
         var roomInfo = RoomManager.instance.getMyRoonInfo()
         if (!roomInfo) {
             this.title.node.active = false
-            this.desc.string = '房间创建失败！请重试'
-            this.txtConfirm.string = '重新创建'
+            this.desc.string = '房间加入失败！请重试'
+            this.txtConfirm.string = '重新加入'
             this.btnConfirm.node.on('click', this.onClickRetry, this)
         }
-        this.title.string = `${roomInfo.name}#${roomInfo.id}`
-        this.desc.string = `邀请码：${roomInfo.inviteCode}`
+        this.title.string = `加入房间`
+        this.desc.string = `加入房间 ${roomInfo.name} 成功！\n赶紧进入游戏吧！`
         this.txtConfirm.string = '进入游戏'
         this.btnConfirm.node.on('click', this.onClickConfirm, this)
 
@@ -61,7 +69,7 @@ export class RoomResultPopView extends Component {
 
     private onClickRetry() {
         // 加载 Prefab
-        NotifyManager.instance.dispatch(GlobalNotify.OpenView, 'roomcreatepopview', this.node.name)
+        NotifyManager.instance.dispatch(GlobalNotify.OpenView, 'roomjoinpopview', this.node.name)
     }
 
     private close() {

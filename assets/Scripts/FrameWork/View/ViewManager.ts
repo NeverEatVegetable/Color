@@ -11,6 +11,7 @@ const { ccclass, property } = _decorator;
  * @method start - 初始化界面管理器：监听关闭界面和打开界面的全局消息
  * @method closeView - GlobalNotify.CloseView消息的处理器：关闭界面
  * @method openView - GlobalNotify.OpenView消息的处理器：打开界面
+ * @method clear - 清除所有界面
  */
 @ccclass('ViewManager')
 export class ViewManager extends Component {
@@ -40,7 +41,8 @@ export class ViewManager extends Component {
         }
 
         if(this.views.size == 0){
-            // this.openView("默认界面名称，你们看看怎么填")
+            console.log("没有活动的界面了，打开默认界面")
+            this.openView("roomjoinpopview")
         }
     }
     /**
@@ -62,6 +64,12 @@ export class ViewManager extends Component {
             if (closeViewName) {
                 this.closeView(closeViewName)
             }
+        })
+    }
+
+    public clearAllView(){
+        this.views.forEach((value, key) => {
+            this.closeView(key)
         })
     }
 }

@@ -27,8 +27,7 @@ class RoomManager {
                 // 判断是否为当前玩家加入房间
                 if (playerInfo.playerId === this._room.playerId) {
                     // 加入房间成功，做相关游戏逻辑处理
-                    console.log("加入房间成功")
-                    console.log(playerInfo)
+                    console.log(`玩家：${playerInfo.playerId}，加入房间成功`)
                 }
             })
         }).catch((e) => {
@@ -45,22 +44,24 @@ class RoomManager {
      */
     public JoinRoom(client: GOBE.Client, roomIdentity: string) {
         //加入房间
-        // 当加入房间失败时，该玩家可通过如下方法收到失败事件通知
+        // 当加入房间失败时，该玩家可通过如下方法收到失败事件通知\
+        console.log("加入房间")
         client.onJoinRoomFailed((error) => {
             // 加入房间失败通知
+            console.error("加入房间失败:", error)
         })
-        client.joinRoom(roomIdentity,
-            { customPlayerStatus: 0, customPlayerProperties: '' }).then((_room) => {
-                // 加入房间中
-                this._room = _room
-                this._player = _room.player
-            }).catch((e) => {
-                // 加入房间失败
-                console.error("加入房间失败:", e)
-            })
+        client.joinRoom(roomIdentity).then((_room) => {
+            this._room = _room
+            this._player = _room.player
+            console.log(`玩家：${this._player.playerId}，加入房间成功`)
+            NotifyManager.instance.dispatch(GlobalNotify.RoomJoinSuccess)
+        }).catch((e) => {
+            // 加入房间失败
+            console.error("加入房间失败:", e)
+        })
     }
 
-    public getRoomList(client: GOBE.Client) {
+    public getRoomListReq(client: GOBE.Client) {
         let roomInfos = []
         let getAvailableRoomsConfig = {
             //    roomType: '蓝队',              // 房间类型
@@ -76,7 +77,7 @@ class RoomManager {
         client.getAvailableRooms(getAvailableRoomsConfig).then((infos) => {
             console.log("search rooms success:", infos)
             // 查询房间列表成功
-            roomInfos = infos.rooms
+            NotifyManager.instance.dispatch(GlobalNotify.GetRoomInfosSuccessRes, infos.rooms)
             // 记录下次查询房间的偏移量
             getAvailableRoomsConfig.offset = infos.offset.toString()
         }).catch((e) => {
@@ -84,7 +85,6 @@ class RoomManager {
             roomInfos = []
             console.log("search rooms failed:", e)
         })
-        return roomInfos
     }
 
     /**
@@ -96,9 +96,9 @@ class RoomManager {
             return
         }
         let info = {
-            "name" : this._room.roomName, // 房间名称
-            "id" : this._room.roomId, // 房间ID
-            "inviteCode" : this._room.roomCode, // 房间邀请码
+            "name": this._room.roomName, // 房间名称
+            "id": this._room.roomId, // 房间ID
+            "roomCode": this._room.roomCode, // 房间邀请码
         }
         return info
     }

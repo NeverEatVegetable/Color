@@ -1,5 +1,6 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, find, Node } from 'cc';
 import { ColorManager } from './Utilites/ColorMix/ColorManager';
+import { ViewManager } from './FrameWork/View/ViewManager';
 const { ccclass, property } = _decorator;
 
 /**
@@ -9,6 +10,7 @@ const { ccclass, property } = _decorator;
  */
 @ccclass('GameStarter')
 export class GameStarter extends Component {
+    private _viewManager: ViewManager
     protected onEnable(): void {
         NotifyManager.instance.addListener(GlobalNotify.ClientInitSuccess, this._onClientInitSuccess.bind(this))
     }
@@ -47,11 +49,12 @@ export class GameStarter extends Component {
      */
     private _onClientInitSuccess() {
         this.node.addComponent("InputSystemTest")
-
+        this._viewManager = find("Canvas").getComponent(ViewManager)
         //加载本地配置
         ColorManager._Instance.loadJsonData();
 
         // 打开初始界面，如：登录界面、主界面等，这里测试填了创建房间界面，记得手动改一下
-        NotifyManager.instance.dispatch(GlobalNotify.OpenView, "roomcreatepopview")
+        this._viewManager.openView("roomcreatepopview")
+        // NotifyManager.instance.dispatch(GlobalNotify.OpenView, "roomcreatepopview")
     }
 }
