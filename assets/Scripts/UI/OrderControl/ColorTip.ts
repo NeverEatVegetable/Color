@@ -1,57 +1,81 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, CCInteger, Color, color, Component, Node, resources, Sprite } from 'cc';
+import { MyColor } from '../../Utilites/ColorMix/MyColor';
 const { ccclass, property } = _decorator;
 
+//订单提示对象(一条)
 @ccclass('ColorTip')
 export class ColorTip extends Component {
-    start() {
+    @property({ type: CCInteger })
+    mixColorsNum: number;
 
+    private _colorTipData: Color[];
+
+    ///**
+    // *
+    // * @param data 要么不传，传了就传：[targetColor colors]
+    // */
+    //constructor(data?:any) {
+    //    super();
+    //    if (data && data[0] && data[1]) {
+    //        this.setData(data[0], data[1]);
+    //    }
+    //    else {
+    //        this.Init();
+    //    }
+    //}
+
+    /** 初始化*/
+    /**
+     * 
+     * @param data 要么不传，传了就传：[targetColor colors]
+     */
+    Init(data?: any) {
+        if (data && data[0] && data[1]) {
+            this.setData(data[0], data[1]);
+        }
+        else {
+            this._colorTipData = [];
+            this.node.active = false;
+        }
     }
 
-    update(deltaTime: number) {
-        
+    /**
+     * 设置订单提示数据
+     * @param targetColor
+     * @param colors
+     */
+    setData(targetColor: MyColor, colors: MyColor[]) {
+        this.Init();
+        this.setColors(colors);
+        this.setTargetColor(targetColor);       
+    }
+
+    private setColors(colors: MyColor[]) {
+        let tmp: Sprite;
+        for (let i = 0; i < colors.length; i++) {
+            //简单粗暴的去重
+            for (let j = i; j >= 0; j--) {
+                if (colors[i].colorHEX == colors[j].colorHEX) {
+                    continue;
+                }
+            }
+            this._colorTipData.push(new Color(colors[i].colorHEX));
+        }
+    }
+
+    private setTargetColor(targetColor: MyColor) {
+        this._colorTipData.push(new Color(targetColor.colorHEX));
+    }
+
+    /** 开始绘制*/
+    draw() {
+        this.node.active = true;
+
+        for (let i = 0; i < this._colorTipData.length - 1; i++) {
+            this.node.getChildByName("n" + i).getComponent(Sprite).color = this._colorTipData[i];
+        }
+
+        this.node.getChildByName("target").getComponent(Sprite).color = this._colorTipData[this._colorTipData.length - 1];
     }
 }
 
-
-
-
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
-
-//public class ColorTip : MonoBehaviour
-//{
-//    [Header("外界要赋值的")]
-//    [Tooltip("目标颜色的混合数组")]
-//    public bool[] mixBools;
-//    public string hex;
-
-//    [Header("自身调节")]
-//    [Tooltip("目标颜色混合的颜色数量")]
-//    public int mixNum;
-//    public Image[] imges;
-//    [SerializeField] List < Vector3 > colorList;
-
-
-//    public void InitColorTip()
-//    {
-//        //将外界提供的提示颜色转化成V3列表
-//        for (int i = 0; i < mixBools.Length; i++)
-//        {
-//            if (mixBools[i]) {
-//                colorList.Add(ColorManager._Instance.TryGetMonoChrome(i).colorRGB);
-//            }
-//        }
-
-//        //利用V3列表，给等式左侧的颜色赋值
-//        for (int i = 0; i < mixNum; i++)
-//        {
-//            imges[i].color = new Color(colorList[i].x, colorList[i].y, colorList[i].z, 1f);
-//        }
-
-//        //给等式右侧的结果颜色赋值
-//        MyColor mc = ColorManager._Instance.TryGetColor(mixBools);
-//        hex = mc.colorHEX;
-//        imges[mixNum].color = new Color(mc.colorRGB.x, mc.colorRGB.y, mc.colorRGB.z, 1f);
-//    }
-//}

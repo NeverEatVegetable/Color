@@ -2,11 +2,7 @@
   "ver": "1.2.0",
   "importer": "directory",
   "imported": true,
-<<<<<<<< HEAD:assets/Scripts/FrameWork/InputSystem.meta
-  "uuid": "aee7e08f-d2c0-4387-b67d-582afdeac16c",
-========
-  "uuid": "27d9cf36-75a9-4524-a22f-239bd6918f86",
->>>>>>>> master:assets/RawRes.meta
+  "uuid": "6207a815-ea84-4a10-8738-64db3b5d17cc",
   "files": [],
   "subMetas": {},
   "userData": {}

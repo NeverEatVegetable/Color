@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\Scripts",
+    "\\assets\\Scripts\\UI",
+    "\\assets\\Scripts\\UI\\OrderControl",
+    "\\assets\\Scripts\\UI\\ScoreControl",
+    "\\assets\\Scripts\\Utilites",
+    "\\assets\\Scripts\\Utilites\\ColorMix",
+    "\\assets\\Scripts\\Utilites\\Order"
   ],
   "PreviewInSolutionExplorer": false
 }
