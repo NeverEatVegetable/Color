@@ -384,7 +384,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "name",
+    "_name": "invite",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1188,7 +1188,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btnCreate",
+    "_name": "btnJoin",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1995,7 +1995,7 @@
     "fileId": "dcCOj35YlGvpQwlfIyB6Rj"
   },
   {
-    "__type__": "68cf8n5L1tJxLdgKD+JGvul",
+    "__type__": "31715uiSCNHdbyI3bl5LqY9",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -2010,7 +2010,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "b5I+9HfFZLB6J/6oNV514W"
+    "fileId": "25ehyNhCtNhKeFOpHkrriY"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -2021,6 +2021,7 @@
       "__id__": 0
     },
     "fileId": "52REv9zw9LM4M34DlfJDnx",
+    "instance": null,
     "targetOverrides": null
   }
 ]

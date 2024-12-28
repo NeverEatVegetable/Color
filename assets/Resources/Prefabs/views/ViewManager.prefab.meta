@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "20f23238-6b6f-4155-9ceb-314ce9ffddaf",
+  "uuid": "95d33d08-786a-4f9a-9c6e-43e7774d2a82",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "roomcreatepopview"
+    "syncNodeName": "ViewManager"
   }
 }

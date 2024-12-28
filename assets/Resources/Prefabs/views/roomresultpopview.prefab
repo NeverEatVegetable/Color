@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "roomfinishpopview",
+    "_name": "roomresultpopview",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "roomfinishpopview",
+    "_name": "roomresultpopview",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -513,7 +513,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "btnGame",
+    "_name": "btnConfirm",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": {
@@ -1320,7 +1320,7 @@
     "fileId": "8fY2R8EsRJ9bwo1MYZV88x"
   },
   {
-    "__type__": "68cf8n5L1tJxLdgKD+JGvul",
+    "__type__": "75952NUS8tLbqRj2OOeEht6",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -1335,7 +1335,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "fbRhDF2cpOF5QRRVt5LcER"
+    "fileId": "65UbL+60hBTItiv30/0EM8"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -1346,6 +1346,7 @@
       "__id__": 0
     },
     "fileId": "8dz54AnJ1AcplabPorc4BS",
+    "instance": null,
     "targetOverrides": null
   }
 ]

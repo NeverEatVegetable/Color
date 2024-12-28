@@ -1,9 +1,9 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node ,EditBox} from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('RoomJoinTabView')
-export class RoomJoinTabView extends Component {
-    private content: Node
+@ccclass('RoomJoinPopView')
+export class RoomJoinPopView extends Component {
+    private inviteCode: string
     private baseRoom: Node
     private roomList: Node[] = []
     private roomInfos: GOBE.RoomInfo[] = []
@@ -18,10 +18,8 @@ export class RoomJoinTabView extends Component {
     }
 
     buildUI() {
-        this.content = this.node.getChildByPath('Scroll View/view/content')
-        this.baseRoom = this.content.getChildByPath('room')
+        this.inviteCode = this.node.getChildByPath('content/invite/txtInput').getComponent(EditBox).string
     }
-
     bindEvent() {
 
     }
@@ -38,6 +36,12 @@ export class RoomJoinTabView extends Component {
         let client = ClientManager.instance.getClient()
         if (client) {
             this.roomInfos = RoomManager.instance.getRoomList(client)
+        }
+
+        if (this.roomInfos.length > 0) {
+            this.roomInfos.forEach((roomInfo, index) => {
+                console.log(roomInfo)
+            })
         }
     }
 

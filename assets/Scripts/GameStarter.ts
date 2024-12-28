@@ -42,10 +42,16 @@ export class GameStarter extends Component {
         return
     }
 
+    /**
+     * 客户端初始化成功的回调
+     */
     private _onClientInitSuccess() {
         this.node.addComponent("InputSystemTest")
 
         //加载本地配置
         ColorManager._Instance.loadJsonData();
+
+        // 打开初始界面，如：登录界面、主界面等，这里测试填了创建房间界面，记得手动改一下
+        NotifyManager.instance.dispatch(GlobalNotify.OpenView, "roomcreatepopview")
     }
 }
