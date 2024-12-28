@@ -1,0 +1,51 @@
+{
+  "__version__": "3.0.7",
+  "game": {
+    "app_id": "601321075",
+    "c_id": "0",
+    "name": "Color"
+  },
+  "appConfigMaps": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "ccce63"
+    },
+    {
+      "app_id": "601321075",
+      "config_id": "30959f"
+    }
+  ],
+  "configs": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "ccce63",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "357",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    },
+    {
+      "app_id": "601321075",
+      "config_id": "30959f",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "357",
+          "enable": true,
+          "param": {}
+        },
+        {
+          "service_id": "353",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    }
+  ]
+}
