@@ -2,12 +2,12 @@
   "ver": "1.1.50",
   "importer": "prefab",
   "imported": true,
-  "uuid": "ee0d8c2f-60ac-45d1-a930-32175bb1f904",
+  "uuid": "3aa089b0-cc3d-4778-b053-989bdea843da",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "roomjointabview"
+    "syncNodeName": "roomfinishpopview"
   }
 }
