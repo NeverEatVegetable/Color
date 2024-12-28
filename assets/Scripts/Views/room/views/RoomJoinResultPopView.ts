@@ -42,7 +42,7 @@ export class RoomJoinResultPopView extends Component {
     }
     
     onEnter() {
-        var roomInfo = RoomManager.instance.getMyRoonInfo()
+        var roomInfo = RoomManager.instance.getMyRoomInfo()
         if (!roomInfo) {
             this.title.node.active = false
             this.desc.string = '房间加入失败！请重试'
