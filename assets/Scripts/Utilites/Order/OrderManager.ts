@@ -1,8 +1,8 @@
 import { _decorator, Component, instantiate, Node, Prefab, resources } from 'cc';
 import { MyColor } from '../ColorMix/MyColor';
-import { OrderData } from '../../UI/OrderControl/OrderData';
-import { ColorTip } from '../../UI/OrderControl/ColorTip';
 import { ColorOrder } from '../../UI/OrderControl/ColorOrder';
+import { ColorTip } from '../../UI/OrderControl/ColorTip';
+import { OrderData } from '../../UI/OrderControl/OrderData';
 const { ccclass, property } = _decorator;
 
 @ccclass('OrderManager')
@@ -61,9 +61,9 @@ export class OrderManager{
     /** 加载资源/数据*/
     LoadResources() {
         for (let i = 2; i <= 4; i++) {
-            resources.load("Prefabs/orderTip_" + i, Prefab, this.loadOrderTip.bind(this));
+            resources.load("Prefabs/views/orderTip_" + i, Prefab, this.loadOrderTip.bind(this));
         }
-        resources.load("Prefabs/order", Prefab, this.loadOrder.bind(this));
+        resources.load("Prefabs/views/order", Prefab, this.loadOrder.bind(this));
     }
 
     loadOrder(err, prefab: Prefab){

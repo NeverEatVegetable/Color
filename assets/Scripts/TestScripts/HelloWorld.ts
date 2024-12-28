@@ -31,7 +31,7 @@ export class HelloWorld extends Component {
         });
 
         
-        ColorManager._Instance.test();
+        //ColorManager._Instance.test();
         
     }
 
