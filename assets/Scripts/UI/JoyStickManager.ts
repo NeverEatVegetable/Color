@@ -25,6 +25,8 @@ export class JoyStickManager extends Component {
 
     onDestroy() {
         input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
+        input.off(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+        input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
     onTouchStart(e: EventTouch) {
@@ -40,7 +42,7 @@ export class JoyStickManager extends Component {
         }
         this.stick.setPosition(stickPos.x, stickPos.y)
         this.input = stickPos.clone().normalize()
-        console.log(this.input)
+        /*console.log(this.input)*/
     }
 
     onTouchEnd() {
