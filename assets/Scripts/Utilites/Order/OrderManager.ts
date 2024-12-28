@@ -1,86 +1,166 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, instantiate, Node, Prefab, resources } from 'cc';
+import { MyColor } from '../ColorMix/MyColor';
+import { OrderData } from '../../UI/OrderControl/OrderData';
+import { ColorTip } from '../../UI/OrderControl/ColorTip';
+import { ColorOrder } from '../../UI/OrderControl/ColorOrder';
 const { ccclass, property } = _decorator;
 
 @ccclass('OrderManager')
-export class OrderManager extends Component {
-    start() {
-
+export class OrderManager{
+    private static _instance: OrderManager = new OrderManager();
+    public static get _Instance() {
+        if (this._instance == null) { this._instance = new OrderManager(); }
+        return this._instance;
     }
 
-    update(deltaTime: number) {
-        
+    /** ç³»ç»Ÿè®¢å•æ•°æ®*/
+    private _orderData: OrderData = new OrderData();
+
+    /** ç©å®¶æäº¤çš„è®¢å•æ•°æ® */
+    private _playerColorOrder: Array<MyColor> = [];
+
+    /** ç³»ç»Ÿå’Œç©å®¶è®¢å•çš„æ¯”å¯¹ç»“æœ */
+    private _isTip: Array<boolean> = [];
+
+
+    /** è®¢å•é¢œè‰²æç¤º*/
+    //private _colorTip: any = {}; //keyä¸ºç›®æ ‡é¢œè‰²hexï¼Œvalueä¸ºcolortip
+    private _tipObj: Array<Node> = [];
+    private _orderObj: Node;
+
+    /** è®¢å•é¢œè‰²æç¤ºé¢„åˆ¶ä½“*/
+    private _colorTipPrefabs: any = {};//keyä¸ºç›®æ ‡é¢œè‰²æ··åˆä¸ªæ•°ï¼Œvalueä¸ºPrefab
+    /** è®¢å•éœ€æ±‚é¢„åˆ¶ä½“*/
+    private _orderColorPrefab;
+
+    private _orderNode: Node;
+    private _orderTipNode: Node;
+
+    // init(){
+    //     GameEventManager._Instance.RegisterEventListener("InitAllEvent", () =>
+    //     {
+    //         //åˆå§‹åŒ–è®¢å•æ•°æ®
+    //         GameEventManager._Instance.RegisterEventListener("InitAllData", InitOrder);
+
+    //         //æ£€æµ‹ç©å®¶æäº¤è®¢å•å’Œç³»ç»Ÿç”Ÿæˆçš„è®¢å•
+    //         GameEventManager._Instance.RegisterEventListener("UploadOrder", CheckOrder);
+
+    //         //å¢åŠ ç©å®¶æäº¤çš„é¢œè‰²
+    //         //GameEventManager._Instance.RegisterEventListener<MyColor>("UploadColor", AddPlayerColor);
+    //     });
+    // }
+
+    constructor() {
+        //NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, () => {
+        //    OrderManager._Instance.InitData();
+        //    NotifyManager.instance.dispatch(GlobalNotify.GAME_INIT_SUCESS);
+        //});
+        this.LoadResources;
     }
+
+    /** åŠ è½½èµ„æº/æ•°æ®*/
+    LoadResources() {
+        for (let i = 2; i <= 4; i++) {
+            resources.load("Prefabs/orderTip_" + i, Prefab, this.loadOrderTip.bind(this));
+        }
+        resources.load("Prefabs/order", Prefab, this.loadOrder.bind(this));
+    }
+
+    loadOrder(err, prefab: Prefab){
+    if (err) {
+        console.error('åŠ è½½è®¢å•æç¤ºé¢„åˆ¶ä½“å‡ºé”™:', err);
+        return;
+    }
+    //OrderManager._instance._orderColorPrefab = prefab;
+    this._orderColorPrefab = prefab;
 }
 
+    loadOrderTip(err, prefab: Prefab) {
+        if (err) {
+            console.error('åŠ è½½è®¢å•æç¤ºé¢„åˆ¶ä½“å‡ºé”™:', err);
+            return;
+        }
+        //OrderManager._instance._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
+        this._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
+    }
+
+    /** æ•°æ®åˆå§‹åŒ– */
+    InitData() {
+        this._orderData.ClearSystemDate();
+
+        this._isTip = [false, false, false, false];
+
+        this._playerColorOrder = [];
+
+        this._orderNode = new Node("orderNode");
+        this._orderObj = instantiate(this._orderColorPrefab);
+        this._orderObj.parent = this._orderNode;
+
+        this._orderTipNode = new Node("orderTipNode");
+    }
+
+    /** äº‹ä»¶åˆå§‹åŒ– */
+    InitEve() {
+        //å‘é€äº‹ä»¶
+        //NotifyManager.instance.dispatch(GlobalNotify.ORDER_DATA_UPDATE, sss);
+    }
 
 
+    // #region è®¢å•ç›¸å…³çš„è°ƒç”¨å‡½æ•°
+    /** ç”Ÿæˆè®¢å•å’Œè®¢å•æç¤º*/
+    UpdateOrder() {
+        //å¤„ç†æ•°æ®
+        this._orderData.ClearSystemDate();
+        this._orderData.RandomOrder();
+        let length = this._orderData.nowColorOrder.length;
 
+        //è®¢å•é¢œè‰²è¦æ±‚æ˜¾ç¤º
+        let comp = this._orderObj.getComponent(ColorOrder);
+        comp.setData(this._orderData.nowColorOrder.slice(0, length - 2));
 
+        //é¢œè‰²æ··åˆæç¤º
+        this._orderTipNode.removeAllChildren();
+        this._tipObj = [];
+        for (let i = 0; i < length;i++) {
+            this._tipObj[i] = instantiate(this._colorTipPrefabs[this._orderData.nowOrderMixNum[i]]);
+            this._tipObj[i].parent = this._orderTipNode;
+            this._tipObj[i].setPosition(500, 100 - i * 75);
 
+            let comp = this._tipObj[i].getComponent(ColorTip);
+            comp.setData(this._orderData.nowColorOrder[length - 1], this._orderData.nowColorOrder.slice(0, length - 2));
+            comp.draw();
+        }
+    }
 
+    /** æ£€æµ‹ç©å®¶æäº¤è®¢å•çš„æ­£ç¡®æ•°é‡å¹¶æ›´æ–°åˆ†æ•° */
+    CheckOrder(){
+        let score = 0;
+        for (let c of this._orderData.nowColorOrder)
+        {
+            for (let p of this._playerColorOrder)
+            {
+                console.log("check: " + c.colorHEX + ", " +  p.colorHEX);
+                if (MyColor.operator_equal(c,p))
+                {
+                    //æ­£ç¡®ä¸€ä¸ªçˆªå­+5ï¼Œå¦åˆ™å°±ä¸åŠ 
+                    //GameEventManager._Instance.EventTrigger("Score+5");
+                    score += 5;
+                    break;
+                }
+            }   
+        }
 
+        //ScoreManager._Instance.ChangeScore(score);
+        //ç”Ÿæˆæ–°çš„è®¢å•
+        //GameEventManager._Instance.EventTrigger("UpdateOrderSystem");
+    }
 
-// using UnityEngine;
-
-// public class OrderManager : ManagerBase<OrderManager>
-// {
-//     public void Init()
-//     {
-//         GameEventManager._Instance.RegisterEventListener("InitAllEvent", () =>
-//         {
-//             //³õÊ¼»¯¶©µ¥Êı¾İ
-//             GameEventManager._Instance.RegisterEventListener("InitAllData", InitOrder);
-
-//             //¼ì²âÍæ¼ÒÌá½»¶©µ¥ºÍÏµÍ³Éú³ÉµÄ¶©µ¥
-//             GameEventManager._Instance.RegisterEventListener("UploadOrder", CheckOrder);
-
-//             //Ôö¼ÓÍæ¼ÒÌá½»µÄÑÕÉ«
-//             //GameEventManager._Instance.RegisterEventListener<MyColor>("UploadColor", AddPlayerColor);
-//         });
-//     }
-
-//     #region ¶©µ¥Ïà¹ØµÄµ÷ÓÃº¯Êı
-//     /// <summary>
-//     /// ¶©µ¥·½ÃæÊı¾İµÄ³õÊ¼»¯
-//     /// </summary>
-//     public void InitOrder()
-//     {
-//         SystemOrder._Instance.ClearPlayerDate();
-//     }
-
-//     /// <summary>
-//     /// ¼ì²âÍæ¼ÒÌá½»¶©µ¥µÄÕıÈ·ÊıÁ¿²¢¸üĞÂ·ÖÊı
-//     /// </summary>
-//     public void CheckOrder()
-//     {
-//         int score = 0;
-//         foreach (MyColor c in SystemOrder._Instance.nowColorOrder)
-//         {
-//             foreach (MyColor p in SystemOrder._Instance.playerColorOrder)
-//             {
-//                 Debug.Log("check: " + c.colorHEX + ", " +  p.colorHEX);
-//                 if (c == p)
-//                 {
-//                     //ÕıÈ·Ò»¸ö×¦×Ó+5£¬·ñÔò¾Í²»¼Ó
-//                     //GameEventManager._Instance.EventTrigger("Score+5");
-//                     score += 5;
-//                     break;
-//                 }
-//             }
-//         }
-//         ScoreManager._Instance.ChangeScore(score);
-//         //Éú³ÉĞÂµÄ¶©µ¥
-//         GameEventManager._Instance.EventTrigger("UpdateOrderSystem");
-//     }
-
-//     /// <summary>
-//     /// ¸üĞÂÍæ¼ÒÌá½»ÑÕÉ«ÁĞ±í
-//     /// </summary>
-//     /// <param name="playerColor"></param>
-//     public void AddPlayerColor(MyColor GiveOrder)
-//     {
-//         SystemOrder._Instance.playerColorOrder.Add(GiveOrder);
-//     }
-
-//     #endregion
-// }
+    /// <summary>
+    /// æ›´æ–°ç©å®¶æäº¤é¢œè‰²åˆ—è¡¨
+    /// </summary>
+    /// <param name="playerColor"></param>
+    AddPlayerColor(GiveOrder: MyColor){
+        this._playerColorOrder.push(GiveOrder);
+    }
+    // #endregion
+}

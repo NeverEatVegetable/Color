@@ -1,6 +1,10 @@
 import { _decorator, Component, find, Node } from 'cc';
 import { ColorManager } from './Utilites/ColorMix/ColorManager';
+<<<<<<< HEAD
 import { ViewManager } from './FrameWork/View/ViewManager';
+=======
+import { OrderManager } from './Utilites/Order/OrderManager';
+>>>>>>> lyl
 const { ccclass, property } = _decorator;
 
 /**
@@ -51,10 +55,18 @@ export class GameStarter extends Component {
         this.node.addComponent("InputSystemTest")
         this._viewManager = find("Canvas").getComponent(ViewManager)
         //加载本地配置
+<<<<<<< HEAD
         ColorManager._Instance.loadJsonData();
 
         // 打开初始界面，如：登录界面、主界面等，这里测试填了创建房间界面，记得手动改一下
         this._viewManager.openView("roomcreatepopview")
         // NotifyManager.instance.dispatch(GlobalNotify.OpenView, "roomcreatepopview")
+=======
+        //ColorManager._Instance.LoadResources();
+        //OrderManager._Instance.LoadResources();
+
+        //本地初始化
+        //OrderManager._Instance.InitData();
+>>>>>>> lyl
     }
 }

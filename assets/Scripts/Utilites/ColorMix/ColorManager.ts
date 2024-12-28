@@ -4,14 +4,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('ColorManager')
 export class ColorManager {
-    private constructor() {
-        //this.loadJsonData().then(dates => { this.colorDates = dates;  });
-        //NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, () => {
-            
-        //});
-
-    }
-
     private static _instance: ColorManager = new ColorManager();
     public static get _Instance() {
         if (this._instance == null) { this._instance = new ColorManager(); }
@@ -30,12 +22,12 @@ export class ColorManager {
     public monoLess: MyColor = new MyColor("#000000", [1, 1, 1], [false, false, false, false]);
 
     /**基础的颜色的个数*/
-    public baseNum: number;
+    public baseNum: number = 4;
 
-    // #region 管理器本身
+    constructor() {
+        this.LoadResources;
+    }
 
-
-    // #endregion
 
     // #region 调用接口工具
     /**
@@ -191,6 +183,12 @@ export class ColorManager {
 
     // #region 资源加载
 
+    /** 加载资源或数据*/
+    LoadResources() {
+        this.loadJsonData();
+    }
+
+
     /**
      * 异步加载JSON
      * @returns
@@ -221,7 +219,7 @@ export class ColorManager {
     }
 
     public loadJsonData() {
-        resources.load('Data/ColorMix', this.loadFun);
+        resources.load('Data/ColorMix', this.loadFun.bind(this));
     }
 
     loadFun(err: any, res: JsonAsset) {
@@ -242,17 +240,17 @@ export class ColorManager {
             dates.push(row);
         }
 
-        ColorManager._instance.colorDates = dates;
+        this.colorDates = dates;
 
         let index = 0;
         let hex, rgb, mix;
         for (let name of lieName) {
             hex = name;
-            rgb = ColorManager._instance.Convert_HEX2RGB(name);
+            rgb = this.Convert_HEX2RGB(name);
             mix = dates[index++];
-            ColorManager._instance.colorList.push(new MyColor(hex, rgb, mix));
+            this.colorList.push(new MyColor(hex, rgb, mix));
         }
-        ColorManager._instance.baseNum = dates[0].length;
+        this.baseNum = dates[0].length;
         NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
     
@@ -296,7 +294,7 @@ export class ColorManager {
     // #region 测试用
     test(): void {
         console.log("in test");
-        for (let tmp in ColorManager._instance.colorList) {
+        for (let tmp in this.colorList) {
             this.colorList[tmp].Print();
         }
     }
@@ -311,127 +309,3 @@ export class ColorManager {
 // #endregion
     
 }
-//(window as any).ColorManager = ColorManager;
-
-//public class ColorManager222: ManagerBase<ColorManager>
-//{
-//    //颜色库
-//    List < MyColor > colorList;
-
-//    //最终的颜色：黑色
-//    public MyColor black = new MyColor("#000001", new Vector3(0, 0, 0), new bool[] { true, true, true, true});
-
-//    //最初的颜色：无任何混合色
-//    public MyColor monoLess = new MyColor("#000000", new Vector3(1, 1, 1), new bool[] { false, false, false, false });
-
-//    public ColorManager()
-//    {
-//        InitColorDic("ColorMix.xlsx");
-
-
-//        //colorList.Add(black);
-//        //colorList.Add(monoLess);
-
-//        //test();
-//        //test2();
-//    }
-
-//    #region 调用接口工具
-
-//    /// <summary>
-//    /// 判断输入的混合方式是否在颜色库中
-//    /// </summary>
-//    /// <param name="color"></param>
-//    /// <returns></returns>
-//    public bool GetContains(bool[] mix, out int ans)
-//    {
-//        bool temBool;
-//        for (int i = 0; i < colorList.Count; i++)
-//        {
-//            temBool = true;
-//            for (int j = 0; j < colorList[i].colorMix.Length; j++)
-//            {
-//                if (mix[j] != colorList[i].colorMix[j]) {
-//                    temBool = false;
-//                    break;
-//                }
-//            }
-
-//            if (temBool) {
-//                ans = i;
-//                return true;
-//            }
-//        }
-
-//        ans = -1;
-//        return false;
-//    }
-
-
-
-//    #endregion
-
-//    #region 转换工具
-
-//    /// <summary>
-//    /// HEX转RGB
-//    /// </summary>
-//    /// <param name="HEX">带#的HEX字符串</param>
-//    /// <returns></returns>
-//    public Vector3 Convert_HEX2RGB(string HEX)
-//    {
-//        return new Vector3(
-//            (float)Convert_16to10(HEX.Substring(1, 2)) / 255,
-//            (float)Convert_16to10(HEX.Substring(3, 2)) / 255,
-//            (float)Convert_16to10(HEX.Substring(5, 2)) / 255
-//        );
-
-//        //16进制转10进制(十六进制的字符串类型，如：F（16）)
-//        int Convert_16to10(string math_16)
-//        {
-//            return Convert.ToInt32(math_16, 16);
-//        }
-
-//    }
-
-//    /// <summary>
-//    /// RGB转HEX
-//    /// </summary>
-//    /// <param name="rgb">unity形式的v3，取值在0f-1f</param>
-//    /// <returns></returns>
-//    public string Convert_RGB2HEX(Vector3 rgb)
-//    {
-//        return TryGetColor(TryGetColorMix(rgb)).colorHEX;
-//    }
-
-//    ///// <summary>
-//    ///// 16进制转10进制
-//    ///// </summary>
-//    ///// <param name="math_16">十六进制的字符串类型，如：F（16）</param>
-//    ///// <returns></returns>
-//    //int Convert_16to10(string math_16)
-//    //{
-//    //    return Convert.ToInt32(math_16,16);
-//    //}
-
-//    #endregion
-
-//    #region 测试用
-//    void test()
-//    {
-//        foreach(MyColor myColor in colorList)
-//        {
-//            myColor.Print();
-//        }
-//    }
-
-//    void test2()
-//    {
-//        Debug.Log(GetContains(new bool[] { false, false, false, false }, out _) ? "true" : "false");
-
-//        Debug.Log(GetContains(new MyColor("#FDFDFD", new Vector3(253, 253, 253), new bool[] { false, false, false, false }), out _) ? "true" : "false");
-//    }
-
-//    #endregion
-//}
-
