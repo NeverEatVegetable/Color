@@ -1,6 +1,6 @@
 import { _decorator, Component, Node } from 'cc';
-import { ColorManager } from '../../Utilites/ColorMix/ColorManager';
 import { MyColor } from '../../Utilites/ColorMix/MyColor';
+import { ColorManager } from '../../Utilites/ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 /** 订单数据*/
@@ -12,13 +12,6 @@ export class OrderData {
     public nowOrderMixNum: Array<number> = [];
 
     // #region 调用函数
-    //public getOrderColor(): Array<MyColor> {
-    //    return this.nowColorOrder;
-    //}
-
-    //public getOrderMixNum(): Array<number> {
-    //    return this.nowOrderMixNum;
-    //}
 
     /** 清除系统单笔订单数据 */
     public ClearSystemDate() {
@@ -62,5 +55,16 @@ export class OrderData {
     getRandomNumber(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+
+
+    Print() {
+        console.log("-----------------------当前订单颜色：");
+        for (let i = 0; i < this.nowColorOrder.length; i++) {
+            console.log(this.nowColorOrder[i].Print());
+        }
+        console.log("-----------------------订单打印完毕");
+    }
+
+
     // #endregion
 }

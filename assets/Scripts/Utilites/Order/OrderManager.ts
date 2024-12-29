@@ -3,11 +3,12 @@ import { MyColor } from '../ColorMix/MyColor';
 import { ColorOrder } from '../../UI/OrderControl/ColorOrder';
 import { ColorTip } from '../../UI/OrderControl/ColorTip';
 import { OrderData } from '../../UI/OrderControl/OrderData';
+import { ColorManager } from '../ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('OrderManager')
 export class OrderManager{
-    private static _instance: OrderManager = new OrderManager();
+    public static _instance: OrderManager = null;
     public static get _Instance() {
         if (this._instance == null) { this._instance = new OrderManager(); }
         return this._instance;
@@ -33,30 +34,8 @@ export class OrderManager{
     /** 订单需求预制体*/
     private _orderColorPrefab;
 
-    private _orderNode: Node;
-    private _orderTipNode: Node;
-
-    // init(){
-    //     GameEventManager._Instance.RegisterEventListener("InitAllEvent", () =>
-    //     {
-    //         //初始化订单数据
-    //         GameEventManager._Instance.RegisterEventListener("InitAllData", InitOrder);
-
-    //         //检测玩家提交订单和系统生成的订单
-    //         GameEventManager._Instance.RegisterEventListener("UploadOrder", CheckOrder);
-
-    //         //增加玩家提交的颜色
-    //         //GameEventManager._Instance.RegisterEventListener<MyColor>("UploadColor", AddPlayerColor);
-    //     });
-    // }
-
-    constructor() {
-        //NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, () => {
-        //    OrderManager._Instance.InitData();
-        //    NotifyManager.instance.dispatch(GlobalNotify.GAME_INIT_SUCESS);
-        //});
-        this.LoadResources;
-    }
+    public orderNode: Node;
+    public orderTipNode: Node;
 
     /** 加载资源/数据*/
     LoadResources() {
@@ -66,18 +45,19 @@ export class OrderManager{
         resources.load("Prefabs/views/order", Prefab, this.loadOrder.bind(this));
     }
 
-    loadOrder(err, prefab: Prefab){
-    if (err) {
-        console.error('加载订单提示预制体出错:', err);
-        return;
+    loadOrder(prefab: Prefab) {
+        if (!prefab) {
+            console.log('Prefab error');
+            return;
+        }
+        //OrderManager._instance._orderColorPrefab = prefab;
+        this._orderColorPrefab = prefab;
+        //NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
-    //OrderManager._instance._orderColorPrefab = prefab;
-    this._orderColorPrefab = prefab;
-}
 
-    loadOrderTip(err, prefab: Prefab) {
-        if (err) {
-            console.error('加载订单提示预制体出错:', err);
+    loadOrderTip(prefab: Prefab) {
+        if (!prefab) {
+            console.log('Prefab error');
             return;
         }
         //OrderManager._instance._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
@@ -92,11 +72,14 @@ export class OrderManager{
 
         this._playerColorOrder = [];
 
-        this._orderNode = new Node("orderNode");
+        //this.orderNode = new Node("orderNode");
+        this.orderNode.setPosition(0, 0);
         this._orderObj = instantiate(this._orderColorPrefab);
-        this._orderObj.parent = this._orderNode;
+        this._orderObj.parent = this.orderNode;
+        this._orderObj.setPosition(500, 150);
 
-        this._orderTipNode = new Node("orderTipNode");
+        //this.orderTipNode = new Node("orderTipNode");
+        this.orderTipNode.setPosition(0, 0);
     }
 
     /** 事件初始化 */
@@ -112,22 +95,47 @@ export class OrderManager{
         //处理数据
         this._orderData.ClearSystemDate();
         this._orderData.RandomOrder();
+
         let length = this._orderData.nowColorOrder.length;
 
         //订单颜色要求显示
         let comp = this._orderObj.getComponent(ColorOrder);
-        comp.setData(this._orderData.nowColorOrder.slice(0, length - 2));
+        comp.setData(this._orderData.nowColorOrder);
+        comp.draw();
 
         //颜色混合提示
-        this._orderTipNode.removeAllChildren();
+        this.orderTipNode.removeAllChildren();
         this._tipObj = [];
-        for (let i = 0; i < length;i++) {
-            this._tipObj[i] = instantiate(this._colorTipPrefabs[this._orderData.nowOrderMixNum[i]]);
-            this._tipObj[i].parent = this._orderTipNode;
-            this._tipObj[i].setPosition(500, 100 - i * 75);
+
+        let index = 0;
+        for (let i = 0; i < length; i++) {
+            let mixNum = this._orderData.nowOrderMixNum[i];
+            //去单色
+            if (mixNum <= 1) continue;
+            //简单除暴去重
+            let flag = false;
+            let j;
+            for (j = i-1; j >= 0; j--) {
+                if (this._orderData.nowColorOrder[i].colorHEX == this._orderData.nowColorOrder[j].colorHEX) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag) continue;
+
+            let targetData: MyColor = this._orderData.nowColorOrder[i];
+            let hexData = [];
+            for (j = 0; j < 4; j++) {
+                if (targetData.colorMix[j]) {
+                    hexData.push(ColorManager._Instance.TryGetMonoChrome_ByIndex(j).colorHEX);
+                }
+            }
+            this._tipObj[i] = instantiate(this._colorTipPrefabs[mixNum]);
+            this._tipObj[i].parent = this.orderTipNode;
+            this._tipObj[i].setPosition(500, 100 - index++ * 75);
 
             let comp = this._tipObj[i].getComponent(ColorTip);
-            comp.setData(this._orderData.nowColorOrder[length - 1], this._orderData.nowColorOrder.slice(0, length - 2));
+            comp.setData(targetData.colorHEX, hexData.slice(0, length));
             comp.draw();
         }
     }
@@ -163,4 +171,8 @@ export class OrderManager{
         this._playerColorOrder.push(GiveOrder);
     }
     // #endregion
+
+    OrderDataPrint() {
+        this._orderData.Print();
+    }
 }

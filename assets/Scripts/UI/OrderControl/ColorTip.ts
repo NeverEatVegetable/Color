@@ -41,30 +41,24 @@ export class ColorTip extends Component {
 
     /**
      * 设置订单提示数据
-     * @param targetColor
-     * @param colors
+     * @param targetHex 等号右侧
+     * @param colorHexs 等号左侧
      */
-    setData(targetColor: MyColor, colors: MyColor[]) {
+    setData(targetHex: string, colorHexs: string[]) {
         this.Init();
-        this.setColors(colors);
-        this.setTargetColor(targetColor);       
+        this.setColors(colorHexs);
+        this.setTargetColor(targetHex);       
     }
 
-    private setColors(colors: MyColor[]) {
+    private setColors(colors: string[]) {
         let tmp: Sprite;
         for (let i = 0; i < colors.length; i++) {
-            //简单粗暴的去重
-            for (let j = i; j >= 0; j--) {
-                if (colors[i].colorHEX == colors[j].colorHEX) {
-                    continue;
-                }
-            }
-            this._colorTipData.push(new Color(colors[i].colorHEX));
+            this._colorTipData.push(new Color(colors[i]));
         }
     }
 
-    private setTargetColor(targetColor: MyColor) {
-        this._colorTipData.push(new Color(targetColor.colorHEX));
+    private setTargetColor(targetHex: string) {
+        this._colorTipData.push(new Color(targetHex));
     }
 
     /** 开始绘制*/
@@ -72,7 +66,7 @@ export class ColorTip extends Component {
         this.node.active = true;
 
         for (let i = 0; i < this._colorTipData.length - 1; i++) {
-            this.node.getChildByName("n" + i).getComponent(Sprite).color = this._colorTipData[i];
+            this.node.getChildByName("n" + (i + 1)).getComponent(Sprite).color = this._colorTipData[i];
         }
 
         this.node.getChildByName("target").getComponent(Sprite).color = this._colorTipData[this._colorTipData.length - 1];

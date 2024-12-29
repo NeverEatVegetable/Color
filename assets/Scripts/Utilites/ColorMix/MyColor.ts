@@ -2,6 +2,7 @@ import { _decorator, Component, error, math, Node } from 'cc';
 import { ColorManager } from './ColorManager';
 const { ccclass, property } = _decorator;
 
+@ccclass('MyColor')
 export class MyColor {
     public colorHEX:string;
     public colorRGB: number[] = [];
@@ -118,11 +119,17 @@ export class MyColor {
         }
     }
 
-    // #endregin
+    // #endregion
 
 
-    // #region 修补colorRgb在ts中通过number[]实现时，使用原V3的函数的问题
+    // #region 修补
 
+    /**
+     * 修补colorRgb在ts中通过number[]实现时，使用原V3的函数的问题
+     * @param rgb1
+     * @param rgb2
+     * @returns
+     */
     static colorRgb_Distance(rgb1:number[],rgb2:number[]):number {
         let ans: number = 0;
 
@@ -133,10 +140,6 @@ export class MyColor {
         return Math.sqrt(ans);
     }
 
-
-
-    // #endregin
-
     /** 修补可能出现的没对mix赋值的情况 */
     static FixMixBools(c: MyColor) {
         if (c.colorHEX == "") {
@@ -144,7 +147,7 @@ export class MyColor {
         }
 
         if (c.colorMix == null) {
-            let bools:boolean[] = ColorManager._Instance.TryGetColorMix_ByHEX(c.colorHEX);
+            let bools: boolean[] = ColorManager._Instance.TryGetColorMix_ByHEX(c.colorHEX);
             if (bools == null) {
                 console.error("错误，HEX有误");
             }
@@ -153,6 +156,10 @@ export class MyColor {
             }
         }
     }
+
+    // #endregion
+
+    
 
         /// <summary>
         /// 打印MyColor的信息
@@ -178,165 +185,4 @@ export class MyColor {
     }
 
 }
-
-//public class MyColor222 {
-//    public string colorHEX;
-//    public Vector3 colorRGB;
-//    public bool[] colorMix;
-
-//    #region 构造函数
-//    public MyColor() {
-
-//    }
-
-//    public MyColor(string colorHEX) {
-//        this.colorHEX = colorHEX;
-//        this.colorRGB = ColorManager._Instance.Convert_HEX2RGB(colorHEX);
-//        this.colorMix = ColorManager._Instance.TryGetColorMix(colorHEX);
-//    }
-
-//    public MyColor(Vector3 colorRGB) {
-//        this.colorRGB = colorRGB / 255;
-//        this.colorHEX = ColorManager._Instance.Convert_RGB2HEX(colorRGB);
-//        this.colorMix = ColorManager._Instance.TryGetColorMix(colorRGB);
-//    }
-
-//    public MyColor(string colorHEX, bool[] colorMix) {
-//        this.colorHEX = colorHEX;
-//        this.colorMix = colorMix;
-//        this.colorRGB = ColorManager._Instance.Convert_HEX2RGB(colorHEX);
-//    }
-
-//    public MyColor(Vector3 colorRGB, bool[] colorMix) {
-//        this.colorRGB = colorRGB / 255;
-//        this.colorMix = colorMix;
-//        this.colorHEX = ColorManager._Instance.TryGetColor(colorMix).colorHEX;
-//    }
-
-//    public MyColor(string colorHEX, Vector3 colorRGB, bool[] colorMix) {
-//        this.colorHEX = colorHEX;
-//        this.colorRGB = colorRGB / 255;
-//        this.colorMix = colorMix;
-//    }
-//    #endregion
-
-//    #region 运算符重载
-//    public static MyColor operator +(MyColor c1, MyColor c2)
-//{
-//    FixMixBools(c1);
-//    FixMixBools(c2);
-
-//    if (c1.colorMix == null || c2.colorMix == null) {
-//        Debug.LogError("Mix为空");
-//        return null;
-//    }
-
-//    if (c1.colorHEX == ColorManager._Instance.black.colorHEX || c2.colorHEX == ColorManager._Instance.black.colorHEX) {
-//        return ColorManager._Instance.black;
-//    }
-
-//    bool[] mixColor = new bool[c1.colorMix.Length];
-
-//    if (c1.colorHEX == "#9C816B" || c2.colorHEX == "#9C816B") {
-//        return ColorManager._Instance.black;
-//    }
-
-//    for (int i = 0; i < mixColor.Length; i++)
-//    {
-//        mixColor[i] = (c1.colorMix[i] == true | c2.colorMix[i] == true) ? true : false;
-//    }
-
-//    return ColorManager._Instance.TryGetColor(mixColor);
-//}
-
-//    public static bool operator == (MyColor c1, MyColor c2)
-//{
-//    FixMixBools(c1);
-//    FixMixBools(c2);
-
-//    if (c1.colorMix == null || c2.colorMix == null) {
-//        Debug.LogError("Mix为空");
-//        return false;
-//    }
-
-//    for (int i = 0; i < c1.colorMix.Length; i++)
-//    {
-//        if (c1.colorMix[i] != c2.colorMix[i]) {
-//            return false;
-//        }
-//    }
-
-//    if (c1.colorHEX != c2.colorHEX) {
-//        return false;
-//    }
-
-//    return true;
-//}
-
-//    public static bool operator != (MyColor c1, MyColor c2)
-//{
-//    FixMixBools(c1);
-//    FixMixBools(c2);
-
-//    if (c1.colorMix == null || c2.colorMix == null) {
-//        Debug.LogError("Mix为空");
-//        return false;
-//    }
-
-//    if (c1 == c2) {
-//        return false;
-//    }
-//    else {
-//        return true;
-//    }
-//}
-//#endregion
-
-
-//    /// <summary>
-//    /// 修补可能出现的没对mix赋值的情况
-//    /// </summary>
-//    /// <param name="c"></param>
-//    public static void FixMixBools(MyColor c)
-//{
-//    if (c.colorHEX == "") {
-//        Debug.LogError("错误，HEX为空");
-//    }
-
-//    if (c.colorMix == null) {
-//        bool[] bools = ColorManager._Instance.TryGetColorMix(c.colorHEX);
-//        if (bools == null) {
-//            Debug.LogError("错误，HEX有误");
-//        }
-//        else {
-//            c.colorMix = bools;
-//        }
-//    }
-//}
-
-//    /// <summary>
-//    /// 打印MyColor的信息
-//    /// </summary>
-//    public void Print()
-//{
-//    FixMixBools(this);
-//    FixMixBools(this);
-
-//    if (this.colorMix == null) {
-//        Debug.LogError("Mix为空");
-//        return;
-//    }
-
-//        string temp;
-//    temp = "hex: " + colorHEX + " , rgb: " + colorRGB + " , mix: ";
-
-//    foreach(bool myBool in colorMix)
-//    {
-//        temp = temp + myBool.ToString();
-//    }
-
-//    Debug.Log(temp);
-//}
-
-//}
 
