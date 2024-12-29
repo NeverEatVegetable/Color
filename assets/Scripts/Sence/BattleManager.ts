@@ -1,10 +1,12 @@
-import { _decorator, Component, instantiate, Node, Prefab } from 'cc';
+import { _decorator, Component, instantiate, JsonAsset, Node, Prefab } from 'cc';
 import DataManager from '../Global/DataManager';
 import { JoyStickManager } from '../UI/JoyStickManager';
 import { ResourceManager } from '../Global/ResourceManager';
 import { PrefabPatEnum } from '../Enum';
 import { ActorMannager } from '../EntityAndActor/ActorMannager';
 import { EntityTypeEnum } from '../Common';
+import { OrderManager } from '../Utilites/Order/OrderManager';
+import { ColorManager } from '../Utilites/ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -27,6 +29,7 @@ export class BattleManager extends Component {
     }
 
     async loadRes() {
+        ResourceManager.Instance.loadRes('Data/ColorMix', JsonAsset).then(ColorManager._Instance.loadFun.bind(ColorManager._Instance));
         const list = []
         for (const type in PrefabPatEnum) {
             const p = ResourceManager.Instance.loadRes(PrefabPatEnum[type], Prefab).then((prefab) => {
@@ -34,7 +37,14 @@ export class BattleManager extends Component {
             })
             list.push(p)
         }
-        await Promise.all(list)
+
+        for (let i = 2; i <= 4; i++) {
+            ResourceManager.Instance.loadRes("Prefabs/views/orderTip_" + i, Prefab).then(OrderManager._Instance.loadOrderTip.bind(OrderManager._Instance));
+        }
+        ResourceManager.Instance.loadRes("Prefabs/views/order", Prefab).then(OrderManager._Instance.loadOrder.bind(OrderManager._Instance));
+
+        await Promise.all(list);
+        NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
 
     initMap() {

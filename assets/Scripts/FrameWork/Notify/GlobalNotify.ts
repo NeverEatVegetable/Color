@@ -49,8 +49,6 @@ enum GlobalNotify {
 
     /** 本地配置加载完毕 */
     LOCAL_DATA_LOAD_SUCESS,
-    /** 本地游戏开始前初始化完毕*/
-    GAME_INIT_SUCESS,
     /** 订单数据改变 */
     ORDER_DATA_UPDATE,
     /** 分数数据改变 */

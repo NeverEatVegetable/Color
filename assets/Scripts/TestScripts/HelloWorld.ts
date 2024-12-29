@@ -15,7 +15,7 @@ export class HelloWorld extends Component {
     public sp3: Sprite;
 
     start() {
-	//演示案例
+        //演示案例
         NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, () => {
             //this.sp1.color = new Color("#0371C7");
             //let c1 = MyColor.Creat_ByHEX("#0371C7");
@@ -25,19 +25,22 @@ export class HelloWorld extends Component {
 
             //let c3 = MyColor.operator_add(c1, c2);
             //this.sp3.color = new Color(c3.colorHEX);
-            
 
+
+            //OrderManager._Instance.InitData();
             //OrderManager._Instance.UpdateOrder();
         });
 
-        
+        //let node = this.node.getChildByName("orderNode");
+        //node.addChild(new Node("node33"));
+
         //ColorManager._Instance.test();
-        
+
     }
 
 
     update(deltaTime: number) {
-        
+
     }
 }
 

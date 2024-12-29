@@ -4,7 +4,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('ColorManager')
 export class ColorManager {
-    private static _instance: ColorManager = new ColorManager();
+    private static _instance: ColorManager = null;
     public static get _Instance() {
         if (this._instance == null) { this._instance = new ColorManager(); }
         return this._instance;
@@ -13,21 +13,16 @@ export class ColorManager {
     public colorDates: boolean[][] = [];
 
     /**颜色混合数据 */
-    public colorList: Array<MyColor> = new Array<MyColor>();
+    public colorList: Array<MyColor> = [];
 
     /**最终的颜色：黑色 */
-    public black: MyColor = new MyColor("#000001", [0, 0, 0], [true, true, true, true]);
+    public black: MyColor = new MyColor("#000001", [0, 0, 0], [true, true, true, true]);;
 
     /**最初的颜色：无任何混合色 */
-    public monoLess: MyColor = new MyColor("#000000", [1, 1, 1], [false, false, false, false]);
+    public monoLess: MyColor = new MyColor("#000000", [255, 255, 255], [false, false, false, false]);
 
     /**基础的颜色的个数*/
     public baseNum: number = 4;
-
-    constructor() {
-        this.LoadResources;
-    }
-
 
     // #region 调用接口工具
     /**
@@ -136,7 +131,7 @@ export class ColorManager {
             case 3:
                 return this.TryGetColor_ByMix([false, false, false, true]);
             default:
-                console.error("TryGetMonoChrome错误");
+                console.error("TryGetMonoChrome_ByIndex错误");
                 return null;
 
         }
@@ -155,7 +150,7 @@ export class ColorManager {
             }
         }
 
-        console.error("TryGetColorMix查找不到");
+        console.error("TryGetColorMix_ByHEX查找不到");
         return null;
     }
 
@@ -175,10 +170,9 @@ export class ColorManager {
             }
         }
 
-        console.error("TryGetColorMix查找不到");
+        console.error("TryGetColorMix_ByRGB查找不到");
         return null;
     }
-
     // #endregion
 
     // #region 资源加载
@@ -222,8 +216,10 @@ export class ColorManager {
         resources.load('Data/ColorMix', this.loadFun.bind(this));
     }
 
-    loadFun(err: any, res: JsonAsset) {
-        if (err) {
+    //loadFun(err: any, res: JsonAsset) {
+    loadFun(res: JsonAsset) {
+        //if (err) {
+        if (!res) {
             console.log('json error');
             return;
         }
@@ -251,7 +247,7 @@ export class ColorManager {
             this.colorList.push(new MyColor(hex, rgb, mix));
         }
         this.baseNum = dates[0].length;
-        NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
+        //NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
     
 
