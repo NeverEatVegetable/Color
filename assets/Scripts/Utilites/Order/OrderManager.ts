@@ -8,7 +8,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('OrderManager')
 export class OrderManager{
-    public static _instance: OrderManager = null;
+    private static _instance: OrderManager = null;
     public static get _Instance() {
         if (this._instance == null) { this._instance = new OrderManager(); }
         return this._instance;
@@ -65,7 +65,7 @@ export class OrderManager{
     }
 
     /** 数据初始化 */
-    InitData() {
+    Init() {
         this._orderData.ClearSystemDate();
 
         this._isTip = [false, false, false, false];
@@ -82,15 +82,8 @@ export class OrderManager{
         this.orderTipNode.setPosition(0, 0);
     }
 
-    /** 事件初始化 */
-    InitEve() {
-        //发送事件
-        //NotifyManager.instance.dispatch(GlobalNotify.ORDER_DATA_UPDATE, sss);
-    }
-
-
     // #region 订单相关的调用函数
-    /** 生成订单和订单提示*/
+    /** 生成订单和订单提示。猫猫模块直接调用吧。*/
     UpdateOrder() {
         //处理数据
         this._orderData.ClearSystemDate();
@@ -107,6 +100,9 @@ export class OrderManager{
         this.orderTipNode.removeAllChildren();
         this._tipObj = [];
 
+        //排序（订单不用，这里提示从多到少）
+        //this._orderData.nowColorOrder.sort(this.sort);
+
         let index = 0;
         for (let i = 0; i < length; i++) {
             let mixNum = this._orderData.nowOrderMixNum[i];
@@ -121,6 +117,7 @@ export class OrderManager{
                     break;
                 }
             }
+
             if (flag) continue;
 
             let targetData: MyColor = this._orderData.nowColorOrder[i];
@@ -140,6 +137,8 @@ export class OrderManager{
         }
     }
 
+
+
     /** 检测玩家提交订单的正确数量并更新分数 */
     CheckOrder(){
         let score = 0;
@@ -158,21 +157,26 @@ export class OrderManager{
             }   
         }
 
-        //ScoreManager._Instance.ChangeScore(score);
-        //生成新的订单
-        //GameEventManager._Instance.EventTrigger("UpdateOrderSystem");
+        
+        //score = 5; //测试用
+        if (score > 0) {
+            NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, score);
+        }
     }
 
-    /// <summary>
-    /// 更新玩家提交颜色列表
-    /// </summary>
-    /// <param name="playerColor"></param>
-    AddPlayerColor(GiveOrder: MyColor){
+    /** 更新玩家提交颜色列表 */
+    UpdatePlayerColor(GiveOrder: MyColor){
         this._playerColorOrder.push(GiveOrder);
+    }
+
+    sort(a: MyColor, b: MyColor): number {
+        return ColorManager._Instance.TryGetColorMixNum_ByMyColor(a) - ColorManager._Instance.TryGetColorMixNum_ByMyColor(b);
     }
     // #endregion
 
+    // #region 测试用
     OrderDataPrint() {
         this._orderData.Print();
     }
+    // #endregion
 }

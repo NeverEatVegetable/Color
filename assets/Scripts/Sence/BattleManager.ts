@@ -7,6 +7,7 @@ import { ActorMannager } from '../EntityAndActor/ActorMannager';
 import { EntityTypeEnum } from '../Common';
 import { OrderManager } from '../Utilites/Order/OrderManager';
 import { ColorManager } from '../Utilites/ColorMix/ColorManager';
+import { ScoreManager } from '../Utilites/Score/ScoreManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -29,7 +30,7 @@ export class BattleManager extends Component {
     }
 
     async loadRes() {
-        ResourceManager.Instance.loadRes('Data/ColorMix', JsonAsset).then(ColorManager._Instance.loadFun.bind(ColorManager._Instance));
+        ResourceManager.Instance.loadRes("Data/ColorMix", JsonAsset).then(ColorManager._Instance.loadFun.bind(ColorManager._Instance));
         const list = []
         for (const type in PrefabPatEnum) {
             const p = ResourceManager.Instance.loadRes(PrefabPatEnum[type], Prefab).then((prefab) => {
@@ -42,6 +43,7 @@ export class BattleManager extends Component {
             ResourceManager.Instance.loadRes("Prefabs/views/orderTip_" + i, Prefab).then(OrderManager._Instance.loadOrderTip.bind(OrderManager._Instance));
         }
         ResourceManager.Instance.loadRes("Prefabs/views/order", Prefab).then(OrderManager._Instance.loadOrder.bind(OrderManager._Instance));
+        ResourceManager.Instance.loadRes("Prefabs/views/score", Prefab).then(ScoreManager._Instance.loadScore.bind(ScoreManager._Instance));
 
         await Promise.all(list);
         NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);

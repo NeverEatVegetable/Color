@@ -1,38 +1,43 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, EventKeyboard, EventTouch, Input, input, KeyCode, Node } from 'cc';
 import { OrderManager } from './Utilites/Order/OrderManager';
+import { ScoreManager } from './Utilites/Score/ScoreManager';
 const { ccclass, property } = _decorator;
 
 //游戏总控
 @ccclass('GameManager')
 export class GameManager extends Component {
     start() {
-        //演示案例
-        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, this.callBack.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, this.InitOrder.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, this.InitScore.bind(this));
 
-        //let node = this.node.getChildByName("orderNode");
-        //node.addChild(new Node("node33"));
-
-        //ColorManager._Instance.test();
-
+        input.on(Input.EventType.KEY_DOWN, this.onTouchStart, this);
     }
 
-    callBack() {
-        //this.sp1.color = new Color("#0371C7");
-        //let c1 = MyColor.Creat_ByHEX("#0371C7");
+    onTouchStart(event: EventKeyboard) {
+        switch (event.keyCode) {
+            //提交订单，增加分数，生成新订单
+            case KeyCode.SPACE:
+                OrderManager._Instance.CheckOrder();
+                OrderManager._Instance.UpdateOrder();
+                OrderManager._Instance.OrderDataPrint();
+                break;
+            default:
+                break;
+        }
+    }
 
-        //let c2 = MyColor.Creat_ByHEX("#F2EB00");
-        //this.sp2.color = new Color(c2.colorRGB[0], c2.colorRGB[1], c2.colorRGB[2]);
+    InitOrder() {
+        OrderManager._Instance.orderNode = this.node.getChildByName("orderNode");
+        OrderManager._Instance.orderTipNode = this.node.getChildByName("orderTipNode");
+        OrderManager._Instance.Init();
 
-        //let c3 = MyColor.operator_add(c1, c2);
-        //this.sp3.color = new Color(c3.colorHEX);
-
-        OrderManager._instance.orderNode = this.node.getChildByName("orderNode");
-        OrderManager._instance.orderTipNode = this.node.getChildByName("orderTipNode");
-        OrderManager._Instance.InitData();
-        
         OrderManager._Instance.UpdateOrder();
         OrderManager._Instance.OrderDataPrint();
+    }
 
+    InitScore() {
+        ScoreManager._Instance.scoreNode = this.node.getChildByName("scoreNode");
+        ScoreManager._Instance.Init();
     }
 }
 
