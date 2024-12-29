@@ -158,13 +158,10 @@ export class OrderManager{
         }
 
         
-        score = 5; //测试用
+        //score = 5; //测试用
         if (score > 0) {
             NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, score);
         }
-        //ScoreManager._Instance.ChangeScore(score);
-        //生成新的订单
-        //GameEventManager._Instance.EventTrigger("UpdateOrderSystem");
     }
 
     /** 更新玩家提交颜色列表 */

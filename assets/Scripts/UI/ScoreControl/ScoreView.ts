@@ -26,8 +26,10 @@ export class ScoreView extends Component {
     private _isOpen: boolean = false;
 
     Init() {
-        this._addScore = ScoreManager._Instance.getAddScore();
         this._score = ScoreManager._Instance.getScore();
+        this.scoreLabel.string = this._score + "";
+        this._addScore = ScoreManager._Instance.getAddScore();
+        
         this.addLabel.string = this._score + "";
 
         let pos = this.addLabel.node.getPosition();

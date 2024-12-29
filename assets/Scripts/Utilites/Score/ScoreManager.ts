@@ -1,6 +1,5 @@
 import { _decorator, Component, instantiate, Node, Prefab } from 'cc';
 import { ScoreView } from '../../UI/ScoreControl/ScoreView';
-import { ColorManager } from '../ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('ScoreManager')
@@ -28,7 +27,7 @@ export class ScoreManager {
         this.ClearScore();
 
         NotifyManager.instance.addListener(GlobalNotify.SCORE_DATA_UPDATE, (addscore) => {
-            ScoreManager._Instance.AddScore(addscore);
+            this.AddScore(addscore);
             let com = this._scoreObj.getComponent(ScoreView);
             com.PlayAddAni();
         });
@@ -60,7 +59,7 @@ export class ScoreManager {
     }
 
     /** ∑÷ ˝«Â¡„ */
-    public ClearScore()
+    ClearScore()
     {
         this._nowScore = 0;
         //NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, 0,0);
