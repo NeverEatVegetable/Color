@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\Scripts",
+    "\\assets\\Scripts\\UI",
+    "\\assets\\Scripts\\UI\\OrderControl"
   ],
+  "SelectedNode": "\\assets\\Scripts\\UI\\OrderControl\\ColorTip.ts",
   "PreviewInSolutionExplorer": false
 }

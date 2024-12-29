@@ -1,56 +1,69 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, instantiate, Node, Prefab } from 'cc';
+import { ScoreView } from '../../UI/ScoreControl/ScoreView';
+import { ColorManager } from '../ColorMix/ColorManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('ScoreManager')
-export class ScoreManager extends Component {
-    start() {
-
+export class ScoreManager {
+    private static _instance: ScoreManager = null;
+    public static get _Instance() {
+        if (this._instance == null) { this._instance = new ScoreManager(); }
+        return this._instance;
     }
 
-    update(deltaTime: number) {
-        
+    private _nowScore;
+    private _addScore;
+
+    public scoreNode: Node;
+
+    private _scoreObj:Node;
+    private _scorePrefab;
+
+    Init() {
+        this._scoreObj = instantiate(this._scorePrefab);
+        this._scoreObj.parent = this.scoreNode;
+        this._scoreObj.setPosition(-500, 300);
+        this._scoreObj.getComponent(ScoreView).Init();
+
+        this.ClearScore();
+
+        NotifyManager.instance.addListener(GlobalNotify.SCORE_DATA_UPDATE, (addscore) => {
+            ScoreManager._Instance.AddScore(addscore);
+            let com = this._scoreObj.getComponent(ScoreView);
+            com.PlayAddAni();
+        });
     }
 
-    public Init(): void {
 
+    public getScore() {
+        return this._nowScore;
     }
+
+    public getAddScore() {
+        return this._addScore;
+    }
+
+    loadScore(prefab: Prefab) {
+        if (!prefab) {
+            console.log('Prefab error');
+            return;
+        }
+        this._scorePrefab = prefab;
+    }
+
+    /** 增加分数 */
+    AddScore(score:number)
+    {
+        this._addScore = score;
+        this._nowScore += score;
+        //NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, this._nowScore, this._addScore);
+    }
+
+    /** 分数清零 */
+    public ClearScore()
+    {
+        this._nowScore = 0;
+        //NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, 0,0);
+    }
+
 }
-
-
-// public class ScoreManager : ManagerBase<ScoreManager>
-// {
-//     public void Init()
-//     {
-//         GameEventManager._Instance.RegisterEventListener("InitAllEvent", () =>
-//         {
-//             //初始化分数数据
-//             GameEventManager._Instance.RegisterEventListener("InitAllData", InitScore);
-
-//             ////改变分数
-//             //GameEventManager._Instance.RegisterEventListener("Score+5", ()=>
-//             //{
-//             //    ChangeScore(5);
-//             //});
-//         });
-//     }
-
-//     #region 分数相关的调用函数
-//     /// <summary>
-//     /// 分数方面数据的初始化
-//     /// </summary>
-//     public void InitScore()
-//     {
-//         SystemScore._Instance.InitScore();
-//     }
-
-//     /// <summary>
-//     /// 改变分数
-//     /// </summary>
-//     /// <param name="value"></param>
-//     public void ChangeScore(int value)
-//     {
-//         SystemScore._Instance.AddScore(value);
-//     }
-//     #endregion
-// }
-

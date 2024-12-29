@@ -10,19 +10,6 @@ export class ColorTip extends Component {
 
     private _colorTipData: Color[];
 
-    ///**
-    // *
-    // * @param data 要么不传，传了就传：[targetColor colors]
-    // */
-    //constructor(data?:any) {
-    //    super();
-    //    if (data && data[0] && data[1]) {
-    //        this.setData(data[0], data[1]);
-    //    }
-    //    else {
-    //        this.Init();
-    //    }
-    //}
 
     /** 初始化*/
     /**
@@ -59,7 +46,7 @@ export class ColorTip extends Component {
 
     private setTargetColor(targetHex: string) {
         this._colorTipData.push(new Color(targetHex));
-    }
+    }    
 
     /** 开始绘制*/
     draw() {
