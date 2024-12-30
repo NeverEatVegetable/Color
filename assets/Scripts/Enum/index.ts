@@ -24,3 +24,10 @@ export enum PrefabPatEnum {
     Actor1 = "Prefabs/Actor",
     Map ="Prefabs/Map",
 }
+
+export enum GameUIPrefabEnum {
+    startView = "Prefabs/UI/startView",
+    clock = "Prefabs/UI/clock",
+    pauseView = "Prefabs/UI/pauseView",
+    overView = "Prefabs/UI/overView",
+}
