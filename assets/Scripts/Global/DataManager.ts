@@ -35,7 +35,7 @@ export default class DataManager extends Singleton {
                 },
                 velocity: false,
                 color: ColorManager._Instance.monoLess ,
-                transparency: 0,
+                transparency: 255,
             },
 
         ],
