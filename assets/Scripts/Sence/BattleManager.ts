@@ -1,10 +1,10 @@
-import { _decorator, Component, instantiate, JsonAsset, Node, Prefab } from 'cc';
+import { _decorator, AnimationClip, Component, instantiate, JsonAsset, Node, Prefab, resources, SpriteFrame } from 'cc';
 import DataManager from '../Global/DataManager';
 import { JoyStickManager } from '../UI/JoyStickManager';
 import { ResourceManager } from '../Global/ResourceManager';
-import { PrefabPatEnum } from '../Enum';
+import { AnimationPathEnum, ImagePatEnum, PrefabPatEnum } from '../Enum';
 import { ActorMannager } from '../EntityAndActor/ActorMannager';
-import { EntityTypeEnum } from '../Common';
+import { EntityTypeEnum } from '../Common/Enum';
 import { OrderManager } from '../Utilites/Order/OrderManager';
 import { ColorManager } from '../Utilites/ColorMix/ColorManager';
 import { ScoreManager } from '../Utilites/Score/ScoreManager';
@@ -17,6 +17,7 @@ export class BattleManager extends Component {
 
     private shouldUpdate = false
     onLoad() {
+
         this.stage = this.node.getChildByName("Stage")
         this.ui = this.node.getChildByName("UI")
         this.stage.destroyAllChildren()
@@ -27,6 +28,7 @@ export class BattleManager extends Component {
         await this.loadRes()
         this.initMap()
         this.shouldUpdate = true
+
     }
 
     async loadRes() {
@@ -38,6 +40,7 @@ export class BattleManager extends Component {
             })
             list.push(p)
         }
+
 
         for (let i = 2; i <= 4; i++) {
             ResourceManager.Instance.loadRes("Prefabs/views/orderTip_" + i, Prefab).then(OrderManager._Instance.loadOrderTip.bind(OrderManager._Instance));
@@ -54,7 +57,7 @@ export class BattleManager extends Component {
         const map = instantiate(prefab)
         map.setParent(this.stage)
     }
-    //统一管理更新
+    //统一锟斤拷锟斤拷锟斤拷锟斤拷
     update(dt) {
         if (!this.shouldUpdate) {
             return
