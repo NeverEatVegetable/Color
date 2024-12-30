@@ -43,22 +43,18 @@ export class ActorStateMachine extends Component {
     handleAnimation(direction: IVec2) {
         let animationState;
         if (direction.y < 0 && Math.abs(direction.y) > Math.abs(direction.x)) {
-            console.log("dong>>Down")
             animationState = this.isRunning ? AnimationPathEnum.DownRun : AnimationPathEnum.DownIdle;
             this.getSprites(0)
         }
         else if (direction.y > 0 && Math.abs(direction.y) > Math.abs(direction.x)) {
-            console.log("dong>>Up")
             animationState = this.isRunning ? AnimationPathEnum.UpRun : AnimationPathEnum.UpIdle;
             this.getSprites(2)
         }
 
         else {
-            console.log("dong>>Right")
             animationState = this.isRunning ? AnimationPathEnum.RightRun : AnimationPathEnum.RightIdle;
             this.getSprites(1)
         }
-        console.log("dong>>>>>>>>>>>",animationState)
         this.getAnim(animationState);
     }
 
