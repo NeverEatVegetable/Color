@@ -68,7 +68,6 @@ export class ActorStateMachine extends Component {
         const { direction, velocity } = data;
         this.isRunning = velocity; // 判断是否有输入
         this.handleAnimation(direction); // 调用handleAnimation来播放动画
-        //console.log("direction.x,direction.y,isRunning>>>>",direction.x,direction.y,velocity)
 
     }
 }
