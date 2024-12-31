@@ -59,6 +59,7 @@ export class DyePool extends Component {
         if (actorMannager) {
             // 记录玩家ID和颜色
             this.actorColors.set(actorMannager.getID(), actorMannager.getColor());
+            //console.log("actorMannager.getID(), actorMannager.getColor()",actorMannager.getID(), actorMannager.getColor())
         }
         //console.log("jiancedao",this.num)
     }

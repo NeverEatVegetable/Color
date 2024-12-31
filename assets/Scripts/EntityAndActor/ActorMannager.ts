@@ -59,8 +59,8 @@ export class ActorMannager extends Component {
         if (am) {
             am.animationState(data);
         }
-
-        const spriteComponent = this.getComponent(Sprite);
+        const fill = this.node.getChildByName('Fill');
+        const spriteComponent = fill.getComponent(Sprite);
         if (data.color && data.color.colorRGB && data.color.colorRGB.length === 3) {
             spriteComponent.color = new Color(data.color.colorRGB[0], data.color.colorRGB[1], data.color.colorRGB[2], data.transparency);
             this.mycolor = data.color

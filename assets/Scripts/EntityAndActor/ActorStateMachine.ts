@@ -15,6 +15,7 @@ export class ActorStateMachine extends Component {
     private animation: Animation;
     private sprite: Sprite;
     private leastName:string
+    private leastIndexe:number
     @property([SpriteFrame])
     sprites: SpriteFrame[] = []
 
@@ -25,7 +26,11 @@ export class ActorStateMachine extends Component {
 
     // 传入index 绑定的图片序号 直接进行赋值给this.node节点的sptite
     getSprites(index: number) {
-        this.node.getComponent(Sprite).spriteFrame = this.sprites[index]
+        if(this.leastIndexe!==index){
+            const fill = this.node.getChildByName('Fill');
+            fill.getComponent(Sprite).spriteFrame = this.sprites[index]
+            this.leastIndexe=index
+        }
     }
     // 传入Name动画的 文件名 如 run  立即播放在this.node中播放该动画
     getAnim(Name: string) {
