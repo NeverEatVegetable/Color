@@ -2,12 +2,13 @@ import { _decorator, AnimationClip, Component, instantiate, JsonAsset, Node, Pre
 import DataManager from '../Global/DataManager';
 import { JoyStickManager } from '../UI/JoyStickManager';
 import { ResourceManager } from '../Global/ResourceManager';
-import { AnimationPathEnum, ImagePatEnum, PrefabPatEnum } from '../Enum';
+import { AnimationPathEnum, ImagePatEnum, PrefabPatEnum,GameUIPrefabEnum } from '../Enum';
 import { ActorMannager } from '../EntityAndActor/ActorMannager';
 import { EntityTypeEnum } from '../Common/Enum';
 import { OrderManager } from '../Utilites/Order/OrderManager';
 import { ColorManager } from '../Utilites/ColorMix/ColorManager';
 import { ScoreManager } from '../Utilites/Score/ScoreManager';
+import { GameManager } from '../GameManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')

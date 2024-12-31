@@ -1,4 +1,4 @@
-﻿import { _decorator, Component, Node, Sprite, error, Collider2D, color, Button } from 'cc';
+﻿import { _decorator, Component, Node, Sprite, error, Collider2D, color, Button, BoxCollider2D,Contact2DType } from 'cc';
 import { MyColor } from '../../Utilites/ColorMix/MyColor';
 import DataManager from '../../Global/DataManager';
 import { ActorMannager } from '../ActorMannager';
@@ -16,7 +16,16 @@ export class DyePool extends Component {
     // 临时存储玩家ID和对应的颜色
     private actorColors: Map<number, MyColor> = new Map();
 
-    start() {
+    private colliderBox:BoxCollider2D=null
+
+    onLoad() {
+
+        this.colliderBox=this.node.getComponent(BoxCollider2D)
+        if (this.colliderBox) {
+            this.colliderBox.on(Contact2DType.BEGIN_CONTACT, this.onTriggerEnter2D, this);
+            this.colliderBox.on(Contact2DType.END_CONTACT, this.onTriggerExit2D, this);
+        }
+        
         if (this.ColorBtn) {
             this.ColorBtn.node.on(Button.EventType.CLICK, this.onButtonPressed, this);
         }
@@ -50,6 +59,7 @@ export class DyePool extends Component {
             // 记录玩家ID和颜色
             this.actorColors.set(actorMannager.getID(), actorMannager.getColor());
         }
+        console.log("检测到",this.num)
     }
 
     onTriggerExit2D(other: Collider2D) {
