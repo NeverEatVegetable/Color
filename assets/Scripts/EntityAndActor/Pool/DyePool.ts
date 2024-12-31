@@ -53,17 +53,19 @@ export class DyePool extends Component {
         }
     }
 
-    onTriggerEnter2D(other: Collider2D) {
-        const actorMannager = other.getComponent(ActorMannager);
+    onTriggerEnter2D(selfCollider: Collider2D, otherCollider: Collider2D) {
+        const otherNode = otherCollider.node;
+        const actorMannager = otherNode.getComponent(ActorMannager);
         if (actorMannager) {
             // 记录玩家ID和颜色
             this.actorColors.set(actorMannager.getID(), actorMannager.getColor());
         }
-        console.log("检测到",this.num)
+        //console.log("jiancedao",this.num)
     }
 
-    onTriggerExit2D(other: Collider2D) {
-        const actorMannager = other.getComponent(ActorMannager);
+    onTriggerExit2D(selfCollider: Collider2D, otherCollider: Collider2D) {
+        const otherNode = otherCollider.node;
+        const actorMannager = otherNode.getComponent(ActorMannager);
         if (actorMannager) {
             // 清除玩家ID和颜色
             this.actorColors.delete(actorMannager.getID());
