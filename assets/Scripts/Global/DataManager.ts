@@ -1,10 +1,11 @@
 import { AnimationClip, Prefab, Sprite, SpriteFrame } from "cc";
 import Singleton from "../Base/Singleton";
-import { EntityTypeEnum, IActor, IActorMove, IState } from "../Common";
+import { EntityTypeEnum, FrameData, IActor, IActorMove, IState } from "../Common";
 import { JoyStickManager } from "../UI/JoyStickManager";
 import { ActorMannager } from "../EntityAndActor/ActorMannager";
 import { ColorManager } from "../Utilites/ColorMix/ColorManager";
 import { MyColor } from "../Utilites/ColorMix/MyColor";
+
 
 const ACTOR_SPEED=100
 
@@ -60,14 +61,14 @@ export default class DataManager extends Singleton implements BaseModel {
     };
 
 
+    // 将actors数组转换为Map<string, Data>
     getPropToMap(): Map<string, any> {
         const map = new Map<string, any>();
-        // 将state对象中的actors数组中的每个元素转换为Data对象，并添加到map中
-        this.state.actors.forEach((actor) => {
-            const data = new Data(); // Data类有一个构造函数接受actor对象？
-            data.setValue(actor);
-            data.setNeeSend(true); // 设置为需要发送
-            map.set(actor.id.toString(), data); // 将Data对象添加到map中，以actor.id为键
+        this.state.actors.forEach((actor, index) => {
+            const data = new Data();
+            data.setValue(actor); // 将IActor对象赋值给Data的value
+            data.setNeeSend(true); // 假设我们总是需要发送这个数据
+            map.set(`actor_${index}`, data); // 使用字符串键
         });
         return map;
     }
@@ -103,6 +104,19 @@ export default class DataManager extends Singleton implements BaseModel {
 
     getMyPlayerId(){
         return this.myPlayerId;
+    }
+
+    processFrameData(frameDataMap: Map<number, IActor>) {
+        frameDataMap.forEach((actorData, id) => {
+            const actor = this.state.actors.find((actor) => actor.id === id);
+            if (actor && actor.id !== this.getMyPlayerId()) {
+                actor.position = actorData.position;
+                actor.direction = actorData.direction;
+                actor.velocity = actorData.velocity;
+                actor.color = actorData.color;
+                actor.transparency = actorData.transparency;
+            }
+        });
     }
 }
 
