@@ -108,24 +108,16 @@ export default class DataManager extends Singleton implements BaseModel {
         }
     }
 
-    // 开启帧同步
-    startFrameSync() {
-        NotifyManager.instance.dispatch(GlobalNotify.RoomStartFrameSync);
-    }
 
-    // 关闭帧同步
-    stopFrameSync() {
-        NotifyManager.instance.dispatch(GlobalNotify.RoomStopFrameSync);
-    }
 
     // 游戏进入时开启帧同步
     onGameEnter() {
-        this.startFrameSync();
+        NotifyManager.instance.dispatch(GlobalNotify.RoomStartFrameSync);
     }
 
     // 游戏退出时关闭帧同步
     onGameExit() {
-        this.stopFrameSync();
+        NotifyManager.instance.dispatch(GlobalNotify.RoomStopFrameSync);
     }
 
 
