@@ -8,10 +8,13 @@ import { MyColor } from "../Utilites/ColorMix/MyColor";
 
 const ACTOR_SPEED=100
 
-export default class DataManager extends Singleton {
+export default class DataManager extends Singleton implements BaseModel {
     static get Instance() {
         return super.GetInstance<DataManager>();
     }
+
+    //登陆数据
+    myPlayerId = 1;
 
     jm: JoyStickManager
 
@@ -37,9 +40,37 @@ export default class DataManager extends Singleton {
                 color: ColorManager._Instance.monoLess ,
                 transparency: 0,
             },
+            {
+                id: 2,
+                type: EntityTypeEnum.Actor1,
+                position: {
+                    x: -200,
+                    y: -200,
+                },
+                direction: {
+                    x: 1,
+                    y: 0,
+                },
+                velocity: false,
+                color: ColorManager._Instance.monoLess ,
+                transparency: 0,
+            },
 
         ],
     };
+
+
+    getPropToMap(): Map<string, any> {
+        const map = new Map<string, any>();
+        // 将state对象中的actors数组中的每个元素转换为Data对象，并添加到map中
+        this.state.actors.forEach((actor) => {
+            const data = new Data(); // Data类有一个构造函数接受actor对象？
+            data.setValue(actor);
+            data.setNeeSend(true); // 设置为需要发送
+            map.set(actor.id.toString(), data); // 将Data对象添加到map中，以actor.id为键
+        });
+        return map;
+    }
 
     applyInput(input: IActorMove) {
         const {

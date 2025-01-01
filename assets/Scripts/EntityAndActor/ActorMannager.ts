@@ -14,7 +14,8 @@ export class ActorMannager extends Component {
     init(data: IActor) {
         //console.log("ActorMannager>>>datainit")
         this.id=data.id
-        const spriteComponent = this.getComponent(Sprite);
+        const fill = this.node.getChildByName('Fill');
+        const spriteComponent = fill.getComponent(Sprite);
         if (data.color && data.color.colorRGB && data.color.colorRGB.length === 3) {
             spriteComponent.color = new Color(data.color.colorRGB[0], data.color.colorRGB[1], data.color.colorRGB[2], data.transparency);
             this.mycolor = data.color;
@@ -25,20 +26,23 @@ export class ActorMannager extends Component {
 
     }
 
-    tick(dt) {
+    tick(dt:number) {
+        if (DataManager.Instance.myPlayerId !== this.id) {
+            return;
+        }
         if (DataManager.Instance.jm.input.length()) {
             const { x, y } = DataManager.Instance.jm.input
             DataManager.Instance.applyInput({
-                id:1,
+                id: this.id,
                 type: InputTypeEnum.ActorMove,
                 direction: {
                     x,
                     y,
                 },
                 dt,
-            })
+            });
 
-            /*console.log(DataManager.Instance.state.actors[0])*/
+           
         }
         else{
             DataManager.Instance.noInput(1)
