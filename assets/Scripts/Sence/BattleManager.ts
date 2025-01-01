@@ -1,13 +1,14 @@
-import { _decorator, Component, instantiate, JsonAsset, Node, Prefab } from 'cc';
+import { _decorator, AnimationClip, Component, instantiate, JsonAsset, Node, Prefab, resources, SpriteFrame } from 'cc';
 import DataManager from '../Global/DataManager';
 import { JoyStickManager } from '../UI/JoyStickManager';
 import { ResourceManager } from '../Global/ResourceManager';
-import { PrefabPatEnum } from '../Enum';
+import { AnimationPathEnum, ImagePatEnum, PrefabPatEnum,GameUIPrefabEnum } from '../Enum';
 import { ActorMannager } from '../EntityAndActor/ActorMannager';
-import { EntityTypeEnum } from '../Common';
+import { EntityTypeEnum } from '../Common/Enum';
 import { OrderManager } from '../Utilites/Order/OrderManager';
 import { ColorManager } from '../Utilites/ColorMix/ColorManager';
 import { ScoreManager } from '../Utilites/Score/ScoreManager';
+import { GameManager } from '../GameManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('BattleManager')
@@ -17,6 +18,7 @@ export class BattleManager extends Component {
 
     private shouldUpdate = false
     onLoad() {
+
         this.stage = this.node.getChildByName("Stage")
         this.ui = this.node.getChildByName("UI")
         this.stage.destroyAllChildren()
@@ -27,6 +29,7 @@ export class BattleManager extends Component {
         await this.loadRes()
         this.initMap()
         this.shouldUpdate = true
+
     }
 
     async loadRes() {
@@ -39,11 +42,19 @@ export class BattleManager extends Component {
             list.push(p)
         }
 
+
         for (let i = 2; i <= 4; i++) {
-            ResourceManager.Instance.loadRes("Prefabs/views/orderTip_" + i, Prefab).then(OrderManager._Instance.loadOrderTip.bind(OrderManager._Instance));
+            ResourceManager.Instance.loadRes("Prefabs/order/orderTip_" + i, Prefab).then(OrderManager._Instance.loadOrderTip.bind(OrderManager._Instance));
         }
-        ResourceManager.Instance.loadRes("Prefabs/views/order", Prefab).then(OrderManager._Instance.loadOrder.bind(OrderManager._Instance));
-        ResourceManager.Instance.loadRes("Prefabs/views/score", Prefab).then(ScoreManager._Instance.loadScore.bind(ScoreManager._Instance));
+        ResourceManager.Instance.loadRes("Prefabs/order/order", Prefab).then(OrderManager._Instance.loadOrder.bind(OrderManager._Instance));
+        ResourceManager.Instance.loadRes("Prefabs/score/score", Prefab).then(ScoreManager._Instance.loadScore.bind(ScoreManager._Instance));
+
+        for (let tmp in GameUIPrefabEnum) {
+            ResourceManager.Instance.loadRes(GameUIPrefabEnum[tmp], Prefab).then((prefab) => {
+                GameManager._Instance.viewPrefabs[prefab.name] = prefab;
+            });
+        }
+
 
         await Promise.all(list);
         NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
@@ -54,7 +65,7 @@ export class BattleManager extends Component {
         const map = instantiate(prefab)
         map.setParent(this.stage)
     }
-    //统一管理更新
+    //缁熶竴绠＄悊鏇存柊
     update(dt) {
         if (!this.shouldUpdate) {
             return

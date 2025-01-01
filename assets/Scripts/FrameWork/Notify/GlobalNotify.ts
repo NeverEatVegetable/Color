@@ -74,6 +74,13 @@ enum GlobalNotify {
 
     /** 重开游戏 */
     GameRestart,
+
+    MUSIC_SETTING_UPDATE,
+    AUDIO_SETTING_UPDATE,
+
+    //发送订单信息
+    PULL_ORDER
+
 }
 
 (window as any).GlobalNotify = GlobalNotify;

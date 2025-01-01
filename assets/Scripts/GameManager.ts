@@ -1,4 +1,4 @@
-import { _decorator, Component, EventKeyboard, EventTouch, Input, input, KeyCode, Node } from 'cc';
+import { _decorator, Component, Event, EventKeyboard, EventTouch, Input, input, instantiate, KeyCode, Node, NodeEventType, Prefab } from 'cc';
 import { OrderManager } from './Utilites/Order/OrderManager';
 import { ScoreManager } from './Utilites/Score/ScoreManager';
 const { ccclass, property } = _decorator;
@@ -6,12 +6,57 @@ const { ccclass, property } = _decorator;
 //游戏总控
 @ccclass('GameManager')
 export class GameManager extends Component {
+    static _Instance: GameManager;
+
+    public viewPrefabs: any = {};   //key为prefab的名字，value为prefab
+
+    private _startView:Node;
+    private _pauseView:Node;
+
+    onLoad() {
+        GameManager._Instance = this;
+    }
+
     start() {
-        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, this.InitOrder.bind(this));
-        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, this.InitScore.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.LOCAL_DATA_LOAD_SUCESS, () => {
+            this.InitOrder.bind(this);
+            this.InitScore.bind(this);
+
+            
+        });
 
         input.on(Input.EventType.KEY_DOWN, this.onTouchStart, this);
     }
+
+    // #region 界面
+    InitStartView() {
+        this._startView = instantiate(this.viewPrefabs["startView"]);
+        this._startView.setParent(this.node);
+        this._startView.setPosition(-640, -360);
+        this._startView.on(Node.EventType.TOUCH_END, this.onStartView,this);
+    }
+
+    onStartView() {
+        this._startView.active = false;
+        this._startView.destroy();
+    }
+
+    InitPauseView() {
+        this._startView = instantiate(this.viewPrefabs["startView"]);
+        this._startView.setParent(this.node);
+        this._startView.setPosition(-640, -360);
+        //绑定事件
+    }
+
+    closePauseView() {
+        this._startView.active = false;
+    }
+
+    openPauseView() {
+        this._startView.active = true;
+    }
+    // #endregion
+
 
     onTouchStart(event: EventKeyboard) {
         switch (event.keyCode) {

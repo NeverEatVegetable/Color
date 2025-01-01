@@ -20,7 +20,33 @@ export enum EntityStateEnum {
 }
 export enum EventEnum { }
 
+export enum TexturePatEnum {
+    Actor1 = "Prefabs/Actor",
+    Map = "Prefabs/Map",
+}
 export enum PrefabPatEnum {
     Actor1 = "Prefabs/Actor",
     Map ="Prefabs/Map",
+}
+
+export enum AnimationPathEnum {
+    DownRun = "DownRun",
+    DownIdle = "DownIdle",
+    RightRun = "RightRun",
+    RightIdle = "RightIdle",
+    UpRun = "UpRun",
+    UpIdle = "UpIdle",
+}
+
+export enum ImagePatEnum {
+    right = "Sprites/Player/right",
+    up = "Sprites/Player/up",
+    down = "Sprites/Player/down",
+}
+
+export enum GameUIPrefabEnum {
+    startView = "Prefabs/UI/startView",
+    clock = "Prefabs/UI/clock",
+    pauseView = "Prefabs/UI/pauseView",
+    overView = "Prefabs/UI/overView",
 }
