@@ -40,10 +40,10 @@ export class ViewManager extends Component {
             console.warn(`关闭界面 ${viewName} 失败: 未找到该视图`)
         }
 
-        if(this.views.size == 0){
-            console.log("没有活动的界面了，打开默认界面")
-            this.openView("roomjoinpopview")
-        }
+        // if(this.views.size <= 0){
+        //     console.log("没有活动的界面了，打开默认界面")
+        //     this.openView("clientcreatepopview")
+        // }
     }
     /**
      * 打开界面

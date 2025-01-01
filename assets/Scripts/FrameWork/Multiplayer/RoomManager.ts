@@ -58,6 +58,19 @@ class RoomManager {
         })
     }
 
+    /**
+     * 获取我的玩家信息
+     * @returns 玩家信息
+     */
+    public getMyInfos() {
+        return this._player
+    }
+    
+    /**
+     * 获取可加入的房间列表
+     * @param client 客户端
+     * @returns 可加入的房间列表
+     */
     public getRoomListReq(client: GOBE.Client) {
         let roomInfos = []
         let getAvailableRoomsConfig = {

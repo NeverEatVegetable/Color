@@ -18,10 +18,14 @@ export class GameStarter extends Component {
 
     start() {
         console.log("Game started");
+        this._viewManager = find("Canvas").getComponent(ViewManager);
+        // 打开初始界面，如：登录界面、主界面等，这里测试填了创建账号界面，记得手动改一下
+        this._viewManager.openView("clientcreatepopview")
+
         //初始化客户端，先放着，后面封装
-        ClientManager.instance.createClient()
-        NotifyManager.instance.getNotifyListenerCount(GlobalNotify.ClientInitSuccess)
-        ClientManager.instance.initClient()
+        // ClientManager.instance.createClient()
+        // NotifyManager.instance.getNotifyListenerCount(GlobalNotify.ClientInitSuccess)
+        // ClientManager.instance.initClient()
     }
 
     update(deltaTime: number) {
@@ -34,24 +38,37 @@ export class GameStarter extends Component {
 
     protected onDestroy(): void {
         this.onDisable()
-        // ClientManager.instance.exitClient()
+        ClientManager.instance.exitClient()
+        RoomManager.instance.leaveRoom()
+
+        var playerInfo = RoomManager.instance.getMyInfos()
+        var roomInfo = RoomManager.instance.getMyRoomInfo()
+        if ((playerInfo != null && roomInfo != null) && (roomInfo.ownerId == playerInfo.playerId)) {
+            // 仅房主可解散房间
+            if (roomInfo.players.length == 1) {
+            RoomManager.instance.dismissRoom()
+            } else {
+                // 房主离开房间，将房间交给下一个玩家
+                var nextOwnerId = roomInfo.players[1].playerId
+                roomInfo.ownerId = nextOwnerId
+            }
+        }
+
         console.log("Game destroyed")
     }
 
     // 获取需要发送的数据
-    private _getNeedSendData() {
-        // TODO: 获取需要发送的数据
-        // 如：玩家信息、订单信息、游戏状态等
-        return
-    }
+    // private _getNeedSendData() {
+    //     // TODO: 获取需要发送的数据
+    //     // 如：玩家信息、订单信息、游戏状态等
+    //     return
+    // }
 
     /**
      * 客户端初始化成功的回调
      */
     private _onClientInitSuccess() {
         this.node.addComponent("InputSystemTest")
-        this._viewManager = find("Canvas").getComponent(ViewManager);
-        // 打开初始界面，如：登录界面、主界面等，这里测试填了创建房间界面，记得手动改一下
-        this._viewManager.openView("roomcreatepopview")
+        // TODO: 客户端初始化成功后的操作
     }
 }

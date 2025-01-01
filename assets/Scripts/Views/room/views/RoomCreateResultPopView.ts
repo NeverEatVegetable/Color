@@ -63,7 +63,8 @@ export class RoomCreateResultPopView extends Component {
         // 进入游戏逻辑
         console.log('进入游戏')
         NotifyManager.instance.dispatch(GlobalNotify.GameEnter)
-        this.close()
+        // this.close()
+        NotifyManager.instance.dispatch(GlobalNotify.OpenView, 'clientcreatepopview', this.node.name)
     }
 
     private onClickRetry() {
