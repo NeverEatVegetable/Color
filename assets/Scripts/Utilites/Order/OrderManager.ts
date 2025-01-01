@@ -50,9 +50,7 @@ export class OrderManager{
             console.log('Prefab error');
             return;
         }
-        //OrderManager._instance._orderColorPrefab = prefab;
         this._orderColorPrefab = prefab;
-        //NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
 
     loadOrderTip(prefab: Prefab) {
@@ -60,7 +58,6 @@ export class OrderManager{
             console.log('Prefab error');
             return;
         }
-        //OrderManager._instance._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
         this._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
     }
 
@@ -72,14 +69,20 @@ export class OrderManager{
 
         this._playerColorOrder = [];
 
-        //this.orderNode = new Node("orderNode");
         this.orderNode.setPosition(0, 0);
         this._orderObj = instantiate(this._orderColorPrefab);
         this._orderObj.parent = this.orderNode;
         this._orderObj.setPosition(500, 150);
 
-        //this.orderTipNode = new Node("orderTipNode");
         this.orderTipNode.setPosition(0, 0);
+    }
+
+    InitEve() {
+        NotifyManager.instance.addListener(GlobalNotify.ORDER_DATA_UPDATE, (playerorder: MyColor[]) => {
+            this._playerColorOrder = playerorder;
+            this.CheckOrder();
+            this.UpdateOrder();
+        });
     }
 
     // #region 订单相关的调用函数
@@ -157,7 +160,6 @@ export class OrderManager{
             }   
         }
 
-        
         //score = 5; //测试用
         if (score > 0) {
             NotifyManager.instance.dispatch(GlobalNotify.SCORE_DATA_UPDATE, score);

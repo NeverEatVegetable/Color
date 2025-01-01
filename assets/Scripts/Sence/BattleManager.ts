@@ -27,9 +27,28 @@ export class BattleManager extends Component {
 
     async start() {
         await this.loadRes()
-        this.initMap()
-        this.shouldUpdate = true
 
+        NotifyManager.instance.addListener(GlobalNotify.GameEnter, this.onGameEnter.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.GameRestart, this.onGameRestart.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.GamePause, this.onGamePause.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
+    }
+
+    onGameEnter() {
+        this.initMap()
+        this.shouldUpdate = true;
+    }
+
+    onGameRestart() {
+        this.shouldUpdate = true;
+    }
+
+    onGamePause() {
+        this.shouldUpdate = false;
+    }
+
+    onGameResume() {
+        this.shouldUpdate = true;
     }
 
     async loadRes() {

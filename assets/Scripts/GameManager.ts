@@ -13,20 +13,31 @@ export class GameManager extends Component {
     private _startView:Node;
     private _pauseView: Node;
     private _overView: Node;
+    private _setting: Node;
 
     onLoad() {
         GameManager._Instance = this;
     }
 
     start() {
-        NotifyManager.instance.addListener(GlobalNotify.GameEnter, this.onGameStart.bind(this));
-        NotifyManager.instance.addListener(GlobalNotify.GameRestart, this.onGameStart.bind(this));
-        NotifyManager.instance.addListener(GlobalNotify.GamePause, this.onGamePause.bind(this));
-        NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.GameEnter, this.onGameEnter.bind(this));
+        NotifyManager.instance.addListener(GlobalNotify.GameRestart, this.onGameRestart.bind(this));
+        //NotifyManager.instance.addListener(GlobalNotify.GamePause, this.onGamePause.bind(this));
+        //NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
 
+        this.schedule(this.test, 0, 0, 3);
     }
 
-    onGameStart() {
+    test() {
+        NotifyManager.instance.dispatch(GlobalNotify.GameEnter);
+    }
+
+    onGameEnter() {
+        this.InitEve();
+        this.onGameRestart();
+    }
+
+    onGameRestart() {
         this.InitOrder();
         this.InitScore();
 
@@ -35,13 +46,13 @@ export class GameManager extends Component {
         this.InitOverView()
     }
 
-    onGamePause() {
-        this._pauseView.active = true;
-    }
+    //onGamePause() {
+    //    this._pauseView.active = true;
+    //}
 
-    onGameResume() {
-        this._pauseView.active = false;
-    }
+    //onGameResume() {
+    //    this._pauseView.active = false;
+    //}
 
 
     // #region ui界面
@@ -62,7 +73,7 @@ export class GameManager extends Component {
     InitPauseView() {
         this._pauseView = instantiate(this.viewPrefabs["pauseView"]);
         this._pauseView.setParent(this.node);
-        this._pauseView.setPosition(-640, -360);
+        this._pauseView.setPosition(0, 0);
         this._pauseView.active = false;
         //绑定事件
     }
@@ -70,12 +81,16 @@ export class GameManager extends Component {
     InitOverView() {
         this._overView = instantiate(this.viewPrefabs["overView"]);
         this._overView.setParent(this.node);
-        this._overView.setPosition(-640, -360);
+        this._overView.setPosition(0, 0);
         this._overView.active = false;
     }
     // #endregion
 
     // #region 系统
+
+    InitEve() {
+        OrderManager._Instance.InitEve();
+    }
 
     InitOrder() {
         OrderManager._Instance.orderNode = this.node.getChildByName("orderNode");

@@ -49,9 +49,9 @@ enum GlobalNotify {
 
     /** 本地配置加载完毕 */
     LOCAL_DATA_LOAD_SUCESS,
-    /** 订单数据改变 */
+    /** 玩家订单数据改变 */
     ORDER_DATA_UPDATE,
-    /** 分数数据改变 */
+    /** 玩家分数数据改变 */
     SCORE_DATA_UPDATE,
 
     /** 打开界面 */
@@ -79,7 +79,7 @@ enum GlobalNotify {
     AUDIO_SETTING_UPDATE,
 
     //发送订单信息
-    PULL_ORDER
+    PULL_ORDER,
 
 }
 

@@ -1,4 +1,5 @@
 import { _decorator, Component, EventTouch, input, Input, Node, UITransform, Vec2 } from 'cc';
+import { GameStarter } from '../GameStarter';
 const { ccclass, property } = _decorator;
 
 @ccclass('JoyStickManager')
@@ -8,8 +9,9 @@ export class JoyStickManager extends Component {
     private body: Node
     private stick: Node
     private defaultPos: Vec2
-    private radius:number
+    private radius: number
 
+    private _isStickOpen = true;
 
     onLoad() {
         this.body = this.node.getChildByName("Body")
@@ -21,6 +23,11 @@ export class JoyStickManager extends Component {
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
         input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
         input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
+
+        NotifyManager.instance.addListener(GlobalNotify.GamePause, () => { this.setStickOpen(false); });
+        NotifyManager.instance.addListener(GlobalNotify.GameResume, () => { this.setStickOpen(true); });
+        NotifyManager.instance.addListener(GlobalNotify.GameRestart, () => { this.setStickOpen(true); });
+        NotifyManager.instance.addListener(GlobalNotify.GameEnter, () => { this.setStickOpen(true); });
     }
 
     onDestroy() {
@@ -30,25 +37,35 @@ export class JoyStickManager extends Component {
     }
 
     onTouchStart(e: EventTouch) {
-        const touchPos = e.getUILocation()
-        this.body.setPosition(touchPos.x, touchPos.y)
+        if (this._isStickOpen) {
+            const touchPos = e.getUILocation()
+            this.body.setPosition(touchPos.x, touchPos.y)
+        }
     }
 
     onTouchMove(e: EventTouch) {
-        const touchPos = e.getUILocation()
-        const stickPos = new Vec2(touchPos.x - this.body.position.x, touchPos.y - this.body.position.y)
-        if (stickPos.length() > this.radius) {
-            stickPos.multiplyScalar(this.radius / stickPos.length())
-        }
-        this.stick.setPosition(stickPos.x, stickPos.y)
-        this.input = stickPos.clone().normalize()
+        if (this._isStickOpen) {
+            const touchPos = e.getUILocation()
+            const stickPos = new Vec2(touchPos.x - this.body.position.x, touchPos.y - this.body.position.y)
+            if (stickPos.length() > this.radius) {
+                stickPos.multiplyScalar(this.radius / stickPos.length())
+            }
+            this.stick.setPosition(stickPos.x, stickPos.y)
+            this.input = stickPos.clone().normalize()
         /*console.log(this.input)*/
+        }
     }
 
     onTouchEnd() {
-        this.body.setPosition(this.defaultPos.x, this.defaultPos.y)
-        this.stick.setPosition(0, 0)
-        this.input = Vec2.ZERO
+        if (this._isStickOpen) {
+            this.body.setPosition(this.defaultPos.x, this.defaultPos.y)
+            this.stick.setPosition(0, 0)
+            this.input = Vec2.ZERO
+        }
+    }
+
+    setStickOpen(isopen: boolean = false) {
+        this._isStickOpen = isopen;
     }
 }
 
