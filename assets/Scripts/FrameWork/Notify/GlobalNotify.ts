@@ -78,6 +78,9 @@ enum GlobalNotify {
     MUSIC_SETTING_UPDATE,
     AUDIO_SETTING_UPDATE,
 
+     /** 本局游戏结束 */
+     GameOver,
+
 }
 
 (window as any).GlobalNotify = GlobalNotify;
