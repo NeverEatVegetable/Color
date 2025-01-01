@@ -167,7 +167,7 @@ export default class DataManager extends Singleton implements BaseModel {
         super();
         // 监听GameEnter和GameExit事件
         NotifyManager.instance.addListener(GlobalNotify.GameEnter, this.onGameEnter);
-        NotifyManager.instance.addListener(GlobalNotify.Game0ver, this.onGameExit);
+        NotifyManager.instance.addListener(GlobalNotify.GameOver, this.onGameExit);
         // 监听帧同步数据接收事件
         NotifyManager.instance.addListener(GlobalNotify.RecvRoomFrameRecvMsg, (frameDataMap) => {
             this.processFrameData(frameDataMap);
