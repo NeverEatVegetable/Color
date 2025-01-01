@@ -26,20 +26,23 @@ export class ActorMannager extends Component {
 
     }
 
-    tick(dt) {
+    tick(dt:number) {
+        if (DataManager.Instance.myPlayerId !== this.id) {
+            return;
+        }
         if (DataManager.Instance.jm.input.length()) {
             const { x, y } = DataManager.Instance.jm.input
             DataManager.Instance.applyInput({
-                id:1,
+                id: this.id,
                 type: InputTypeEnum.ActorMove,
                 direction: {
                     x,
                     y,
                 },
                 dt,
-            })
+            });
 
-            /*console.log(DataManager.Instance.state.actors[0])*/
+           
         }
         else{
             DataManager.Instance.noInput(1)

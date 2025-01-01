@@ -13,6 +13,9 @@ export default class DataManager extends Singleton implements BaseModel {
         return super.GetInstance<DataManager>();
     }
 
+    //登陆数据
+    myPlayerId = 1;
+
     jm: JoyStickManager
 
     actorMap: Map<number, ActorMannager> = new Map()
