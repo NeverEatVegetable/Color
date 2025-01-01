@@ -76,7 +76,7 @@ export class BattleManager extends Component {
 
 
         await Promise.all(list);
-        NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
+        //NotifyManager.instance.dispatch(GlobalNotify.LOCAL_DATA_LOAD_SUCESS);
     }
 
     initMap() {

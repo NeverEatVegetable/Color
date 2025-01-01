@@ -40,7 +40,7 @@ export class ClockItem extends Component {
                 this.isOpen = false;
             }
             //console.log("starttime:" + this._startTime + "|||gameTime:" + this.gameTime * 1000 + "|||time:" + time + "|||viewFill.fillRange:" + this.viewFill.fillRange);
-            console.log("time/gametime*1000:" + (time / (this.gameTime * 1000)) + "|||viewFill.fillRange:" + this.viewFill.fillRange);
+            //console.log("time/gametime*1000:" + (time / (this.gameTime * 1000)) + "|||viewFill.fillRange:" + this.viewFill.fillRange);
         }
     }
 }

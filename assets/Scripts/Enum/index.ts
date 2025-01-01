@@ -45,7 +45,8 @@ export enum ImagePatEnum {
 }
 
 export enum GameUIPrefabEnum {
-    startView = "Prefabs/UI/startView",
+    //联机开
+    //startView = "Prefabs/UI/startView",
     clock = "Prefabs/UI/clock",
     pauseView = "Prefabs/UI/pauseView",
     overView = "Prefabs/UI/overView",

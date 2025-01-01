@@ -67,7 +67,7 @@ export class OrderManager{
         this.orderNode.setPosition(0, 0);
         this._orderObj = instantiate(this._orderColorPrefab);
         this._orderObj.parent = this.orderNode;
-        this._orderObj.setPosition(500, 150);
+        this._orderObj.setPosition(450, 250);
 
         this.orderTipNode.setPosition(0, 0);
 
@@ -146,7 +146,7 @@ export class OrderManager{
             }
             this._tipObj[i] = instantiate(this._colorTipPrefabs[mixNum]);
             this._tipObj[i].parent = this.orderTipNode;
-            this._tipObj[i].setPosition(500, 100 - index++ * 75);
+            this._tipObj[i].setPosition(500, 180 - index++ * 75);
 
             let comp = this._tipObj[i].getComponent(ColorTip);
             comp.setData(targetData.colorHEX, hexData.slice(0, length));

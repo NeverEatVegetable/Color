@@ -11,7 +11,7 @@ export class GameManager extends Component {
 
     public viewPrefabs: any = {};   //key为prefab的名字，value为prefab
 
-    private _startView:Node;
+    private _startView: Node;
     private _pauseView: Node;
     private _overView: Node;
     private _clockItem: Node;
@@ -27,16 +27,20 @@ export class GameManager extends Component {
         //NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
         NotifyManager.instance.addListener(GlobalNotify.GameOver, this.onGameOver.bind(this));
 
-        //this.schedule(this.test, 0, 0, 2);
+        //单机用
+        this._startView = this.node.getChildByName("startView");
+        this._startView.on(Node.EventType.TOUCH_END, this.onStartView, this);
+        this.schedule(this.test, 0, 0, 2);
     }
 
-    //test() {
-    //    let time = new Date().getTime();
-    //    console.log("gameenter:" + time);
-    //    NotifyManager.instance.dispatch(GlobalNotify.GameEnter, time);
-    //}
+    test() {
+        let time = new Date().getTime();
+        console.log("gameenter:" + time);
+        //NotifyManager.instance.dispatch(GlobalNotify.GameEnter, time);
+        this._startView.active = true;
+    }
 
-    onGameEnter(time?:number) {
+    onGameEnter(time?: number) {
         this.node.getChildByName("UI").active = true;
         this.node.getChildByName("Desk").active = true;
         OrderManager._Instance.orderNode = this.node.getChildByName("orderNode");
@@ -52,10 +56,11 @@ export class GameManager extends Component {
         this._clockItem.setParent(this.node.getChildByName("UI"));
         this._clockItem.getComponent(ClockItem).setStartTime(time ? time : new Date().getTime());
 
-        this._startView = instantiate(this.viewPrefabs["startView"]);
-        this._startView.setParent(this.node);
-        this._startView.setPosition(-640, -360);
-        this._startView.on(Node.EventType.TOUCH_END, this.onStartView, this);
+        //联机开启
+        //this._startView = instantiate(this.viewPrefabs["startView"]);
+        //this._startView.setParent(this.node);
+        //this._startView.setPosition(-640, -360);
+        //this._startView.on(Node.EventType.TOUCH_END, this.onStartView, this);
 
         this._pauseView = instantiate(this.viewPrefabs["pauseView"]);
         this._pauseView.setParent(this.node);
@@ -69,7 +74,7 @@ export class GameManager extends Component {
         this.onGameRestart();
     }
 
-    onGameRestart(time?:number) {
+    onGameRestart(time?: number) {
         this.InitUIDat();
         this.node.getChildByName("UI").active = true;
         this.node.getChildByName("Desk").active = true;
@@ -83,6 +88,10 @@ export class GameManager extends Component {
     }
 
     onStartView() {
+        //单机用
+        NotifyManager.instance.dispatch(GlobalNotify.GameEnter, new Date().getTime());
+
+
         this._startView.active = false;
         this._startView.destroy();
     }
@@ -104,7 +113,5 @@ export class GameManager extends Component {
     //onGameResume() {
     //    this._pauseView.active = false;
     //}
-    
+
 }
-
-

@@ -21,7 +21,7 @@ export class ScoreManager {
     Init() {
         this._scoreObj = instantiate(this._scorePrefab);
         this._scoreObj.parent = this.scoreNode;
-        this._scoreObj.setPosition(-500, 300);
+        //this._scoreObj.setPosition(-500, 300);
         this._scoreObj.getComponent(ScoreView).Init();
 
         NotifyManager.instance.addListener(GlobalNotify.SCORE_DATA_UPDATE, (addscore) => {
