@@ -10,8 +10,8 @@ export class ScoreManager {
         return this._instance;
     }
 
-    private _nowScore;
-    private _addScore;
+    private _nowScore = 0;
+    private _addScore = 0;
 
     public scoreNode: Node;
 

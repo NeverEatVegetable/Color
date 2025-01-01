@@ -1315,7 +1315,7 @@
     "fileId": "56gcGJ7RhEw60sAnSmJVDS"
   },
   {
-    "__type__": "fab8bV3ZpdGULNLNa1FxK1E",
+    "__type__": "fcf89mZXqlHXJE7hqYInMei",
     "_name": "",
     "_objFlags": 0,
     "__editorExtras__": {},
@@ -1330,7 +1330,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "28CAAQufJGhIXtrHzEV4AH"
+    "fileId": "43NYwICsRKWb0XFstZVBI8"
   },
   {
     "__type__": "cc.Button",
@@ -1400,7 +1400,7 @@
       "__id__": 1
     },
     "component": "",
-    "_componentId": "fab8bV3ZpdGULNLNa1FxK1E",
+    "_componentId": "fcf89mZXqlHXJE7hqYInMei",
     "handler": "onClose",
     "customEventData": ""
   },
