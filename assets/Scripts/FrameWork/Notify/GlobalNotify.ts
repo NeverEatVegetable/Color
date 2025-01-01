@@ -78,8 +78,8 @@ enum GlobalNotify {
     MUSIC_SETTING_UPDATE,
     AUDIO_SETTING_UPDATE,
 
-    /** 本局游戏结束 */
-    GameOver,
+     /** 本局游戏结束 */
+     GameOver,
 
 }
 
