@@ -42,8 +42,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -504.354,
-      "y": 307.848,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -92,8 +92,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -330.015,
+      "y": 301.567,
       "z": 0
     },
     "_lrot": {
@@ -133,8 +133,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 219.96391327573392,
-      "height": 50.39999999999999
+      "width": 220,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -172,7 +172,7 @@
     "_string": "本局获得的猫猫币数量：",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 21.0234375,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -251,8 +251,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 108.694,
-      "y": 0,
+      "x": -221.321,
+      "y": 301.567,
       "z": 0
     },
     "_lrot": {
@@ -292,8 +292,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 11.121228748606464,
-      "height": 50.39999999999999
+      "width": 11.123046875,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -331,7 +331,7 @@
     "_string": "0",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 21.0234375,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -414,8 +414,8 @@
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
+      "x": -330.015,
+      "y": 301.567,
       "z": 0
     },
     "_lrot": {
@@ -505,8 +505,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 11.121228748606464,
-      "height": 50.39999999999999
+      "width": 11.123046875,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -544,7 +544,7 @@
     "_string": "0",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 21.0234375,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -664,8 +664,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 11.677771390746933,
-      "height": 50.39999999999999
+      "width": 11.6796875,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -703,7 +703,7 @@
     "_string": "+",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 21.0234375,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,

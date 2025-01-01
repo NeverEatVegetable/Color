@@ -1,4 +1,4 @@
-import { _decorator, CCFloat, Component, Node } from 'cc';
+import { _decorator, CCFloat, Component, macro, Node, ProgressBar, Sprite } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('ClockItem')
@@ -6,39 +6,43 @@ export class ClockItem extends Component {
     @property({ type: CCFloat })
     public gameTime: number;
 
+    @property({ type: Sprite })
+    public viewFill: Sprite;
+
+    /** 时间戳 */
     private _startTime: number;
+
+    private _nowTime: number;
+
+    @property({ type: Boolean })
+    public isOpen: boolean = false;
 
     setGameTime(time: number) {
         this.gameTime = time;
     }
 
+    setStartTime(time: number) {
+        this._startTime = time;
+        this.isOpen = true;
+    }
 
-    //// 开始倒计时
-    //startTimeCutDown(time:number) {
-    //    let allTime = time;
-    //    let startOsTime = util.os.time();
-    //    this.timeNode.getComponent(cc.Label).string = allTime;
-    //    let scheduleCallback = function () {
-    //        let nowOsTime = util.os.time();
-    //        let nowTime = allTime - Math.floor((nowOsTime - startOsTime));
-    //        if (nowTime <= 0) {
-    //            this.stopTimeCutDown();
-    //        }
-    //        this.timeNode.getComponent(cc.Label).string = nowTime;
-    //    }.bind(this);
-    //    this.timeNode.active = true;
-    //    this.sprShaoDeng.active = true;
-    //    this.timeNode.getComponent(cc.Label).schedule(scheduleCallback, 1);
-    //}
+    update() {
+        this.UpdateClock();
+    }
 
-
-    //// 停止倒计时
-    //stopTimeCutDown() {
-    //    this.timeNode.getComponent(cc.Label).unscheduleAllCallbacks();
-    //    this.timeNode.active = false;
-    //    this.sprShaoDeng.active = false;
-    //}
-
+    UpdateClock() {
+        if (this.isOpen) {
+            this._nowTime = new Date().getTime();
+            let time:number = this._nowTime - this._startTime;
+            this.viewFill.fillRange = time / (this.gameTime * 1000) * (-1);
+            if (time >= this.gameTime * 1000) {
+                NotifyManager.instance.dispatch(GlobalNotify.GameOver);
+                this.isOpen = false;
+            }
+            //console.log("starttime:" + this._startTime + "|||gameTime:" + this.gameTime * 1000 + "|||time:" + time + "|||viewFill.fillRange:" + this.viewFill.fillRange);
+            console.log("time/gametime*1000:" + (time / (this.gameTime * 1000)) + "|||viewFill.fillRange:" + this.viewFill.fillRange);
+        }
+    }
 }
 
 

@@ -24,13 +24,26 @@ export class ScoreManager {
         this._scoreObj.setPosition(-500, 300);
         this._scoreObj.getComponent(ScoreView).Init();
 
-        this.ClearScore();
-
         NotifyManager.instance.addListener(GlobalNotify.SCORE_DATA_UPDATE, (addscore) => {
             this.AddScore(addscore);
             let com = this._scoreObj.getComponent(ScoreView);
             com.PlayAddAni();
         });
+
+        NotifyManager.instance.addListener(GlobalNotify.GameOver, () => {
+            this.scoreNode.active = false;
+        });
+
+        NotifyManager.instance.addListener(GlobalNotify.GameRestart, () => {
+            this.InitDat();
+            this.scoreNode.active = true;
+        });
+
+        
+    }
+
+    InitDat() {
+        this.ClearScore();
     }
 
 

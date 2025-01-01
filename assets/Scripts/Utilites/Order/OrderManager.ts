@@ -61,28 +61,42 @@ export class OrderManager{
         this._colorTipPrefabs[parseInt(prefab.name.charAt(9))] = prefab;
     }
 
-    /** 数据初始化 */
+    /** 初始化 */
     Init() {
-        this._orderData.ClearSystemDate();
-
-        this._isTip = [false, false, false, false];
-
-        this._playerColorOrder = [];
-
+        this.InitDat();
         this.orderNode.setPosition(0, 0);
         this._orderObj = instantiate(this._orderColorPrefab);
         this._orderObj.parent = this.orderNode;
         this._orderObj.setPosition(500, 150);
 
         this.orderTipNode.setPosition(0, 0);
-    }
 
-    InitEve() {
         NotifyManager.instance.addListener(GlobalNotify.ORDER_DATA_UPDATE, (playerorder: MyColor[]) => {
             this._playerColorOrder = playerorder;
             this.CheckOrder();
             this.UpdateOrder();
         });
+
+        NotifyManager.instance.addListener(GlobalNotify.GameOver, () => {
+            this.orderNode.active = false;
+            this.orderTipNode.active = false;
+        });
+
+        NotifyManager.instance.addListener(GlobalNotify.GameRestart, () => {
+            this.InitDat();
+            this.UpdateOrder();
+            this.OrderDataPrint();
+            this.orderNode.active = true;
+            this.orderTipNode.active = true;
+        });
+    }
+
+    InitDat() {
+        this._orderData.ClearSystemDate();
+
+        this._isTip = [false, false, false, false];
+
+        this._playerColorOrder = [];
     }
 
     // #region 订单相关的调用函数
