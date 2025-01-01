@@ -32,6 +32,14 @@ export class Desk extends Component {
         if (this.SubmitButton) {
             this.SubmitButton.node.on(Button.EventType.CLICK, this.onSubmitButtonPressed, this);
         }
+
+        // 初始化时，将所有sprites的透明度设置为0
+        this.sprites.forEach(sprite => {
+            const spriteComponent = sprite.getComponent(Sprite);
+            if (spriteComponent) {
+                spriteComponent.color = new Color(255, 255, 255, 0); // 设置颜色为255，透明度为0
+            }
+        });
     }
 
     onTriggerEnter2D(selfCollider: Collider2D, otherCollider: Collider2D) {
@@ -54,21 +62,19 @@ export class Desk extends Component {
 
     // 盖章按钮按下事件
     onStampButtonPressed() {
-        // 获取玩家颜色的迭代器
-        const playerColorsIterator = this.playerColors.entries();
+        const myPlayerId = DataManager.Instance.getMyPlayerId();
+        if (myPlayerId === null) return;
+
+        // 只处理当前玩家的颜色
         for (let i = 0; i < this.stampStatus.length; i++) {
             if (this.stampStatus[i] === 0) { // 检查数组中有没有为0的
-                // 获取下一个玩家颜色
-                const { value } = playerColorsIterator.next();
-                if (value) {
-                    const [playerID, playerColor] = value;
-                    this.Order[i]=playerColor;
+                const playerColor = this.playerColors.get(myPlayerId);
+                if (playerColor) {
+                    this.Order[i] = playerColor;
                     this.updateSpriteColor(this.sprites[i], playerColor); // 更新对应Sprite的颜色
                     this.stampStatus[i] = 1; // 将数组改成1
-                    this.playerColors.delete(playerID); // 删除已经使用的颜色
-                } else {
-                    // 如果没有更多的玩家颜色，退出循环
-                    break;
+                    this.playerColors.delete(myPlayerId); // 删除已经使用的颜色
+                    break; // 处理完毕后退出循环
                 }
             }
         }
@@ -92,6 +98,13 @@ export class Desk extends Component {
 
         // 重置 stampStatus 数组
         this.stampStatus = [0, 0, 0, 0];
+
+        this.sprites.forEach(sprite => {
+            const spriteComponent = sprite.getComponent(Sprite);
+            if (spriteComponent) {
+                spriteComponent.color = new Color(255, 255, 255, 0); // 设置颜色为255，透明度为0
+            }
+        });
     }
 
     onDestroy() {

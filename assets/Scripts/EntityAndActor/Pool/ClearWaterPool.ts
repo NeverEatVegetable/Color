@@ -50,12 +50,16 @@ export class ClearWaterPool extends Component {
 
     onButtonPressed() {
         // 遍历所有在清水池中的玩家并更新颜色
-        this.actorIDs.forEach((id) => {
-            const targetColor = ColorManager._Instance.monoLess;
-            DataManager.Instance.updateActorColor(id, targetColor, 0);
-        });
-        // 清空数组
-        this.actorIDs = [];
+        const myPlayerId = DataManager.Instance.getMyPlayerId();
+        if (myPlayerId === null) return;
+        const index = this.actorIDs.indexOf(myPlayerId);
+        if (index !== -1) {
+            // 使用ColorManager中定义的清水颜色
+            const clearWaterColor = ColorManager._Instance.monoLess;
+            DataManager.Instance.updateActorColor(myPlayerId, clearWaterColor, 0);
+            // 从数组中移除当前玩家的ID
+            this.actorIDs.splice(index, 1);
+        }
     }
 
     // 清理按钮事件监听

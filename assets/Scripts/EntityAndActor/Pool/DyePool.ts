@@ -19,7 +19,6 @@ export class DyePool extends Component {
     private colliderBox:BoxCollider2D=null
 
     onLoad() {
-
         this.colliderBox=this.node.getComponent(BoxCollider2D)
         if (this.colliderBox) {
             this.colliderBox.on(Contact2DType.BEGIN_CONTACT, this.onTriggerEnter2D, this);
@@ -72,13 +71,18 @@ export class DyePool extends Component {
     }
 
     onButtonPressed() {
-        // 遍历所有在染色池中的玩家并更新颜色
-        this.actorColors.forEach((color, id) => {
-            const newColor = MyColor.operator_add(color, this.dyeColor);
-            DataManager.Instance.updateActorColor(id, newColor, 255);
-        });
-        // 清空Map
-        this.actorColors.clear();
+        const myPlayerId = DataManager.Instance.getMyPlayerId();
+        if (myPlayerId === null) return;
+        // 找到当前玩家ID对应的颜色
+        const myPlayerColor = this.actorColors.get(myPlayerId);
+        if (myPlayerColor) {
+            // 混合颜色
+            const newColor = MyColor.operator_add(myPlayerColor, this.dyeColor);
+            // 更新玩家颜色
+            DataManager.Instance.updateActorColor(myPlayerId, newColor, 255);
+            // 清除当前玩家的颜色记录
+            this.actorColors.delete(myPlayerId);
+        }
     }
 
     // 清理按钮事件监听

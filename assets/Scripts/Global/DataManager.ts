@@ -100,6 +100,10 @@ export default class DataManager extends Singleton implements BaseModel {
             actor.transparency = newTransparency;
         }
     }
+
+    getMyPlayerId(){
+        return this.myPlayerId;
+    }
 }
 
 
