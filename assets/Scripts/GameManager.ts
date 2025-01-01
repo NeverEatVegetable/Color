@@ -25,12 +25,12 @@ export class GameManager extends Component {
         //NotifyManager.instance.addListener(GlobalNotify.GamePause, this.onGamePause.bind(this));
         //NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
 
-        this.schedule(this.test, 0, 0, 3);
+        //this.schedule(this.test, 0, 0, 3);
     }
 
-    test() {
-        NotifyManager.instance.dispatch(GlobalNotify.GameEnter);
-    }
+    //test() {
+    //    NotifyManager.instance.dispatch(GlobalNotify.GameEnter);
+    //}
 
     onGameEnter() {
         this.InitEve();
