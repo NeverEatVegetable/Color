@@ -35,6 +35,8 @@ export class GameManager extends Component {
     onGameEnter() {
         this.InitEve();
         this.onGameRestart();
+        this.node.getChildByName("UI").active = true;
+        this.node.getChildByName("Desk").active = true;
     }
 
     onGameRestart() {
