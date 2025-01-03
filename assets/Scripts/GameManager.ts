@@ -4,12 +4,12 @@ import { ScoreManager } from './Utilites/Score/ScoreManager';
 import { ClockItem } from './UI/Common/ClockItem';
 const { ccclass, property } = _decorator;
 
-//ÓÎÏ·×Ü¿Ø(¼æ¹Ëuimanager£¬ÀÁµÃÔÙÐ´ÁË)
+//ï¿½ï¿½Ï·ï¿½Ü¿ï¿½(ï¿½ï¿½ï¿½uimanagerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½)
 @ccclass('GameManager')
 export class GameManager extends Component {
     static _Instance: GameManager;
 
-    public viewPrefabs: any = {};   //keyÎªprefabµÄÃû×Ö£¬valueÎªprefab
+    public viewPrefabs: any = {};   //keyÎªprefabï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½valueÎªprefab
 
     private _startView: Node;
     private _pauseView: Node;
@@ -27,10 +27,11 @@ export class GameManager extends Component {
         //NotifyManager.instance.addListener(GlobalNotify.GameResume, this.onGameResume.bind(this));
         NotifyManager.instance.addListener(GlobalNotify.GameOver, this.onGameOver.bind(this));
 
-        //µ¥»úÓÃ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         this._startView = this.node.getChildByName("startView");
         this._startView.on(Node.EventType.TOUCH_END, this.onStartView, this);
         this.schedule(this.test, 0, 0, 2);
+        NotifyManager.instance.dispatch(GlobalNotify.MUSIC_PLAY, 0);
     }
 
     test() {
@@ -56,7 +57,7 @@ export class GameManager extends Component {
         this._clockItem.setParent(this.node.getChildByName("UI"));
         this._clockItem.getComponent(ClockItem).setStartTime(time ? time : new Date().getTime());
 
-        //Áª»ú¿ªÆô
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         //this._startView = instantiate(this.viewPrefabs["startView"]);
         //this._startView.setParent(this.node);
         //this._startView.setPosition(-640, -360);
@@ -70,6 +71,7 @@ export class GameManager extends Component {
         this._overView.setParent(this.node);
         this._overView.setPosition(0, 0);
         this._overView.on(Node.EventType.TOUCH_END, this.onOverView, this);
+        
 
         this.onGameRestart();
     }
@@ -88,10 +90,12 @@ export class GameManager extends Component {
     }
 
     onStartView() {
-        //µ¥»úÓÃ
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         NotifyManager.instance.dispatch(GlobalNotify.GameEnter, new Date().getTime());
-
-
+        
+        NotifyManager.instance.dispatch(GlobalNotify.MUSIC_PLAY, 0,false);
+        NotifyManager.instance.dispatch(GlobalNotify.MUSIC_PLAY, 1);
+        NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY, 1);
         this._startView.active = false;
         this._startView.destroy();
     }

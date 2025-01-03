@@ -1,11 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Entity",
-    "\\Entity\\Actor",
+    "\\Audio",
+    "\\Base",
+    "\\EntityAndActor",
+    "\\EntityAndActor\\Desk",
+    "\\EntityAndActor\\Pool",
+    "\\Global",
     "\\Sence",
     "\\UI"
   ],
-  "SelectedNode": "\\Sence\\BattleManager.ts.meta",
+  "SelectedNode": "\\EntityAndActor\\Desk\\Desk.ts",
   "PreviewInSolutionExplorer": false
 }

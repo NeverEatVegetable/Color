@@ -9,13 +9,12 @@ export class ClockItem extends Component {
     @property({ type: Sprite })
     public viewFill: Sprite;
 
-    /** Ê±¼ä´Á */
+    /** Ê±ï¿½ï¿½ï¿½ */
     private _startTime: number;
 
     private _nowTime: number;
 
-    @property({ type: Boolean })
-    public isOpen: boolean = false;
+    private _isOpen: boolean = false;
 
     setGameTime(time: number) {
         this.gameTime = time;
@@ -23,7 +22,7 @@ export class ClockItem extends Component {
 
     setStartTime(time: number) {
         this._startTime = time;
-        this.isOpen = true;
+        this._isOpen = true;
     }
 
     update() {
@@ -31,13 +30,13 @@ export class ClockItem extends Component {
     }
 
     UpdateClock() {
-        if (this.isOpen) {
+        if (this._isOpen) {
             this._nowTime = new Date().getTime();
             let time:number = this._nowTime - this._startTime;
             this.viewFill.fillRange = time / (this.gameTime * 1000) * (-1);
             if (time >= this.gameTime * 1000) {
                 NotifyManager.instance.dispatch(GlobalNotify.GameOver);
-                this.isOpen = false;
+                this._isOpen = false;
             }
             //console.log("starttime:" + this._startTime + "|||gameTime:" + this.gameTime * 1000 + "|||time:" + time + "|||viewFill.fillRange:" + this.viewFill.fillRange);
             //console.log("time/gametime*1000:" + (time / (this.gameTime * 1000)) + "|||viewFill.fillRange:" + this.viewFill.fillRange);

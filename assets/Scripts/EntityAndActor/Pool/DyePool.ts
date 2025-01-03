@@ -82,6 +82,7 @@ export class DyePool extends Component {
             DataManager.Instance.updateActorColor(myPlayerId, newColor, 255);
             // 清除当前玩家的颜色记录
             this.actorColors.delete(myPlayerId);
+            NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY,2);
         }
     }
 

@@ -1,12 +1,14 @@
-﻿import { _decorator, Component, Node, Sprite, Collider2D, Color, Button, BoxCollider2D, Contact2DType } from 'cc';
+﻿import { _decorator, Component, Node, Sprite, Collider2D, Color, Button, BoxCollider2D, Contact2DType, AudioClip } from 'cc';
 import { ActorMannager } from '../ActorMannager';
 import DataManager from '../../Global/DataManager';
 import { ColorManager } from '../../Utilites/ColorMix/ColorManager';
 import { MyColor } from '../../Utilites/ColorMix/MyColor';
+import { AudioPatEnum } from '../../Enum';
 const { ccclass, property } = _decorator;
 
 @ccclass('Desk')
 export class Desk extends Component {
+
     @property({ type: [Node] })
     private sprites: Sprite[] = [];
 
@@ -78,6 +80,7 @@ export class Desk extends Component {
                 }
             }
         }
+        NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY, 3);
     }
 
     // 更新Sprite的颜色
@@ -92,6 +95,7 @@ export class Desk extends Component {
     onSubmitButtonPressed(){
         // 发送订单信息事件
         NotifyManager.instance.dispatch(GlobalNotify.ORDER_DATA_UPDATE,this.Order);
+        NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY,4);
 
         // 清空订单数组
         this.Order = [];

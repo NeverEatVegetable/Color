@@ -59,6 +59,7 @@ export class ClearWaterPool extends Component {
             DataManager.Instance.updateActorColor(myPlayerId, clearWaterColor, 0);
             // 从数组中移除当前玩家的ID
             this.actorIDs.splice(index, 1);
+            NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY,2);
         }
     }
 

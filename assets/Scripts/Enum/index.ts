@@ -51,3 +51,14 @@ export enum GameUIPrefabEnum {
     pauseView = "Prefabs/UI/pauseView",
     overView = "Prefabs/UI/overView",
 }
+
+export enum AudioPatEnum {
+    beginBg= "Audio/beginBg",
+    button ="Audio/button",
+    cat ="Audio/cat",
+    dyeColor ="Audio/dyeColor",
+    gameBg ="Audio/gameBg",
+    stamp ="Audio/stamp",
+    submit ="Audio/submit.mp3",
+    timeOver ="Audio/timeOver",
+}

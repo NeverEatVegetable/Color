@@ -1,4 +1,4 @@
-import { _decorator, Component, EventTouch, input, Input, Node, UITransform, Vec2 } from 'cc';
+import { _decorator, Color, Component, EventTouch, input, Input, Node, Sprite, UITransform, Vec2 } from 'cc';
 import { GameStarter } from '../GameStarter';
 const { ccclass, property } = _decorator;
 
@@ -8,14 +8,20 @@ export class JoyStickManager extends Component {
 
     private body: Node
     private stick: Node
+    private base: Node
     private defaultPos: Vec2
     private radius: number
+    private stickcolor: Sprite
+    private basecolor: Sprite
 
     private _isStickOpen = true;
 
     onLoad() {
         this.body = this.node.getChildByName("Body")
         this.stick = this.body.getChildByName("Stick")
+        this.base = this.body.getChildByName("Base")
+        this.stickcolor=this.stick.getComponent(Sprite)
+        this.basecolor=this.base.getComponent(Sprite)
         //console.log(this.body)
         //console.log(this.stick)
         this.radius = this.body.getComponent(UITransform).contentSize.x/2
@@ -40,6 +46,7 @@ export class JoyStickManager extends Component {
         if (this._isStickOpen) {
             const touchPos = e.getUILocation()
             this.body.setPosition(touchPos.x, touchPos.y)
+            this.setSpriteOpacity(255); // 设置透明度为255
         }
     }
 
@@ -61,11 +68,22 @@ export class JoyStickManager extends Component {
             this.body.setPosition(this.defaultPos.x, this.defaultPos.y)
             this.stick.setPosition(0, 0)
             this.input = Vec2.ZERO
+            this.setSpriteOpacity(100); // 设置透明度为100
         }
     }
 
     setStickOpen(isopen: boolean = false) {
         this._isStickOpen = isopen;
+    }
+
+    // 新增方法，用于设置stick和base节点的Sprite透明度
+    private setSpriteOpacity(value: number) {
+        if (this.stickcolor) {
+            this.stickcolor.color = new Color(255, 255, 255, value);
+        }
+        if (this.basecolor) {
+            this.basecolor.color = new Color(255, 255, 255, value);
+        }
     }
 }
 

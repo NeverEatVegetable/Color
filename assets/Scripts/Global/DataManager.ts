@@ -32,8 +32,8 @@ export default class DataManager extends Singleton implements BaseModel {
                 id: 1,
                 type: EntityTypeEnum.Actor1,
                 position: {
-                    x: -200,
-                    y: -200,
+                    x: -427,
+                    y: -55,
                 },
                 direction: {
                     x: 1,
@@ -45,12 +45,12 @@ export default class DataManager extends Singleton implements BaseModel {
             },
             {
                 id: 2,
-                type: EntityTypeEnum.Actor1,
+               type: EntityTypeEnum.Actor1,
                 position: {
-                    x: -200,
-                    y: -200,
-                },
-                direction: {
+                    x: 807,
+                    y: 232,
+               },
+               direction: {
                     x: 1,
                     y: 0,
                 },

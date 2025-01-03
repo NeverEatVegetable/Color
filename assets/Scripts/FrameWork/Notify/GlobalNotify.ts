@@ -81,6 +81,9 @@ enum GlobalNotify {
      /** 本局游戏结束 */
      GameOver,
 
+    MUSIC_PLAY, // 播放音乐事件
+    EFFECT_PLAY, // 播放音效事件
+
 }
 
 (window as any).GlobalNotify = GlobalNotify;

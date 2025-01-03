@@ -17,6 +17,7 @@ export class PauseView extends Component {
     onOpen() {
         this.node.active = true;
         NotifyManager.instance.dispatch(GlobalNotify.GamePause);
+        NotifyManager.instance.dispatch(GlobalNotify.EFFECT_PLAY,0);
     }
 }
 
