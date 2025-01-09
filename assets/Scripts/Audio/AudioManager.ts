@@ -28,6 +28,8 @@ export class AudioManager extends Component {
         NotifyManager.instance.addListener(GlobalNotify.MUSIC_PLAY, this.playMusicclip.bind(this));
         NotifyManager.instance.addListener(GlobalNotify.EFFECT_PLAY, this.playEffectclip.bind(this));
         // NotifyManager.instance.addListener(GlobalNotify.ORDER_DATA_UPDATE,this.playEffectclip.bind())
+        NotifyManager.instance.addListener(GlobalNotify.AUDIO_SETTING_UPDATE, (vo) => { this.setVolumn(1, vo); });
+        NotifyManager.instance.addListener(GlobalNotify.MUSIC_SETTING_UPDATE, (vo) => { this.setVolumn(0, vo); });
     }
 
 
@@ -73,6 +75,38 @@ export class AudioManager extends Component {
     stopEffect() {
         if (this.effectAudioSource) {
             this.effectAudioSource.stop();
+        }
+    }
+
+    //typ:0为音乐喇叭、1为音效喇叭
+    //volumn：音量
+    setVolumn(typ: number, volumn: number) {
+        if (typ == 0) {
+            this.musicAudioSource.volume = volumn;
+        }
+        else {
+            this.effectAudioSource.volume = volumn;
+        }
+    }
+
+    //typ:0为音乐喇叭、1为音效喇叭
+    //true:pause   false:play
+    closeVolumn(typ: number,isClose:boolean) {
+        if (typ == 0) {
+            if (isClose) {
+                this.musicAudioSource.pause();
+            }
+            else {
+                this.musicAudioSource.play();
+            }
+        }
+        else {
+            if (isClose) {
+                this.effectAudioSource.pause();
+            }
+            else {
+                this.effectAudioSource.play();
+            }
         }
     }
 }

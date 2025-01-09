@@ -18,12 +18,16 @@ export class SoundSetItem extends Component {
     @property({ type: Slider })
     fillTip: Slider;
 
+    start() {
+        this.SetVolume(0.5);
+    }
+
     onToggle() {
         if (this.toggle.isChecked) {
-            this.OpenSound();
+            this.CloseSound();
         }
         else {
-            this.CloseSound();
+            this.OpenSound();
         }
     }
 
